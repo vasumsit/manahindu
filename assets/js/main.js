@@ -40,3 +40,11 @@ document.addEventListener('click', function(e) {
 // ── Export for future Vue/Angular use ─────────────────────
 // When migrating to Vue: import { MH } from '@/utils/main.js'
 if (typeof module !== 'undefined') module.exports = { MH };
+
+// Reset dropdown scroll to top on open
+document.querySelectorAll('.nav-item').forEach(function(item) {
+  item.addEventListener('mouseenter', function() {
+    var dropdown = item.querySelector('.dropdown');
+    if (dropdown) dropdown.scrollTop = 0;
+  });
+});

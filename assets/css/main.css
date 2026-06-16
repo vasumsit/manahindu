@@ -224,6 +224,7 @@ body {
 .dropdown::-webkit-scrollbar { width: 4px; }
 .dropdown::-webkit-scrollbar-track { background: var(--cream); }
 .dropdown::-webkit-scrollbar-thumb { background: var(--saffron); border-radius: 4px; }
+.dropdown a.active { color: var(--maroon); font-weight: 600; background: var(--cream); }
 .nav-item:hover .dropdown { display: block; }
 .dropdown a {
   display: block;
