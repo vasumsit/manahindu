@@ -94,10 +94,38 @@ const ManaHinduComments = {
     data.comments[key].unshift(comment); // newest first
 
     await this.saveAll(data);
-    this.markCommented(key);
 
-    // Re-render
-    this.render(key, data.comments[key]);
+    // Clear form and show success message briefly, then re-render
+    nameEl.value = '';
+    textEl.value = '';
+    btn.disabled = false;
+    btn.textContent = 'వ్యాఖ్య నమోదు చేయండి 🙏';
+
+    // Show success briefly
+    const successMsg = document.createElement('div');
+    successMsg.style.cssText = 'background:#f0fdf4;border:1px solid #86efac;border-radius:8px;padding:0.6rem 1rem;font-size:0.82rem;color:#166534;margin-bottom:0.5rem;';
+    successMsg.textContent = '✅ మీ వ్యాఖ్య నమోదైంది! ధన్యవాదాలు 🙏';
+    nameEl.parentNode.insertBefore(successMsg, nameEl);
+    setTimeout(() => successMsg.remove(), 3000);
+
+    // Re-render comments list only
+    const listEl = document.querySelector('.mh-comments-list');
+    if (listEl) {
+      listEl.innerHTML = data.comments[key].map(c => `
+        <div class="mh-comment-item">
+          <div class="mh-comment-header">
+            <span class="mh-comment-avatar">${c.name.charAt(0).toUpperCase()}</span>
+            <div>
+              <span class="mh-comment-name">${ManaHinduComments.escapeHtml(c.name)}</span>
+              <span class="mh-comment-date">${ManaHinduComments.formatDate(c.date)}</span>
+            </div>
+          </div>
+          <div class="mh-comment-text">${ManaHinduComments.escapeHtml(c.text)}</div>
+        </div>`).join('') || '<p style="color:var(--text-muted);font-size:0.85rem;text-align:center;padding:1rem;">ఇంకా వ్యాఖ్యలు లేవు</p>';
+      // Update count
+      const h3 = document.querySelector('.mh-comments-box h3');
+      if (h3) h3.innerHTML = `💬 భక్తుల అభిప్రాయాలు <span style="font-size:0.8rem;font-weight:normal;color:var(--text-muted)">(${data.comments[key].length})</span>`;
+    }
   },
 
   // Render full widget
@@ -105,7 +133,6 @@ const ManaHinduComments = {
     const el = document.getElementById('mh-comments');
     if (!el) return;
 
-    const hasCommented = this.hasCommented(key);
     const commentsList = (comments || []).map(c => `
       <div class="mh-comment-item">
         <div class="mh-comment-header">
@@ -118,10 +145,7 @@ const ManaHinduComments = {
         <div class="mh-comment-text">${this.escapeHtml(c.text)}</div>
       </div>`).join('');
 
-    const formHtml = hasCommented ? `
-      <div class="mh-comment-submitted">
-        ✅ మీరు ఈ పేజీపై వ్యాఖ్య నమోదు చేశారు. ధన్యవాదాలు 🙏
-      </div>` : `
+    const formHtml = `
       <div class="mh-comment-form">
         <h4>మీ అభిప్రాయం పంచుకోండి</h4>
         <div id="mh-comment-error" style="display:none;color:#dc2626;font-size:0.82rem;margin-bottom:0.5rem;"></div>
@@ -130,7 +154,7 @@ const ManaHinduComments = {
         <textarea id="mh-comment-text" placeholder="మీ అభిప్రాయం రాయండి... *" maxlength="500" rows="3"
           class="mh-comment-textarea"></textarea>
         <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;">
-          <small style="color:var(--text-muted);font-size:0.72rem;">⚠️ ఒకసారి submit చేసిన వ్యాఖ్యను edit చేయలేరు</small>
+          <small style="color:var(--text-muted);font-size:0.72rem;">⚠️ submit చేసిన వ్యాఖ్యను edit చేయలేరు</small>
           <button id="mh-comment-submit" onclick="ManaHinduComments.submit('${key}')"
             class="mh-comment-btn">వ్యాఖ్య నమోదు చేయండి 🙏</button>
         </div>
