@@ -212,11 +212,18 @@ body {
   border: 1px solid var(--border);
   border-top: 3px solid var(--saffron);
   border-radius: 0 0 10px 10px;
-  min-width: 240px;
+  min-width: 260px;
+  max-height: 70vh;
+  overflow-y: auto;
   box-shadow: var(--shadow-lg);
   z-index: 500;
   padding: 0.5rem 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--saffron) var(--cream);
 }
+.dropdown::-webkit-scrollbar { width: 4px; }
+.dropdown::-webkit-scrollbar-track { background: var(--cream); }
+.dropdown::-webkit-scrollbar-thumb { background: var(--saffron); border-radius: 4px; }
 .nav-item:hover .dropdown { display: block; }
 .dropdown a {
   display: block;
