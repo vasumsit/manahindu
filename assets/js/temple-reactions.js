@@ -9,8 +9,8 @@ const ManaHinduReactions = {
   // Step 2: Create a new bin with this JSON:
   // { "reactions": {} }
   // Step 3: Copy the BIN_ID and API_KEY below
-  BIN_ID:  'YOUR_BIN_ID_HERE',   // e.g. "64abc123def456"
-  API_KEY: 'YOUR_API_KEY_HERE',  // e.g. "$2b$10$abcdef..."
+  BIN_ID:  '6a3168a5da38895dfeca560b',   // e.g. "64abc123def456"
+  API_KEY: '$2a$10$qKtXWnseApIuvvFkuCcYqeiGduPMLn3VKQnTyGYk1X5ZXlgLDPcYG',  // e.g. "$2b$10$abcdef..."
   // ────────────────────────────────────────────────────────
 
   BASE_URL: 'https://api.jsonbin.io/v3/b',
