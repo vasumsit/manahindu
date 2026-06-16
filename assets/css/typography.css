@@ -1,0 +1,67 @@
+/* ============================================================
+   ManaHindu — typography.css
+   Fonts, Telugu text styles, headings, prose
+   Used by: ALL pages
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Telugu&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ── Telugu Text ─────────────────────────────────────────── */
+.telugu        { font-family: 'Tiro Telugu', serif; }
+.telugu-lg     { font-family: 'Tiro Telugu', serif; font-size: 1.3rem; line-height: 1.6; }
+.telugu-xl     { font-family: 'Tiro Telugu', serif; font-size: 1.8rem; line-height: 1.4; }
+
+/* ── Article Body ────────────────────────────────────────── */
+.article-body h2 {
+  font-family: 'Tiro Telugu', serif;
+  font-size: 1.35rem;
+  color: var(--maroon);
+  margin: 1.8rem 0 0.8rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--cream-dark);
+}
+.article-body h2:first-child { margin-top: 0; }
+.article-body p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.9;
+  margin-bottom: 1rem;
+}
+.article-body p strong { color: var(--maroon); }
+.article-body ul {
+  list-style: none;
+  margin: 1rem 0;
+}
+.article-body ul li {
+  display: flex;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--cream-dark);
+  line-height: 1.5;
+}
+.article-body ul li::before { content: '🙏'; flex-shrink: 0; }
+.article-body ul li:last-child { border-bottom: none; }
+
+/* ── Lead Text ───────────────────────────────────────────── */
+.lead {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.9;
+  margin-bottom: 1.2rem;
+}
+.lead strong { color: var(--maroon); }
+
+/* ── Source Note ─────────────────────────────────────────── */
+.source-note {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--saffron);
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 2rem;
+  line-height: 1.7;
+}

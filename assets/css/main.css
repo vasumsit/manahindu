@@ -1,0 +1,199 @@
+/* ============================================================
+   ManaHindu — main.css
+   Global styles: reset, header, nav, footer, ticker, topbar
+   Used by: ALL pages
+   ============================================================ */
+
+/* ── Reset ───────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── CSS Variables ───────────────────────────────────────── */
+:root {
+  --maroon:       #7c1c1c;
+  --maroon-dark:  #5a1212;
+  --saffron:      #f59e0b;
+  --gold:         #d97706;
+  --cream:        #fdf8f0;
+  --cream-dark:   #f5ede0;
+  --white:        #ffffff;
+  --text:         #1a1a1a;
+  --text-muted:   #5a4a3a;
+  --border:       #e8d5c0;
+  --radius:       10px;
+  --shadow:       0 2px 12px rgba(124,28,28,0.08);
+  --shadow-lg:    0 4px 24px rgba(124,28,28,0.12);
+
+  /* Depth levels */
+  --z-nav:        100;
+  --z-mobile-nav: 200;
+}
+
+/* ── Base ────────────────────────────────────────────────── */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ── Container ───────────────────────────────────────────── */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.2rem;
+}
+
+/* ── Topbar ──────────────────────────────────────────────── */
+.topbar {
+  background: var(--maroon-dark);
+  color: #f5c98e;
+  font-size: 0.78rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.35rem 1.5rem;
+}
+.topbar a { color: #f5c98e; text-decoration: none; }
+.topbar a.active { color: var(--saffron); font-weight: 600; }
+
+/* ── Header ──────────────────────────────────────────────── */
+.header {
+  background: var(--white);
+  border-bottom: 3px solid var(--saffron);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-nav);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1.2rem;
+  gap: 1rem;
+}
+
+/* ── Logo ────────────────────────────────────────────────── */
+.logo { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; }
+.logo-om    { font-size: 2.2rem; color: var(--saffron); line-height: 1; }
+.logo-title { font-family: 'Tiro Telugu', serif; font-size: 1.4rem; color: var(--maroon); font-weight: 700; line-height: 1.1; }
+.logo-sub   { font-size: 0.72rem; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; }
+
+/* ── Nav ─────────────────────────────────────────────────── */
+.nav { display: flex; gap: 0.2rem; }
+.nav a {
+  color: var(--maroon);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.nav a:hover     { background: var(--cream); color: var(--maroon-dark); }
+.nav a.active    { background: var(--saffron); color: var(--maroon-dark); font-weight: 700; }
+
+/* ── Mobile Nav ──────────────────────────────────────────── */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--maroon);
+  cursor: pointer;
+}
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  padding: 0.5rem 1.2rem 1rem;
+  z-index: var(--z-mobile-nav);
+}
+.mobile-nav a {
+  color: var(--maroon);
+  text-decoration: none;
+  padding: 0.55rem 0;
+  font-size: 0.95rem;
+  border-bottom: 1px solid var(--cream-dark);
+}
+.mobile-nav a.active { color: var(--saffron); font-weight: 700; }
+.mobile-nav.open { display: flex; }
+
+/* ── News Ticker ─────────────────────────────────────────── */
+.ticker-wrap {
+  background: var(--maroon);
+  color: #f5e0bb;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: 38px;
+}
+.ticker-label {
+  background: var(--saffron);
+  color: var(--maroon-dark);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0 1rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.ticker-track {
+  display: flex;
+  white-space: nowrap;
+  animation: ticker 30s linear infinite;
+  font-size: 0.82rem;
+}
+.ticker-track span { display: inline-block; }
+@keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+/* ── Page Hero (inner pages) ─────────────────────────────── */
+.page-hero {
+  background: linear-gradient(135deg, #3d0c0c 0%, #7c1c1c 50%, #4a0e0e 100%);
+  padding: 2.5rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::before {
+  content: 'ॐ';
+  position: absolute;
+  right: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14rem;
+  color: rgba(245,158,11,0.06);
+  pointer-events: none;
+}
+.page-hero h1 { font-family: 'Tiro Telugu', serif; color: #fff; font-size: clamp(1.6rem,3vw,2.2rem); position: relative; }
+.page-hero p  { color: #f5ddb0; font-size: 0.9rem; margin-top: 0.4rem; position: relative; }
+
+/* ── Breadcrumb ──────────────────────────────────────────── */
+.breadcrumb { font-size: 0.8rem; color: #f5c98e; margin-bottom: 1rem; }
+.breadcrumb a { color: #f5c98e; text-decoration: none; }
+.breadcrumb a:hover { color: var(--saffron); }
+.breadcrumb span { margin: 0 0.4rem; }
+
+/* ── Footer ──────────────────────────────────────────────── */
+.footer { background: #1a0505; color: #c9a07a; padding: 2.5rem 0 0; }
+.footer-inner { display: flex; gap: 3rem; flex-wrap: wrap; padding-bottom: 2rem; }
+.footer-brand { display: flex; align-items: center; gap: 0.8rem; }
+.footer-links { display: flex; gap: 3rem; flex-wrap: wrap; }
+.footer-links div { display: flex; flex-direction: column; gap: 0.4rem; }
+.footer-links h4 { color: var(--saffron); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.4rem; }
+.footer-links a { color: #c9a07a; text-decoration: none; font-size: 0.83rem; }
+.footer-links a:hover { color: var(--saffron); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); text-align: center; padding: 1rem; font-size: 0.8rem; color: #8a6050; }
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .nav        { display: none; }
+  .hamburger  { display: block; }
+  .footer-inner { flex-direction: column; gap: 1.5rem; }
+  .footer-links { gap: 1.5rem; }
+  .page-hero::before { font-size: 6rem; }
+}

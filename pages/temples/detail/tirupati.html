@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>తిరుపతి శ్రీ వేంకటేశ్వర స్వామి దేవాలయం | ManaHindu</title>
+  <link rel="stylesheet" href="../../../assets/css/main.css" />
+  <link rel="stylesheet" href="../../../assets/css/components.css" />
+  <link rel="stylesheet" href="../../../assets/css/typography.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Telugu&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../tirupati.css" />
+  <meta name="description" content="తిరుపతి తిరుమల శ్రీ వేంకటేశ్వర స్వామి దేవాలయం పూర్తి సమాచారం — దర్శన సమయాలు, సేవలు, యాత్ర మార్గం, చరిత్ర." />
+  
+  
+  <style>
+    .article-hero {
+      background: linear-gradient(135deg, #5a1212 0%, #9b2a2a 60%, #7c1c1c 100%);
+      padding: 3rem 0 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .article-hero::before {
+      content: 'ॐ';
+      position: absolute;
+      right: 3%;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 16rem;
+      color: rgba(245,158,11,0.07);
+      pointer-events: none;
+    }
+    .article-hero-inner { position: relative; z-index: 2; }
+    .breadcrumb { font-size: 0.8rem; color: #f5c98e; margin-bottom: 1rem; }
+    .breadcrumb a { color: #f5c98e; text-decoration: none; }
+    .breadcrumb span { margin: 0 0.4rem; }
+    .article-hero h1 {
+      font-family: 'Tiro Telugu', serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+      color: #fff;
+      line-height: 1.3;
+      margin-bottom: 0.8rem;
+    }
+    .article-hero-sub { color: #f5ddb0; font-size: 0.95rem; margin-bottom: 1.2rem; }
+    .article-meta { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+    .meta-badge {
+      background: rgba(245,158,11,0.2);
+      border: 1px solid rgba(245,158,11,0.4);
+      color: #f5c98e;
+      font-size: 0.78rem;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+    }
+
+    /* PHOTO GALLERY */
+    .photo-gallery {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: 200px 200px;
+      gap: 8px;
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 2rem 0;
+    }
+    .photo-gallery .gal-main { grid-row: 1 / 3; }
+    .gal-img {
+      background: linear-gradient(135deg, #c9873033, #7c1c1c33);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .gal-img img { width: 100%; height: 100%; object-fit: cover; }
+    .gal-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.7));
+      color: #fff;
+      font-size: 0.72rem;
+      padding: 0.5rem;
+      text-align: center;
+    }
+    .photo-placeholder {
+      background: linear-gradient(135deg, #fef3e2, #fde8c8);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      color: #c9873099;
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 1rem;
+    }
+    .photo-placeholder .ph-icon { font-size: 2.5rem; }
+
+    /* ARTICLE LAYOUT */
+    .article-layout {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 2rem;
+      padding: 2.5rem 0;
+      align-items: start;
+    }
+    .article-body h2 {
+      font-family: 'Tiro Telugu', serif;
+      font-size: 1.35rem;
+      color: var(--maroon);
+      margin: 1.8rem 0 0.8rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid var(--cream-dark);
+    }
+    .article-body h2:first-child { margin-top: 0; }
+    .article-body p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.9;
+      margin-bottom: 1rem;
+    }
+    .article-body p strong { color: var(--maroon); }
+
+    /* INFO BOXES */
+    .info-box {
+      background: var(--cream);
+      border: 1.5px solid var(--border);
+      border-left: 4px solid var(--saffron);
+      border-radius: 8px;
+      padding: 1.2rem;
+      margin: 1.5rem 0;
+    }
+    .info-box h3 {
+      font-family: 'Tiro Telugu', serif;
+      color: var(--maroon);
+      font-size: 1rem;
+      margin-bottom: 0.8rem;
+    }
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.85rem;
+    }
+    .info-row:last-child { border-bottom: none; }
+    .info-row .label { color: var(--text-muted); font-weight: 500; }
+    .info-row .value { color: var(--maroon); font-weight: 600; text-align: right; }
+
+    /* SEVA TABLE */
+    .seva-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.85rem; }
+    .seva-table th {
+      background: var(--maroon);
+      color: var(--saffron);
+      padding: 0.6rem 0.8rem;
+      text-align: left;
+      font-weight: 600;
+    }
+    .seva-table td { padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--border); color: var(--text-muted); }
+    .seva-table tr:nth-child(even) td { background: var(--cream); }
+    .seva-table tr:hover td { background: #fef3e2; }
+
+    /* SIDEBAR */
+    .sidebar { display: flex; flex-direction: column; gap: 1.2rem; }
+    .sidebar-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .sidebar-box-header {
+      background: var(--maroon);
+      color: var(--saffron);
+      font-family: 'Tiro Telugu', serif;
+      font-size: 0.95rem;
+      padding: 0.7rem 1rem;
+      font-weight: 600;
+    }
+    .sidebar-box-body { padding: 1rem; }
+    .sidebar-box-body p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.7; }
+
+    /* QUICK FACTS */
+    .quick-facts { list-style: none; }
+    .quick-facts li {
+      display: flex;
+      gap: 0.6rem;
+      font-size: 0.82rem;
+      padding: 0.45rem 0;
+      border-bottom: 1px solid var(--cream-dark);
+      color: var(--text-muted);
+    }
+    .quick-facts li:last-child { border-bottom: none; }
+    .quick-facts li .qf-icon { font-size: 1rem; flex-shrink: 0; }
+
+    /* VIDEO SECTION */
+    .video-section {
+      background: var(--maroon);
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .video-section h3 {
+      font-family: 'Tiro Telugu', serif;
+      color: var(--saffron);
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    .video-placeholder {
+      background: rgba(255,255,255,0.05);
+      border: 2px dashed rgba(245,158,11,0.4);
+      border-radius: 8px;
+      padding: 2.5rem 1rem;
+      color: #f5c98e;
+      font-size: 0.85rem;
+    }
+    .video-placeholder .play-icon { font-size: 3rem; margin-bottom: 0.5rem; display: block; }
+    .video-embed { width: 100%; border-radius: 8px; aspect-ratio: 16/9; border: none; }
+
+    /* TIPS */
+    .tips-list { list-style: none; }
+    .tips-list li {
+      display: flex;
+      gap: 0.6rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--cream-dark);
+      line-height: 1.5;
+    }
+    .tips-list li:last-child { border-bottom: none; }
+    .tips-list li::before { content: '🙏'; flex-shrink: 0; }
+
+    /* HOW TO REACH */
+    .reach-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .reach-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+    }
+    .reach-card .reach-icon { font-size: 1.8rem; margin-bottom: 0.4rem; }
+    .reach-card h4 { font-size: 0.85rem; color: var(--maroon); font-weight: 600; margin-bottom: 0.3rem; }
+    .reach-card p { font-size: 0.75rem; color: var(--text-muted); line-height: 1.5; }
+
+    /* SHARE */
+    .share-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 1.2rem;
+      background: var(--cream);
+      border-radius: 8px;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+    .share-bar span { font-size: 0.85rem; color: var(--text-muted); font-weight: 500; }
+    .share-btn {
+      padding: 0.4rem 1rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+    }
+    .share-wa { background: #25d366; color: #fff; }
+    .share-fb { background: #1877f2; color: #fff; }
+    .share-tw { background: #1da1f2; color: #fff; }
+
+    @media (max-width: 768px) {
+      .article-layout { grid-template-columns: 1fr; }
+      .photo-gallery { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .photo-gallery .gal-main { grid-row: auto; grid-column: 1 / 3; }
+    }
+  </style>
+</head>
+<body>
+
+    <div class="topbar">
+    <span class="topbar-date" id="topdate"></span>
+    <span class="topbar-lang"><a href="#" class="active">తెలుగు</a> | <a href="#">English</a></span>
+  </div>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="../../../index.html">
+        <div class="logo-om">ॐ</div>
+        <div><div class="logo-title">మన హిందూ</div><div class="logo-sub">ManaHindu</div></div>
+      </a>
+      <nav class="nav">
+        <a href="../../../index.html">హోమ్</a>
+        <a href="../../../pages/hinduism/index.html">హిందూమతం</a>
+        <a href="../../../pages/temples/index.html" class="active">దేవాలయాలు</a>
+        <a href="../../../pages/vlogs/index.html">వ్లాగ్స్</a>
+        <a href="../../../pages/news/index.html">వార్తలు</a>
+        <a href="../../../pages/festivals/index.html">పండుగలు</a>
+        <a href="../../../pages/about/index.html">మా గురించి</a>
+      </nav>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="../../../index.html">హోమ్</a>
+      <a href="../../../pages/hinduism/index.html">హిందూమతం</a>
+      <a href="../../../pages/temples/index.html" class="active">దేవాలయాలు</a>
+      <a href="../../../pages/vlogs/index.html">వ్లాగ్స్</a>
+      <a href="../../../pages/news/index.html">వార్తలు</a>
+      <a href="../../../pages/festivals/index.html">పండుగలు</a>
+      <a href="../../../pages/about/index.html">మా గురించి</a>
+    </div>
+  </header>
+
+  <!-- ARTICLE HERO -->
+  <div class="article-hero">
+    <div class="container article-hero-inner">
+      <div class="breadcrumb">
+        <a href="../../../index.html">హోమ్</a><span>›</span>
+        <a href="../index.html">దేవాలయాలు</a><span>›</span>
+        తిరుపతి వేంకటేశ్వర స్వామి
+      </div>
+      <h1>🛕 శ్రీ వేంకటేశ్వర స్వామి దేవాలయం<br/>తిరుమల తిరుపతి</h1>
+      <p class="article-hero-sub">ప్రపంచంలో అత్యంత సందర్శించబడే హిందూ ఆలయం — సప్తగిరి పై కొలువైన బాలాజీ స్వామి</p>
+      <div class="article-meta">
+        <span class="meta-badge">📍 తిరుమల, ఆంధ్రప్రదేశ్</span>
+        <span class="meta-badge">🕐 దర్శనం: ఉదయం 2:30 నుండి</span>
+        <span class="meta-badge">✍️ ManaHindu టీమ్</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHOTO GALLERY -->
+  <div class="container">
+    <div class="photo-gallery">
+      <div class="gal-img gal-main photo-placeholder">
+        <span class="ph-icon">📸</span>
+        <span>మీ ఫోటో ఇక్కడ వస్తుంది<br/>Your Tirupati Photo Here</span>
+      </div>
+      <div class="gal-img photo-placeholder">
+        <span class="ph-icon">🛕</span>
+        <span>గాలి గోపురం</span>
+      </div>
+      <div class="gal-img photo-placeholder">
+        <span class="ph-icon">🌄</span>
+        <span>తిరుమల కొండలు</span>
+      </div>
+      <div class="gal-img photo-placeholder">
+        <span class="ph-icon">📿</span>
+        <span>లడ్డు ప్రసాదం</span>
+      </div>
+      <div class="gal-img photo-placeholder">
+        <span class="ph-icon">🙏</span>
+        <span>భక్తుల దర్శనం</span>
+      </div>
+    </div>
+    <p style="font-size:0.75rem;color:var(--text-muted);text-align:center;margin-top:-1rem;margin-bottom:1rem;">📸 మీ ఫోటోలు పంపండి — మేము వెంటనే అప్‌లోడ్ చేస్తాం</p>
+  </div>
+
+  <!-- MAIN ARTICLE -->
+  <div class="container">
+    <div class="article-layout">
+
+      <!-- LEFT: ARTICLE BODY -->
+      <div class="article-body">
+
+        <h2>స్వామి వారి చరిత్ర — History</h2>
+        <p>తిరుమల తిరుపతి దేవస్థానం (TTD) ఆధ్వర్యంలో నిర్వహించబడే <strong>శ్రీ వేంకటేశ్వర స్వామి ఆలయం</strong> ప్రపంచంలోనే అత్యంత సందర్శించబడే హిందూ ఆలయంగా ప్రసిద్ధి పొందింది. ప్రతిరోజూ సుమారు <strong>50,000 నుండి 1,00,000</strong> మంది భక్తులు స్వామిని దర్శించుకుంటారు.</p>
+        <p>సప్తగిరి పర్వతాలపై (సముద్ర మట్టానికి 853 మీటర్ల ఎత్తులో) కొలువైన శ్రీనివాసుడు — <strong>కలియుగ ప్రత్యక్ష దైవం</strong>గా కొలవబడతాడు. స్కంద పురాణంలో ఈ ఆలయం గురించి విస్తారంగా వర్ణించబడింది. ద్రావిడ శైలిలో నిర్మించిన ఈ ఆలయం దాదాపు <strong>2000 సంవత్సరాల</strong> చరిత్రను కలిగి ఉంది.</p>
+        <p>స్వామి వారు <strong>శంఖు చక్రాలు</strong> ధరించి నాలుగు చేతులతో దర్శనమిస్తారు. స్వయంభూగా వెలసిన ఈ విగ్రహం పాదాల నుండి శిరస్సు వరకు అలంకరించబడి భక్తులను ఆకర్షిస్తుంది.</p>
+
+        <div class="info-box">
+          <h3>⏰ దర్శన సమయాలు — Darshan Timings (2025)</h3>
+          <div class="info-row"><span class="label">సుప్రభాత సేవ</span><span class="value">తెల్లవారు 2:30 AM</span></div>
+          <div class="info-row"><span class="label">సర్వదర్శనం (ఉచిత)</span><span class="value">ఉదయం 6:00 – రాత్రి 11:00*</span></div>
+          <div class="info-row"><span class="label">స్పెషల్ దర్శనం*</span><span class="value">ఆన్‌లైన్ బుకింగ్ మాత్రమే</span></div>
+          <div class="info-row"><span class="label">వీఐపీ బ్రేక్ దర్శనం*</span><span class="value">ఆన్‌లైన్ బుకింగ్ మాత్రమే</span></div>
+          <div class="info-row" style="background:#fef9e2;"><span class="label" style="color:#92400e;">⚠️ గమనిక</span><span class="value" style="color:#92400e;font-size:0.75rem;">సమయాలు, ధరలు TTD నిర్ణయం బట్టి మారవచ్చు. ప్రయాణానికి ముందు tirupatibalaji.ap.gov.in లో confirm చేయండి.</span></div>
+          <div class="info-row"><span class="label">ఏకాంత సేవ</span><span class="value">రాత్రి 10:30 PM</span></div>
+        </div>
+
+        <h2>సేవలు మరియు ధరలు — Sevas & Charges</h2>
+        <p>TTD అనేక రకాల ప్రత్యేక సేవలను అందిస్తుంది. ముందుగా <strong>TTD వెబ్‌సైట్ (tirupatibalaji.ap.gov.in)</strong> లో బుకింగ్ చేసుకోవడం మంచిది.</p>
+
+        <table class="seva-table">
+          <thead>
+            <tr><th>సేవ పేరు</th><th>సమయం</th><th>ధర</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>సుప్రభాత సేవ</td><td>2:30 AM</td><td>₹500</td></tr>
+            <tr><td>తోమాల సేవ</td><td>7:30 AM</td><td>₹500</td></tr>
+            <tr><td>అర్చన</td><td>8:00 AM</td><td>₹116</td></tr>
+            <tr><td>కళ్యాణోత్సవం</td><td>12:00 PM</td><td>₹500</td></tr>
+            <tr><td>అర్జిత బ్రహ్మోత్సవం</td><td>వార్షికం</td><td>₹1,25,000</td></tr>
+            <tr><td>అన్నప్రసాద సేవ</td><td>11:00 AM</td><td>₹500*</td></tr>
+          </tbody>
+        </table>
+
+        <!-- VIDEO SECTION -->
+                
+
+        <div class="source-note" style="margin-top:0.5rem;">* సేవల సమయాలు మరియు ధరలు TTD నిర్ణయం బట్టి మారవచ్చు. ప్రయాణం ముందు అధికారిక TTD వెబ్‌సైట్ tirupatibalaji.ap.gov.in లో లేదా 0877-2277777 కి call చేసి confirm చేయండి. ఈ వెబ్‌సైట్ సమాచారం reference కోసం మాత్రమే — official information కాదు.</div>
+        
+
+        
+
+        <h2>
+        <div class="video-section">
+          <h3>🎬 మా వ్లాగ్స్ చూడండి — v11tv</h3>
+          <div style="margin-bottom:1.5rem;">
+            <p style="color:#f5ddb0;font-size:0.82rem;margin-bottom:0.6rem;">Hyderabad to Tirupati Journey | BRS Bus & Vande Bharat</p>
+            <iframe class="video-embed" src="https://www.youtube.com/embed/40xUBt1Vab8" allowfullscreen title="Hyderabad to Tirupati Journey | BRS Bus & Vande Bharat" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+          </div>
+          <div style="margin-bottom:1.5rem;">
+            <p style="color:#f5ddb0;font-size:0.82rem;margin-bottom:0.6rem;">Tirupati to Tirumala Ghat Road Leyland Bus Journey</p>
+            <iframe class="video-embed" src="https://www.youtube.com/embed/OsTSA-E8RWs" allowfullscreen title="Tirupati to Tirumala Ghat Road Leyland Bus Journey" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+          </div>
+          <a href="https://www.youtube.com/@Vasu11tv" target="_blank" class="yt-btn">▶ Subscribe — v11tv</a>
+        </div>
+
+        <h2>ఎలా చేరుకోవాలి — How to Reach</h2>
+        <div class="reach-grid">
+          <div class="reach-card">
+            <div class="reach-icon">✈️</div>
+            <h4>విమానం</h4>
+            <p>తిరుపతి విమానాశ్రయం నుండి 15 కి.మీ. హైదరాబాద్ నుండి 1.5 గంటలు.</p>
+          </div>
+          <div class="reach-card">
+            <div class="reach-icon">🚂</div>
+            <h4>రైలు</h4>
+            <p>తిరుపతి రైల్వే స్టేషన్ నుండి TTD బస్సులు. హైదరాబాద్ నుండి రాత్రి రైళ్ళు.</p>
+          </div>
+          <div class="reach-card">
+            <div class="reach-icon">🚌</div>
+            <h4>బస్సు</h4>
+            <p>APSRTC బస్సులు హైదరాబాద్, విజయవాడ, చెన్నై నుండి నేరుగా.</p>
+          </div>
+          <div class="reach-card">
+            <div class="reach-icon">🚗</div>
+            <h4>కారు</h4>
+            <p>హైదరాబాద్ నుండి NH 44 మీదుగా 550 కి.మీ. సుమారు 7-8 గంటలు.</p>
+          </div>
+        </div>
+
+        <h2>యాత్రికులకు సూచనలు — Tips for Pilgrims</h2>
+        <ul class="tips-list">
+          <li>కనీసం <strong>2-3 రోజులు ముందుగా</strong> TTD వెబ్‌సైట్‌లో దర్శన టికెట్ బుక్ చేసుకోండి.</li>
+          <li>తిరుమల కొండపైకి వెళ్ళే ముందు <strong>తిరుపతిలోనే</strong> కాళ్ళు కడుక్కుని వెళ్ళండి.</li>
+          <li>ఆలయంలో <strong>మొబైల్ ఫోన్లు, కెమెరాలు</strong> అనుమతి లేదు — క్లాక్‌రూమ్‌లో ఉంచండి.</li>
+          <li>సర్వదర్శనం కోసం <strong>4-8 గంటలు</strong> వేచి ఉండవలసి రావచ్చు — ఓపికగా ఉండండి.</li>
+          <li><strong>లడ్డు ప్రసాదం</strong> తప్పకుండా తీసుకోండి — ఒక్కొక్కరికి 2 లడ్డులు ఇస్తారు.</li>
+          <li>తిరుమలలో <strong>TTD అన్నప్రసాదం</strong> ఉచితంగా లభిస్తుంది — తప్పకుండా తినండి.</li>
+          <li>చలికాలంలో (నవంబర్-జనవరి) తిరుమలలో <strong>చాలా చలిగా</strong> ఉంటుంది — గంజి దుస్తులు తీసుకెళ్ళండి.</li>
+        </ul>
+
+        <h2>ప్రసాదం మరియు అన్నదానం</h2>
+        <p>తిరుమల తిరుపతి దేవస్థానం ప్రతిరోజూ లక్షలాది మంది భక్తులకు <strong>ఉచిత అన్నప్రసాదం</strong> అందిస్తుంది. ఇది ప్రపంచంలోనే అతి పెద్ద ఉచిత భోజన సౌకర్యాలలో ఒకటి. ప్రసిద్ధమైన <strong>తిరుపతి లడ్డు</strong> GI tag పొందింది — ఇది స్వామి వారి ప్రసాదంగా ప్రపంచ ప్రసిద్ధి చెందింది.</p>
+
+        <!-- SHARE BAR -->
+        <div class="share-bar">
+          <span>🔗 షేర్ చేయండి:</span>
+          <a class="share-btn share-wa" href="https://wa.me/?text=తిరుపతి యాత్ర సమాచారం చదవండి — https://vasumsit.github.io/manahindu/pages/temples/detail/tirupati.html" target="_blank">WhatsApp</a>
+          <a class="share-btn share-fb" href="#" target="_blank">Facebook</a>
+          <a class="share-btn share-tw" href="#" target="_blank">Twitter</a>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: SIDEBAR -->
+      <div class="sidebar">
+
+        <div class="sidebar-box">
+          <div class="sidebar-box-header">📋 క్విక్ ఫ్యాక్ట్స్</div>
+          <div class="sidebar-box-body">
+            <ul class="quick-facts">
+              <li><span class="qf-icon">📍</span>తిరుమల, చిత్తూరు జిల్లా, AP</li>
+              <li><span class="qf-icon">🏔️</span>ఎత్తు: 853 మీటర్లు (సముద్ర మట్టం పైన)</li>
+              <li><span class="qf-icon">🛕</span>నిర్మాణ శైలి: ద్రావిడ శైలి</li>
+              <li><span class="qf-icon">📅</span>చరిత్ర: 2000+ సంవత్సరాలు</li>
+              <li><span class="qf-icon">👥</span>రోజువారీ సందర్శకులు: 50,000–1,00,000</li>
+              <li><span class="qf-icon">🕐</span>దర్శన సమయం: 24 గంటలూ (సోమవారం మినహా)</li>
+              <li><span class="qf-icon">📞</span>TTD హెల్ప్‌లైన్: 0877-2277777</li>
+              <li><span class="qf-icon">🌐</span>tirupatibalaji.ap.gov.in</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sidebar-box">
+          <div class="sidebar-box-header">🗓️ ముఖ్యమైన ఉత్సవాలు</div>
+          <div class="sidebar-box-body">
+            <ul class="quick-facts">
+              <li><span class="qf-icon">🌟</span>బ్రహ్మోత్సవాలు — సెప్టెంబర్/అక్టోబర్</li>
+              <li><span class="qf-icon">🌟</span>వైకుంఠ ఏకాదశి — డిసెంబర్/జనవరి</li>
+              <li><span class="qf-icon">🌟</span>రథసప్తమి — జనవరి/ఫిబ్రవరి</li>
+              <li><span class="qf-icon">🌟</span>శ్రీ రామనవమి — మార్చి/ఏప్రిల్</li>
+              <li><span class="qf-icon">🌟</span>జన్మాష్టమి — ఆగస్టు</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sidebar-box">
+          <div class="sidebar-box-header">🏨 వసతి సౌకర్యాలు</div>
+          <div class="sidebar-box-body">
+            <p>TTD అనేక రకాల ఉచిత మరియు చెల్లింపు వసతి గృహాలను అందిస్తుంది. TTD వెబ్‌సైట్‌లో ముందుగా బుక్ చేసుకోండి.</p>
+            <br/>
+            <ul class="quick-facts">
+              <li><span class="qf-icon">🏠</span>TTD కాటేజీలు: ₹500 నుండి</li>
+              <li><span class="qf-icon">🏨</span>TTD గెస్ట్‌హౌస్: ₹200 నుండి</li>
+              <li><span class="qf-icon">🛏️</span>డార్మిటరీ: ₹50 (ఉచిత దర్శనం తో)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sidebar-box">
+          <div class="sidebar-box-header">🛕 దగ్గరలో ఉన్న ఆలయాలు</div>
+          <div class="sidebar-box-body">
+            <ul class="quick-facts">
+              <li><span class="qf-icon">🛕</span>పద్మావతి అమ్మవారు — తిరుచానూరు</li>
+              <li><span class="qf-icon">🛕</span>కపిలేశ్వర స్వామి — తిరుపతి</li>
+              <li><span class="qf-icon">🛕</span>కాణిపాకం వినాయకుడు — 70 కి.మీ.</li>
+              <li><span class="qf-icon">🛕</span>శ్రీకాళహస్తి — 36 కి.మీ.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- RELATED ARTICLES -->
+  <section class="section" style="background:var(--cream-dark);">
+    <div class="container">
+      <h2 class="section-title">మరిన్ని దేవాలయాలు <span>More Temples</span></h2>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-img card-img-2" style="height:120px;font-size:3rem;">🛕</div>
+          <div class="card-body">
+            <span class="card-tag">తెలంగాణ</span>
+            <h3>యాదాద్రి లక్ష్మీనరసింహ స్వామి</h3>
+            <p>తెలంగాణలో అత్యంత పవిత్రమైన వైష్ణవ క్షేత్రం.</p>
+            <a href="../index.html" class="card-link">చదవండి →</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img card-img-3" style="height:120px;font-size:3rem;">🛕</div>
+          <div class="card-body">
+            <span class="card-tag">ఆంధ్రప్రదేశ్</span>
+            <h3>శ్రీశైలం మల్లికార్జున స్వామి</h3>
+            <p>12 జ్యోతిర్లింగాలలో ఒకటి — కృష్ణా నది తీరంలో.</p>
+            <a href="../index.html" class="card-link">చదవండి →</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img" style="background:#fef3e2;height:120px;font-size:3rem;">🛕</div>
+          <div class="card-body">
+            <span class="card-tag">తెలంగాణ</span>
+            <h3>వేములవాడ రాజరాజేశ్వర స్వామి</h3>
+            <p>రాజన్న మహిమలకు ప్రసిద్ధి చెందిన శివాలయం.</p>
+            <a href="../index.html" class="card-link">చదవండి →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo-om" style="font-size:2rem;color:#f59e0b;">ॐ</div>
+        <div><div class="logo-title" style="font-size:1.2rem;color:#fff;">మన హిందూ</div><div class="logo-sub">ManaHindu</div></div>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>విభాగాలు</h4>
+          <a href="../../../pages/hinduism/index.html">హిందూమతం</a>
+          <a href="../../../pages/temples/detail/tirupati.html">తిరుపతి వేంకటేశ్వర స్వామి</a>
+          <a href="../../../pages/temples/index.html">మరిన్ని దేవాలయాలు</a>
+          <a href="../../../pages/festivals/index.html">పండుగల కేలండర్ 2025</a>
+        </div>
+        <div>
+          <h4>మా చానెల్</h4>
+          <a href="https://www.youtube.com/@Vasu11tv" target="_blank">▶ YouTube — v11tv</a>
+          <a href="../../../pages/about/index.html">మా గురించి</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 మన హిందూ | ManaHindu — జై శ్రీ వేంకటేశ్వర 🙏</p></div>
+  </footer>
+
+      <script src="../../../assets/js/main.js"></script>
+
+  <script>
+  // YouTube embed error fallback
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.video-embed').forEach(function(iframe) {
+      iframe.addEventListener('error', function() {
+        var src = iframe.src;
+        var videoId = src.match(/embed\/([a-zA-Z0-9_-]+)/);
+        if (videoId) {
+          var div = document.createElement('div');
+          div.style.cssText = 'background:#1a1a2e;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;border-radius:8px;flex-direction:column;gap:1rem;';
+          div.innerHTML = '<p style="color:#fff;font-size:0.85rem;">వీడియో ఇక్కడ load కావడం లేదు</p><a href="https://www.youtube.com/watch?v=' + videoId[1] + '" target="_blank" style="background:#ff0000;color:#fff;padding:0.6rem 1.5rem;border-radius:6px;text-decoration:none;font-weight:600;">▶ YouTube లో చూడండి</a>';
+          iframe.parentNode.replaceChild(div, iframe);
+        }
+      });
+    });
+  });
+  </script>
+</body>
+</html>

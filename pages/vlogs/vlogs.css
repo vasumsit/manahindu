@@ -1,0 +1,14 @@
+/* ============================================================
+   ManaHindu — vlogs.css
+   Vlogs module styles
+   Used by: pages/vlogs/index.html
+   ============================================================ */
+
+.vlog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 1.5rem; padding: 2rem 0; }
+.vlog-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: box-shadow 0.2s; }
+.vlog-card:hover { box-shadow: var(--shadow); }
+.vlog-thumb { background: #1a1a2e; aspect-ratio: 16/9; position: relative; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: rgba(255,255,255,0.3); }
+.vlog-thumb iframe { width: 100%; height: 100%; position: absolute; inset: 0; border: none; }
+.vlog-body { padding: 1rem 1.2rem; }
+.vlog-body h3 { font-family: 'Tiro Telugu', serif; color: var(--maroon); font-size: 0.95rem; margin-bottom: 0.3rem; }
+.vlog-body p  { font-size: 0.8rem; color: var(--text-muted); }

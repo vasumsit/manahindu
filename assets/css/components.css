@@ -1,0 +1,300 @@
+/* ============================================================
+   ManaHindu — components.css
+   Reusable UI: buttons, cards, badges, sections, panchangam,
+   shloka, info-box, share bar, stat strip, coming-soon
+   Used by: ALL pages
+   ============================================================ */
+
+/* ── Section Base ────────────────────────────────────────── */
+.section { padding: 3rem 0; }
+.section-title {
+  font-family: 'Tiro Telugu', serif;
+  font-size: 1.5rem;
+  color: var(--maroon);
+  margin-bottom: 1.5rem;
+}
+.section-title span {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-left: 0.5rem;
+  font-weight: 400;
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.section-header .section-title { margin-bottom: 0; }
+.see-all { color: var(--maroon); font-size: 0.88rem; font-weight: 600; text-decoration: none; }
+.see-all:hover { color: var(--saffron); }
+
+/* ── Buttons ─────────────────────────────────────────────── */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.6rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: 2px solid transparent;
+  font-family: 'Poppins', sans-serif;
+}
+.btn-primary  { background: var(--saffron); color: var(--maroon-dark); }
+.btn-primary:hover  { background: var(--gold); }
+.btn-outline  { background: transparent; border-color: var(--saffron); color: var(--saffron); }
+.btn-outline:hover  { background: var(--saffron); color: var(--maroon-dark); }
+.btn-sm { padding: 0.4rem 1rem; font-size: 0.82rem; }
+
+/* ── Badges ──────────────────────────────────────────────── */
+.badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+}
+.badge-tag     { background: var(--cream-dark); color: var(--maroon); }
+.badge-vlog    { background: #fef3e2; color: #b45309; }
+.badge-news    { background: #e8f4fe; color: #1e40af; }
+.badge-coming  { background: var(--cream-dark); color: var(--gold); letter-spacing: 0.05em; }
+.badge-live    { background: #22c55e; color: #fff; }
+.badge-state   { background: var(--cream-dark); color: var(--maroon); }
+
+/* ── Cards ───────────────────────────────────────────────── */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.4rem;
+}
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+.card-img {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  position: relative;
+}
+.card-body   { padding: 1rem 1.1rem; }
+.card-body h3 {
+  font-family: 'Tiro Telugu', serif;
+  font-size: 1rem;
+  color: var(--maroon);
+  margin: 0.4rem 0;
+  line-height: 1.4;
+}
+.card-body p  { font-size: 0.83rem; color: var(--text-muted); margin-bottom: 0.8rem; }
+.card-link    { color: var(--maroon); font-size: 0.83rem; font-weight: 600; text-decoration: none; }
+.card-link:hover { color: var(--saffron); }
+
+/* Card image color variants */
+.card-img-saffron { background: #fef3e2; }
+.card-img-red     { background: #fce8e8; }
+.card-img-purple  { background: #ede9fe; }
+.card-img-yellow  { background: #fef9e2; }
+.card-img-blue    { background: #e8f4fe; }
+.card-img-green   { background: #e8fef3; }
+
+/* Overlay for coming soon cards */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Category Grid ───────────────────────────────────────── */
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1rem;
+}
+.cat-card {
+  background: var(--cream);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.3rem 0.8rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.cat-card:hover { border-color: var(--saffron); transform: translateY(-3px); box-shadow: var(--shadow); }
+.cat-icon    { font-size: 2rem; margin-bottom: 0.5rem; }
+.cat-name    { font-family: 'Tiro Telugu', serif; font-size: 0.95rem; color: var(--maroon); font-weight: 600; }
+.cat-name-en { font-size: 0.72rem; color: var(--text-muted); margin-top: 0.15rem; }
+
+/* ── Info Box ────────────────────────────────────────────── */
+.info-box {
+  background: var(--cream);
+  border: 1.5px solid var(--border);
+  border-left: 4px solid var(--saffron);
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin: 1.5rem 0;
+}
+.info-box h3 { font-family: 'Tiro Telugu', serif; color: var(--maroon); font-size: 1rem; margin-bottom: 0.8rem; }
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.85rem;
+}
+.info-row:last-child { border-bottom: none; }
+.info-row .label { color: var(--text-muted); font-weight: 500; }
+.info-row .value { color: var(--maroon); font-weight: 600; text-align: right; }
+
+/* ── Stat Strip ──────────────────────────────────────────── */
+.stat-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin: 1.5rem 0;
+}
+.stat-item { background: var(--white); padding: 1.2rem; text-align: center; }
+.stat-num  { font-size: 1.6rem; font-weight: 700; color: var(--maroon); }
+.stat-label { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem; }
+
+/* ── Panchangam Box ──────────────────────────────────────── */
+.panchangam-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1px;
+  background: rgba(255,255,255,0.1);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(245,158,11,0.3);
+}
+.pancha-item { background: rgba(255,255,255,0.05); padding: 1rem; text-align: center; }
+.pancha-label { display: block; font-size: 0.72rem; color: #f5c98e; font-weight: 500; margin-bottom: 0.3rem; letter-spacing: 0.05em; }
+.pancha-val   { font-family: 'Tiro Telugu', serif; font-size: 1rem; color: #fff; font-weight: 600; }
+
+/* ── Shloka Box ──────────────────────────────────────────── */
+.shloka-box {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--white);
+  border: 1.5px solid var(--saffron);
+  border-radius: var(--radius);
+  padding: 1.5rem 2rem;
+}
+.shloka-icon  { font-size: 2.5rem; flex-shrink: 0; }
+.shloka-label { font-size: 0.78rem; color: var(--gold); font-weight: 600; margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.08em; }
+.shloka-main  { font-family: 'Tiro Telugu', serif; font-size: 1.2rem; color: var(--maroon); margin-bottom: 0.3rem; line-height: 1.6; }
+.shloka-trans { font-size: 0.85rem; color: var(--text-muted); }
+
+/* ── Coming Soon Card ────────────────────────────────────── */
+.coming-soon-card {
+  background: var(--white);
+  border: 1.5px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 1.3rem;
+  text-align: center;
+}
+.coming-soon-card .cs-icon  { font-size: 2.2rem; margin-bottom: 0.5rem; }
+.coming-soon-card h3 { font-family: 'Tiro Telugu', serif; color: var(--maroon); font-size: 0.95rem; margin-bottom: 0.3rem; }
+.coming-soon-card p  { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.7rem; }
+
+/* ── Share Bar ───────────────────────────────────────────── */
+.share-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 1.2rem;
+  background: var(--cream);
+  border-radius: 8px;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+.share-bar span { font-size: 0.85rem; color: var(--text-muted); font-weight: 500; }
+.share-btn { padding: 0.4rem 1rem; border-radius: 6px; font-size: 0.8rem; font-weight: 600; text-decoration: none; border: none; cursor: pointer; }
+.share-wa { background: #25d366; color: #fff; }
+.share-fb { background: #1877f2; color: #fff; }
+.share-yt { background: #ff0000; color: #fff; }
+
+/* ── YouTube Button ──────────────────────────────────────── */
+.yt-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #ff0000;
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.yt-btn:hover { background: #cc0000; }
+
+/* ── Tables ──────────────────────────────────────────────── */
+.data-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.85rem; }
+.data-table th { background: var(--maroon); color: var(--saffron); padding: 0.6rem 0.8rem; text-align: left; font-weight: 600; }
+.data-table td { padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--border); color: var(--text-muted); }
+.data-table tr:nth-child(even) td { background: var(--cream); }
+.data-table tr:hover td { background: #fef3e2; }
+
+/* ── Sidebar Layout ──────────────────────────────────────── */
+.page-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 2rem;
+  padding: 2rem 0;
+  align-items: start;
+}
+.sidebar { display: flex; flex-direction: column; gap: 1.2rem; }
+.sidebar-box { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.sidebar-box-header { background: var(--maroon); color: var(--saffron); font-family: 'Tiro Telugu', serif; font-size: 0.95rem; padding: 0.7rem 1rem; font-weight: 600; }
+.sidebar-box-body { padding: 0.8rem 1rem; }
+.sidebar-menu { list-style: none; }
+.sidebar-menu li a {
+  display: block;
+  padding: 0.55rem 0.5rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  border-bottom: 1px solid var(--cream-dark);
+  transition: color 0.2s, padding 0.2s;
+}
+.sidebar-menu li a:hover  { color: var(--maroon); padding-left: 0.8rem; }
+.sidebar-menu li a.active { color: var(--maroon); font-weight: 600; padding-left: 0.8rem; border-left: 3px solid var(--saffron); }
+.sidebar-menu li:last-child a { border-bottom: none; }
+
+/* ── Quick Facts List ────────────────────────────────────── */
+.quick-facts { list-style: none; }
+.quick-facts li {
+  display: flex;
+  gap: 0.6rem;
+  font-size: 0.82rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid var(--cream-dark);
+  color: var(--text-muted);
+}
+.quick-facts li:last-child { border-bottom: none; }
+.quick-facts li .qf-icon { font-size: 1rem; flex-shrink: 0; }
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .page-layout { grid-template-columns: 1fr; }
+  .shloka-box  { flex-direction: column; text-align: center; padding: 1.2rem; }
+  .cards-grid  { grid-template-columns: 1fr; }
+}

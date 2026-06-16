@@ -1,0 +1,18 @@
+/* ============================================================
+   ManaHindu — temples.css
+   Temples module: listing page, temple cards, sidebar menu
+   Used by: pages/temples/index.html
+   ============================================================ */
+
+.temple-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 1.2rem;
+  padding: 2rem 0;
+}
+.temple-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; transition: box-shadow 0.2s; }
+.temple-card:hover { box-shadow: var(--shadow); }
+.temple-card-img { height: 140px; display: flex; align-items: center; justify-content: center; font-size: 4rem; position: relative; }
+.temple-card-body { padding: 1rem 1.2rem; }
+.temple-card-body h3 { font-family: 'Tiro Telugu', serif; font-size: 1rem; color: var(--maroon); margin-bottom: 0.3rem; }
+.temple-card-body p  { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.8rem; }

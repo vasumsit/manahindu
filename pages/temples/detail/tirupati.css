@@ -1,0 +1,38 @@
+/* ============================================================
+   ManaHindu — tirupati.css
+   Tirupati detail page specific styles
+   Used by: pages/temples/detail/tirupati.html
+   ============================================================ */
+
+.article-hero { background: linear-gradient(135deg, #5a1212 0%, #9b2a2a 60%, #7c1c1c 100%); padding: 3rem 0 2rem; position: relative; overflow: hidden; }
+.article-hero::before { content: 'ॐ'; position: absolute; right: 3%; top: 50%; transform: translateY(-50%); font-size: 16rem; color: rgba(245,158,11,0.07); pointer-events: none; }
+.article-hero-inner { position: relative; z-index: 2; }
+.article-hero h1 { font-family: 'Tiro Telugu', serif; font-size: clamp(1.6rem,3.5vw,2.5rem); color: #fff; line-height: 1.3; margin-bottom: 0.8rem; }
+.article-hero-sub { color: #f5ddb0; font-size: 0.95rem; margin-bottom: 1.2rem; }
+.article-meta { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+.meta-badge { background: rgba(245,158,11,0.2); border: 1px solid rgba(245,158,11,0.4); color: #f5c98e; font-size: 0.78rem; padding: 0.3rem 0.8rem; border-radius: 20px; }
+
+.photo-gallery { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 200px 200px; gap: 8px; border-radius: 12px; overflow: hidden; margin: 2rem 0; }
+.photo-gallery .gal-main { grid-row: 1 / 3; }
+.gal-img { display: flex; align-items: center; justify-content: center; font-size: 3rem; position: relative; overflow: hidden; }
+.gal-img img { width: 100%; height: 100%; object-fit: cover; }
+.photo-placeholder { background: linear-gradient(135deg,#fef3e2,#fde8c8); flex-direction: column; align-items: center; justify-content: center; gap: 0.4rem; color: #c9873099; font-size: 0.75rem; text-align: center; padding: 1rem; }
+.photo-placeholder .ph-icon { font-size: 2.5rem; }
+
+.article-layout { display: grid; grid-template-columns: 1fr 300px; gap: 2rem; padding: 2.5rem 0; align-items: start; }
+
+.reach-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); gap: 1rem; margin: 1rem 0; }
+.reach-card { background: var(--cream); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; text-align: center; }
+.reach-card .reach-icon { font-size: 1.8rem; margin-bottom: 0.4rem; }
+.reach-card h4 { font-size: 0.85rem; color: var(--maroon); font-weight: 600; margin-bottom: 0.3rem; }
+.reach-card p  { font-size: 0.75rem; color: var(--text-muted); line-height: 1.5; }
+
+.video-section { background: var(--maroon); border-radius: 10px; padding: 1.5rem; margin: 2rem 0; }
+.video-section h3 { font-family: 'Tiro Telugu', serif; color: var(--saffron); margin-bottom: 1rem; font-size: 1.1rem; }
+.video-embed { width: 100%; border-radius: 8px; aspect-ratio: 16/9; border: none; }
+
+@media (max-width: 768px) {
+  .article-layout { grid-template-columns: 1fr; }
+  .photo-gallery  { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+  .photo-gallery .gal-main { grid-row: auto; grid-column: 1/3; }
+}

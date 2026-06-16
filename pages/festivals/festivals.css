@@ -1,0 +1,30 @@
+/* ============================================================
+   ManaHindu — festivals.css
+   Festivals module: calendar, month headers, fest items
+   Used by: pages/festivals/index.html
+   ============================================================ */
+
+.fest-month { margin-bottom: 2.5rem; }
+.month-header { display: flex; align-items: center; gap: 1rem; background: var(--maroon); color: #fff; padding: 0.7rem 1.2rem; border-radius: 8px; margin-bottom: 1rem; }
+.month-header h2 { font-family: 'Tiro Telugu', serif; font-size: 1.1rem; margin: 0; color: var(--saffron); }
+.month-header span { font-size: 0.82rem; color: #f5ddb0; }
+.fest-list { display: flex; flex-direction: column; gap: 0.6rem; }
+.fest-item { display: grid; grid-template-columns: 90px 2rem 1fr auto; align-items: center; gap: 0.8rem; background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 0.75rem 1rem; transition: box-shadow 0.15s; }
+.fest-item:hover  { box-shadow: var(--shadow); }
+.fest-item.major  { border-left: 4px solid var(--saffron); }
+.fest-item.past   { opacity: 0.5; }
+.fest-date  { font-size: 0.8rem; font-weight: 700; color: var(--maroon); white-space: nowrap; }
+.fest-icon  { font-size: 1.3rem; text-align: center; }
+.fest-info h4 { font-family: 'Tiro Telugu', serif; font-size: 0.95rem; color: var(--maroon); margin-bottom: 0.1rem; }
+.fest-info p  { font-size: 0.75rem; color: var(--text-muted); margin: 0; }
+.fest-badge { font-size: 0.65rem; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 20px; white-space: nowrap; }
+.badge-major  { background: #fef3e2; color: var(--gold); }
+.badge-telugu { background: #fce8e8; color: var(--maroon); }
+.badge-vrat   { background: #ede9fe; color: #5b21b6; }
+.year-strip { background: var(--maroon); color: var(--saffron); text-align: center; padding: 1rem; border-radius: 10px; margin-bottom: 2rem; font-family: 'Tiro Telugu', serif; font-size: 1.1rem; }
+.year-strip span { color: #f5ddb0; font-size: 0.85rem; font-family: 'Poppins',sans-serif; display: block; margin-top: 0.2rem; }
+
+@media (max-width: 600px) {
+  .fest-item { grid-template-columns: 75px 1.5rem 1fr; }
+  .fest-badge { display: none; }
+}

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>పండుగలు 2025 | ManaHindu – Telugu Hindu Festivals</title>
+  <link rel="stylesheet" href="../../assets/css/main.css" />
+  <link rel="stylesheet" href="../../assets/css/components.css" />
+  <link rel="stylesheet" href="../../assets/css/typography.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Telugu&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="festivals.css" />
+  <meta name="description" content="2025 హిందూ పండుగల పూర్తి జాబితా తేదీలతో సహా — తెలుగు పండుగ కేలండర్ 2025." />
+  
+  
+  <style>
+    .fest-month { margin-bottom: 2.5rem; }
+    .month-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: var(--maroon);
+      color: #fff;
+      padding: 0.7rem 1.2rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    .month-header h2 {
+      font-family: 'Tiro Telugu', serif;
+      font-size: 1.1rem;
+      margin: 0;
+      color: var(--saffron);
+    }
+    .month-header span { font-size: 0.82rem; color: #f5ddb0; }
+    .fest-list { display: flex; flex-direction: column; gap: 0.6rem; }
+    .fest-item {
+      display: grid;
+      grid-template-columns: 90px 2rem 1fr auto;
+      align-items: center;
+      gap: 0.8rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      transition: box-shadow 0.15s;
+    }
+    .fest-item:hover { box-shadow: var(--shadow); }
+    .fest-item.major { border-left: 4px solid var(--saffron); }
+    .fest-item.past { opacity: 0.5; }
+    .fest-date { font-size: 0.8rem; font-weight: 700; color: var(--maroon); white-space: nowrap; }
+    .fest-icon { font-size: 1.3rem; text-align: center; }
+    .fest-info h4 { font-family: 'Tiro Telugu', serif; font-size: 0.95rem; color: var(--maroon); margin-bottom: 0.1rem; }
+    .fest-info p { font-size: 0.75rem; color: var(--text-muted); }
+    .fest-badge {
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 0.2rem 0.5rem;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .badge-major { background: #fef3e2; color: var(--gold); }
+    .badge-telugu { background: #fce8e8; color: var(--maroon); }
+    .badge-vrat { background: #ede9fe; color: #5b21b6; }
+    .badge-done { background: #f0fdf4; color: #166534; }
+
+    .year-strip {
+      background: var(--maroon);
+      color: var(--saffron);
+      text-align: center;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      font-family: 'Tiro Telugu', serif;
+      font-size: 1.1rem;
+    }
+    .year-strip span { color: #f5ddb0; font-size: 0.85rem; font-family: 'Poppins', sans-serif; display: block; margin-top: 0.2rem; }
+
+    @media (max-width: 600px) {
+      .fest-item { grid-template-columns: 75px 1.5rem 1fr; }
+      .fest-badge { display: none; }
+    }
+  </style>
+</head>
+<body>
+    <div class="topbar">
+    <span class="topbar-date" id="topdate"></span>
+    <span class="topbar-lang"><a href="#" class="active">తెలుగు</a> | <a href="#">English</a></span>
+  </div>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="../../index.html">
+        <div class="logo-om">ॐ</div>
+        <div><div class="logo-title">మన హిందూ</div><div class="logo-sub">ManaHindu</div></div>
+      </a>
+      <nav class="nav">
+        <a href="../../index.html">హోమ్</a>
+        <a href="../../pages/hinduism/index.html">హిందూమతం</a>
+        <a href="../../pages/temples/index.html">దేవాలయాలు</a>
+        <a href="../../pages/vlogs/index.html">వ్లాగ్స్</a>
+        <a href="../../pages/news/index.html">వార్తలు</a>
+        <a href="../../pages/festivals/index.html" class="active">పండుగలు</a>
+        <a href="../../pages/about/index.html">మా గురించి</a>
+      </nav>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="../../index.html">హోమ్</a>
+      <a href="../../pages/hinduism/index.html">హిందూమతం</a>
+      <a href="../../pages/temples/index.html">దేవాలయాలు</a>
+      <a href="../../pages/vlogs/index.html">వ్లాగ్స్</a>
+      <a href="../../pages/news/index.html">వార్తలు</a>
+      <a href="../../pages/festivals/index.html" class="active">పండుగలు</a>
+      <a href="../../pages/about/index.html">మా గురించి</a>
+    </div>
+  </header>
+
+  <div class="page-hero">
+    <h1>🪔 పండుగల కేలండర్ 2025</h1>
+    <p>Hindu Festival Calendar 2025 — Complete List with Dates</p>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="year-strip">
+        శ్రీ విశ్వావసు నామ సంవత్సరం — 2025
+        <span>తెలుగు నూతన సంవత్సరం: మార్చి 30, 2025 నుండి</span>
+      </div>
+
+      <!-- JANUARY -->
+      <div class="fest-month">
+        <div class="month-header"><h2>జనవరి</h2><span>January 2025</span></div>
+        <div class="fest-list">
+          <div class="fest-item past"><span class="fest-date">Jan 14</span><span class="fest-icon">☀️</span><div class="fest-info"><h4>మకర సంక్రాంతి</h4><p>Makar Sankranti — సూర్యుడు మకర రాశిలో ప్రవేశం</p></div><span class="fest-badge badge-major">పెద్ద పండుగ</span></div>
+          <div class="fest-item past"><span class="fest-date">Jan 14</span><span class="fest-icon">🌾</span><div class="fest-info"><h4>పొంగల్</h4><p>Pongal — పంట పండుగ, నాలుగు రోజులు</p></div><span class="fest-badge badge-major">పెద్ద పండుగ</span></div>
+          <div class="fest-item past"><span class="fest-date">Jan 15</span><span class="fest-icon">🐄</span><div class="fest-info"><h4>కనుమ</h4><p>Kanuma — పశువులను పూజించే రోజు</p></div><span class="fest-badge badge-telugu">తెలుగు</span></div>
+          <div class="fest-item past"><span class="fest-date">Jan 10</span><span class="fest-icon">📿</span><div class="fest-info"><h4>పౌష పుత్రద ఏకాదశి</h4><p>Pausha Putrada Ekadashi</p></div><span class="fest-badge badge-vrat">వ్రతం</span></div>
+        </div>
+      </div>
+
+      <!-- FEBRUARY -->
+      <div class="fest-month">
+        <div class="month-header"><h2>ఫిబ్రవరి</h2><span>February 2025</span></div>
+        <div class="fest-list">
+          <div class="fest-item past"><span class="fest-date">Feb 2</span><span class="fest-icon">📚</span><div class="fest-info"><h4>వసంత పంచమి — సరస్వతి పూజ</h4><p>Vasanta Panchami — Saraswati Pooja</p></div><span class="fest-badge badge-major">పెద్ద పండుగ</span></div>
+          <div class="fest-item past"><span class="fest-date">Feb 4</span><span class="fest-icon">☀️</span><div class="fest-info"><h4>రథ సప్తమి</h4><p>Ratha Saptami — సూర్య జయంతి</p></div><span class="fest-badge badge-telugu">తెలుగు</span></div>
+          <div class="fest-item past"><span class="fest-date">Feb 26</span><span class="fest-icon">🔱</span><div class="fest-info"><h4>మహా శివరాత్రి</h4><p>Maha Shivaratri — శివుని పవిత్ర రాత్రి, రాత్రంతా జాగారం</p></div><span class="fest-badge badge-major">పెద్ద పండుగ</span></div>
+        </div>
+      </div>
+
+      <!-- MARCH -->
+      <div class="fest-month">
+        <div class="month-header"><h2>మార్చి</h2><span>March 2025</span></div>
+        <div class="fest-list">
+          <div class="fest-item past"><span class="fest-date">Mar 13</span><span class="fest-icon">🎨</span><div class="fest-info"><h4>హోలికా దహన్</h4><p>Holika Dahan — హోలి ముందురోజు</p></div><span class="fest-badge badge-major">పెద్ద పండుగ</span></div>
+          <div class="fest-item past"><span class="fest-date">Mar 14</span><span class="fest-icon">🌈</span><div class="fest-info"><h4>హోలి — రంగుల పండుగ</h4><p>Holi — Festival of Colours</p></div><span class="fest-badge badge-major">పెద్ద పండుగ</span></div>
+          <div class="fest-item past"><span class="fest-date">Mar 30</span><span class="fest-icon">🌸</span><div class="fest-info"><h4>ఉగాది — తెలుగు నూతన సంవత్సరం</h4><p>Ugadi — Telugu & Kannada New Year. విశ్వావసు సంవత్సరం ప్రారంభం</p></div><span class="fest-badge badge-telugu">తెలుగు పండుగ</span></div>
+          <div class="fest-item past"><span class="fest-date">Mar 30</span><span class="fest-icon">🙏</span><div class="fest-info"><h4>చైత్ర నవరాత్రులు ప్రారంభం</h4><p>Chaitra Navratri begins — 9 రోజులు</p></div><span class="fest-badge badge-vrat">వ్రతం</span></div>
+        </div>
+      </div>
+
+      <!-- APRIL -->
+      <div class="fest-month">
+        <div class="month-header"><h2>ఏప్రిల్</h2><span>April 2025</span></div>
+        <div class="fest-list">
+          <div class="fest-item past"><span class="fest-date">Apr 6</span><span class="fest-icon">🏹</span><div class="fest-info"><h4>శ్రీ రామ నవమి</h4><p>Sri Rama Navami — శ్రీరాముని జన్మదినం</p></div><span class="fest-badge badge-major">పెద్ద పండుగ</span></div>
+          <div class="fest-item past"><span class="fest-date">Apr 12</span><span class="fest-icon">🐒</span><div class="fest-info"><h4>హనుమాన్ జయంతి</h4><p>Hanuman Jayanti — ఆంజనేయ స్వామి జన్మదినం</p></div><span class="fest-badge badge-major">పెద్ద పండుగ</span></div>
+          <div class="fest-item past"><span class="fest-date">Apr 30</span><span class="fest-icon">💰</span><div class="fest-info"><h4>అక్షయ తృతీయ</h4><p>Akshaya Tritiya — బంగారం కొనడానికి శుభ దినం</p></div><span class="fest-badge badge-major">పెద్ద పండుగ</span></div>
+        </div>
+      </div>
+
+      <!-- MAY -->
+      <div class="fest-month">
+        <div class="month-header"><h2>మే</h2><span>May 2025</span></div>
+        <div class="fest-list">
+          <div class="fest-item past"><span class="fest-date">May 11</span><span class="fest-icon">🦁</span><div class="fest-info"><h4>నరసింహ జయంతి</h4><p>Narasimha Jayanti — శ్రీ లక్ష్మీనరసింహ స్వామి జన్మదినం</p></div><span class="fest-badge badge-telugu">తెలుగు</span></div>
+          <div class="fest-item past"><span class="fest-date">May 12</span><span class="fest-icon">🌕</span><div class="fest-info"><h4>బుద్ధ పూర్ణిమ</h4><p>Buddha Purnima — వైశాఖ పూర్ణిమ</p></div><span class="fest-badge badge-vrat">పూర్ణిమ</span></div>
+        </div>
+      </div>
+
+      <!-- JUNE -->
+      <div class="fest-month">
+        <div class="month-header"><h2>జూన్</h2><span>June 2025</span></div>
+        <div class="fest-list">
+          <div class="fest-item past"><span class="fest-date">Jun 5</span><span class="fest-icon">🌊</span><div class="fest-info"><h4>గంగా దశమి</h4><p>Ganga Dasshara — గంగా నది పూజ</p></div><span class="fest-badge badge-vrat">వ్రతం</span></div>
+          <div class="fest-item past"><span class="fest-date">Jun 27</span><span class="fest-icon">🎡</span><div class="fest-info"><h4>జగన్నాథ రథ యాత్ర</h4><p>Jagannath Rath Yatra — పూరీ, ఒడిశా</p></div><span class="fest-badge badge-major">పెద్ద పండుగ</span></div>
+        </div>
+      </div>
+
+      <!-- JULY -->
+      <div class="fest-month">
+        <div class="month-header"><h2>జూలై</h2><span>July 2025</span></div>
+        <div class="fest-list">
+          <div class="fest-item past"><span class="fest-date">Jul 10</span><span class="fest-icon">🌕</span><div class="fest-info"><h4>గురు పూర్ణిమ</h4><p>Guru Purnima — గురువుకు కృతజ్ఞత చెప్పే రోజు</p></div><span class="fest-badge badge-major">పెద్ద పండుగ</span></div>
+          <div class="fest-item past"><span class="fest-date">Jul 6</span><span class="fest-icon">📿</span><div class="fest-info"><h4>దేవశయని ఏకాదశి</h4><p>Devshayani Ekadashi — చాతుర్మాస్య ప్రారంభం</p></div><span class="fest-badge badge-vrat">వ్రతం</span></div>
+        </div>
+      </div>
+
+      <!-- AUGUST -->
+      <div class="fest-month">
+        <div class="month-header"><h2>ఆగస్టు</h2><span>August 2025</span></div>
+        <div class="fest-list">
+          <div class="fest-item past"><span class="fest-date">Aug 9</span><span class="fest-icon">🪢</span><div class="fest-info"><h4>రక్షా బంధన్</h4><p>Raksha Bandhan — అన్నాచెల్లెళ్ళ పండుగ</p></div><span class="fest-badge badge-major">పెద్ద పండుగ</span></div>
+          <div class="fest-item past"><span class="fest-date">Aug 16</span><span class="fest-icon">💙</span><div class="fest-info"><h4>శ్రీ కృష్ణ జన్మాష్టమి</h4><p>Krishna Janmashtami — శ్రీకృష్ణుని జన్మదినం, అర్ధరాత్రి పూజ</p></div><span class="fest-badge badge-major">పెద్ద పండుగ</span></div>
+          <div class="fest-item past"><span class="fest-date">Aug 27</span><span class="fest-icon">🐘</span><div class="fest-info"><h4>వినాయక చవితి — గణేష్ చతుర్థి</h4><p>Vinayaka Chavithi — 10 రోజుల ఉత్సవం, నిమజ్జనంతో ముగింపు</p></div><span class="fest-badge badge-telugu">తెలుగు పండుగ</span></div>
+          <div class="fest-item past"><span class="fest-date">Aug 29</span><span class="fest-icon">👩</span><div class="fest-info"><h4>వరలక్ష్మి వ్రతం</h4><p>Varalakshmi Vratham — శ్రావణ శుక్రవారం</p></div><span class="fest-badge badge-telugu">తెలుగు</span></div>
+        </div>
+      </div>
+
+      <!-- SEPTEMBER -->
+      <div class="fest-month">
+        <div class="month-header"><h2>సెప్టెంబర్</h2><span>September 2025</span></div>
+        <div class="fest-list">
+          <div class="fest-item past"><span class="fest-date">Sep 2</span><span class="fest-icon">🌸</span><div class="fest-info"><h4>బతుకమ్మ పండుగ</h4><p>Bathukamma — తెలంగాణ పువ్వుల పండుగ, 9 రోజులు</p></div><span class="fest-badge badge-telugu">తెలంగాణ</span></div>
+          <div class="fest-item past"><span class="fest-date">Sep 5</span><span class="fest-icon">🐘</span><div class="fest-info"><h4>వినాయక నిమజ్జనం</h4><p>Ganesh Nimajjanam — 10వ రోజు విసర్జన</p></div><span class="fest-badge badge-telugu">తెలుగు</span></div>
+          <div class="fest-item past"><span class="fest-date">Sep 22</span><span class="fest-icon">🙏</span><div class="fest-info"><h4>శారదా నవరాత్రులు</h4><p>Sharada Navratri — దేవి నవరాత్రి, 9 రోజులు Oct 2 వరకు</p></div><span class="fest-badge badge-major">పెద్ద పండుగ</span></div>
+          <div class="fest-item past"><span class="fest-date">Sep 13</span><span class="fest-icon">🌕</span><div class="fest-info"><h4>పితృ పక్షం ప్రారంభం</h4><p>Pitru Paksha — పితరుల తర్పణాలు, 16 రోజులు</p></div><span class="fest-badge badge-vrat">వ్రతం</span></div>
+        </div>
+      </div>
+
+      <!-- OCTOBER -->
+      <div class="fest-month">
+        <div class="month-header"><h2>అక్టోబర్</h2><span>October 2025</span></div>
+        <div class="fest-list">
+          <div class="fest-item past"><span class="fest-date">Oct 2</span><span class="fest-icon">⚔️</span><div class="fest-info"><h4>దసరా — విజయదశమి</h4><p>Dussehra / Vijayadashami — రావణ దహన, అస్త్ర పూజ</p></div><span class="fest-badge badge-major">పెద్ద పండుగ</span></div>
+          <div class="fest-item past"><span class="fest-date">Oct 20</span><span class="fest-icon">🪔</span><div class="fest-info"><h4>దీపావళి — నరక చతుర్దశి</h4><p>Deepavali / Diwali — వెలుతురుల పండుగ, లక్ష్మీ పూజ</p></div><span class="fest-badge badge-major">పెద్ద పండుగ</span></div>
+          <div class="fest-item past"><span class="fest-date">Oct 22</span><span class="fest-icon">💰</span><div class="fest-info"><h4>కార్తీక మాసం ప్రారంభం</h4><p>Karthika Masam — శివ పూజకు అత్యంత పవిత్రమైన మాసం</p></div><span class="fest-badge badge-telugu">తెలుగు</span></div>
+          <div class="fest-item past"><span class="fest-date">Oct 22</span><span class="fest-icon">👨‍👩‍👦</span><div class="fest-info"><h4>భాయి దూజ్</h4><p>Bhai Dooj — అన్నాచెల్లెళ్ళ పండుగ</p></div><span class="fest-badge badge-vrat">వ్రతం</span></div>
+        </div>
+      </div>
+
+      <!-- NOVEMBER -->
+      <div class="fest-month">
+        <div class="month-header"><h2>నవంబర్</h2><span>November 2025</span></div>
+        <div class="fest-list">
+          <div class="fest-item"><span class="fest-date">Nov 1</span><span class="fest-icon">🌙</span><div class="fest-info"><h4>కార్తీక సోమవారాలు</h4><p>Karthika Somavaram — శివుని పూజ, ప్రదోష్ వ్రతం</p></div><span class="fest-badge badge-telugu">తెలుగు</span></div>
+          <div class="fest-item"><span class="fest-date">Nov 5</span><span class="fest-icon">🌕</span><div class="fest-info"><h4>కార్తీక పూర్ణిమ — గురు నానక్ జయంతి</h4><p>Kartika Purnima — దీపాల పండుగ, తులసి వివాహం</p></div><span class="fest-badge badge-major">పెద్ద పండుగ</span></div>
+          <div class="fest-item"><span class="fest-date">Nov 20</span><span class="fest-icon">🌿</span><div class="fest-info"><h4>కార్తీక మాసం ముగింపు</h4><p>Karthika Masam ends — తులసి పూజ, దీపదానం</p></div><span class="fest-badge badge-telugu">తెలుగు</span></div>
+        </div>
+      </div>
+
+      <!-- DECEMBER -->
+      <div class="fest-month">
+        <div class="month-header"><h2>డిసెంబర్</h2><span>December 2025</span></div>
+        <div class="fest-list">
+          <div class="fest-item"><span class="fest-date">Dec 1</span><span class="fest-icon">📿</span><div class="fest-info"><h4>మోక్షద ఏకాదశి</h4><p>Mokshada Ekadashi — వైకుంఠ ఏకాదశి (TTD బుకింగ్ ముందుగా చేయండి)</p></div><span class="fest-badge badge-major">పెద్ద పండుగ</span></div>
+          <div class="fest-item"><span class="fest-date">Dec 14</span><span class="fest-icon">🌕</span><div class="fest-info"><h4>మార్గశీర్ష పూర్ణిమ</h4><p>Margashira Purnima — దత్తాత్రేయ జయంతి</p></div><span class="fest-badge badge-vrat">పూర్ణిమ</span></div>
+          <div class="fest-item"><span class="fest-date">Dec 27</span><span class="fest-icon">⚔️</span><div class="fest-info"><h4>గురు గోవింద్ సింగ్ జయంతి</h4><p>Guru Gobind Singh Jayanti</p></div><span class="fest-badge badge-vrat">జయంతి</span></div>
+        </div>
+      </div>
+
+      <!-- NOTE -->
+      <div class="info-box" style="margin-top:2rem;">
+        <h3>📌 గమనిక — Note</h3>
+        <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.8;">⚠️ <strong>Disclaimer:</strong> హిందూ పండుగలు చంద్ర-సూర్య కేలండర్ ప్రకారం జరుగుతాయి. ఇక్కడ ఇచ్చిన తేదీలు సాధారణ reference కోసం మాత్రమే. స్థానం, పంచాంగం ఆధారంగా 1–2 రోజులు తేడా రావచ్చు. ఖచ్చితమైన తేదీల కోసం మీ స్థానిక పంచాంగం లేదా ఆలయాన్ని సంప్రదించండి. ManaHindu ఈ తేదీల ఆధారంగా జరిగే ఏ పొరపాటుకూ బాధ్యత వహించదు. <br/>Hindu festival dates may vary by 1 day depending on location and local panchangam. Please verify with your local temple or panchangam.</p>
+      </div>
+
+    </div>
+  </section>
+
+    <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo-om" style="font-size:2rem;color:#f59e0b;">ॐ</div>
+        <div><div class="logo-title" style="font-size:1.2rem;color:#fff;">మన హిందూ</div><div class="logo-sub">ManaHindu</div></div>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>విభాగాలు</h4>
+          <a href="../../pages/hinduism/index.html">హిందూమతం</a>
+          <a href="../../pages/temples/detail/tirupati.html">తిరుపతి వేంకటేశ్వర స్వామి</a>
+          <a href="../../pages/temples/index.html">మరిన్ని దేవాలయాలు</a>
+          <a href="../../pages/festivals/index.html">పండుగల కేలండర్ 2025</a>
+        </div>
+        <div>
+          <h4>మా చానెల్</h4>
+          <a href="https://www.youtube.com/@Vasu11tv" target="_blank">▶ YouTube — v11tv</a>
+          <a href="../../pages/about/index.html">మా గురించి</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 మన హిందూ | ManaHindu — జై శ్రీ వేంకటేశ్వర 🙏</p></div>
+  </footer>
+      <script src="../../assets/js/main.js"></script>
+</body>
+</html>

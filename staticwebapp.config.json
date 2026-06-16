@@ -1,0 +1,17 @@
+{
+  "routes": [
+    { "route": "/", "serve": "/index.html" },
+    { "route": "/temples", "serve": "/pages/temples/index.html" },
+    { "route": "/hinduism", "serve": "/pages/hinduism/index.html" },
+    { "route": "/festivals", "serve": "/pages/festivals/index.html" },
+    { "route": "/vlogs", "serve": "/pages/vlogs/index.html" },
+    { "route": "/news", "serve": "/pages/news/index.html" },
+    { "route": "/about", "serve": "/pages/about/index.html" }
+  ],
+  "responseOverrides": {
+    "404": { "rewrite": "/index.html" }
+  },
+  "globalHeaders": {
+    "Cache-Control": "public, max-age=86400"
+  }
+}

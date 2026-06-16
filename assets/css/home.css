@@ -1,0 +1,146 @@
+/* ============================================================
+   ManaHindu — home.css
+   Homepage specific styles only
+   Used by: index.html only
+   ============================================================ */
+
+/* ── Hero ────────────────────────────────────────────────── */
+.hero {
+  background: linear-gradient(135deg, #3d0c0c 0%, #7c1c1c 50%, #4a0e0e 100%);
+  min-height: 460px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: 'ॐ';
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18rem;
+  color: rgba(245,158,11,0.07);
+  pointer-events: none;
+}
+.hero-overlay  { position: absolute; inset: 0; background: rgba(0,0,0,0.1); }
+.hero-content  { position: relative; z-index: 2; padding: 3rem 1.2rem; }
+.hero-eyebrow  { color: var(--saffron); font-size: 1rem; margin-bottom: 0.8rem; letter-spacing: 0.05em; }
+.hero-title    { font-family: 'Tiro Telugu', serif; font-size: clamp(1.8rem,4vw,2.8rem); color: #fff; line-height: 1.3; margin-bottom: 1rem; }
+.hero-sub      { color: #f5e6cc; font-size: 1rem; max-width: 520px; margin-bottom: 1.8rem; }
+.hero-btns     { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+/* ── Hinduism Intro ──────────────────────────────────────── */
+.hinduism-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+.hinduism-intro-text h2 { font-family: 'Tiro Telugu', serif; font-size: 1.6rem; color: var(--maroon); margin-bottom: 0.5rem; }
+.hinduism-intro-text .tagline { color: var(--gold); font-size: 0.88rem; font-weight: 600; margin-bottom: 1rem; }
+
+/* ── Belief Mini Grid ────────────────────────────────────── */
+.belief-mini-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; }
+.belief-mini {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--saffron);
+  border-radius: 8px;
+  padding: 0.8rem;
+}
+.belief-mini h4 { font-family: 'Tiro Telugu', serif; font-size: 0.88rem; color: var(--maroon); margin-bottom: 0.2rem; }
+.belief-mini p  { font-size: 0.75rem; color: var(--text-muted); line-height: 1.6; margin: 0; }
+
+/* ── Vedas Strip ─────────────────────────────────────────── */
+.vedas-strip { background: var(--maroon); padding: 1.5rem 0; }
+.vedas-grid  { display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem; }
+.veda-mini {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(245,158,11,0.2);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+.veda-mini-icon { font-size: 1.8rem; margin-bottom: 0.4rem; }
+.veda-mini h4   { font-family: 'Tiro Telugu', serif; color: var(--saffron); font-size: 0.88rem; margin-bottom: 0.3rem; }
+.veda-mini p    { font-size: 0.72rem; color: #f5ddb0; line-height: 1.5; margin: 0; }
+
+/* ── Featured Card ───────────────────────────────────────── */
+.featured-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1.5px solid var(--border);
+  box-shadow: var(--shadow-lg);
+}
+.featured-card-img {
+  background: linear-gradient(135deg, #fef3e2, #fde8c8);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 7rem; min-height: 260px; position: relative;
+}
+.featured-card-img .fc-label {
+  position: absolute; top: 1rem; left: 1rem;
+  background: var(--maroon); color: var(--saffron);
+  font-size: 0.72rem; font-weight: 700;
+  padding: 0.3rem 0.8rem; border-radius: 20px;
+}
+.featured-card-body {
+  padding: 1.8rem;
+  display: flex; flex-direction: column; justify-content: center;
+  background: var(--cream);
+}
+.featured-card-body h2       { font-family: 'Tiro Telugu', serif; font-size: 1.3rem; color: var(--maroon); margin-bottom: 0.4rem; }
+.featured-card-body .subtitle { color: var(--gold); font-size: 0.82rem; font-weight: 600; margin-bottom: 0.8rem; }
+.featured-card-body p        { color: var(--text-muted); font-size: 0.85rem; line-height: 1.8; margin-bottom: 1rem; }
+.featured-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 0.6rem; margin-bottom: 1rem; }
+.fstat         { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 0.5rem; text-align: center; }
+.fstat-num     { font-size: 0.95rem; font-weight: 700; color: var(--maroon); }
+.fstat-label   { font-size: 0.62rem; color: var(--text-muted); }
+
+/* ── TTD Strip ───────────────────────────────────────────── */
+.ttd-strip { background: var(--maroon); padding: 1.2rem 0; }
+.ttd-strip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px,1fr));
+  gap: 1px;
+  background: rgba(255,255,255,0.1);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.ttd-strip-item { background: rgba(255,255,255,0.04); padding: 0.85rem; text-align: center; }
+.ttd-strip-icon  { font-size: 1.2rem; margin-bottom: 0.2rem; }
+.ttd-strip-label { font-size: 0.65rem; color: #f5c98e; margin-bottom: 0.15rem; }
+.ttd-strip-val   { font-family: 'Tiro Telugu', serif; font-size: 0.82rem; color: #fff; font-weight: 600; }
+
+/* ── Vlog Feature ────────────────────────────────────────── */
+.vlog-feature { display: grid; grid-template-columns: 1.5fr 1fr; gap: 1.5rem; align-items: start; }
+.vlog-main-card { background: var(--white); border-radius: 12px; overflow: hidden; border: 1px solid var(--border); }
+.vlog-main-thumb { background: #1a1a2e; aspect-ratio: 16/9; position: relative; }
+.vlog-main-thumb iframe { width: 100%; height: 100%; position: absolute; inset: 0; border: none; }
+.vlog-main-body { padding: 1rem; }
+.vlog-main-body h3 { font-family: 'Tiro Telugu', serif; color: var(--maroon); font-size: 0.95rem; margin-bottom: 0.3rem; }
+.vlog-main-body p  { font-size: 0.8rem; color: var(--text-muted); }
+.vlog-side-list { display: flex; flex-direction: column; gap: 1rem; }
+.vlog-side-item { display: flex; gap: 0.8rem; background: var(--white); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+.vlog-side-thumb { width: 90px; min-height: 65px; background: #2a2a3e; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #fff; }
+.vlog-side-body  { padding: 0.6rem 0.8rem 0.6rem 0; }
+.vlog-side-body h4 { font-size: 0.78rem; color: var(--maroon); font-weight: 600; line-height: 1.4; margin-bottom: 0.2rem; }
+.vlog-side-body span { font-size: 0.68rem; color: var(--text-muted); }
+
+/* ── Coming Soon Grid ────────────────────────────────────── */
+.coming-soon-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 1rem; }
+
+/* ── Panchangam Section ──────────────────────────────────── */
+.panchangam-section { background: var(--maroon); }
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero::before          { font-size: 8rem; }
+  .hinduism-intro-grid   { grid-template-columns: 1fr; }
+  .vedas-grid            { grid-template-columns: repeat(2,1fr); }
+  .featured-card         { grid-template-columns: 1fr; }
+  .featured-card-img     { min-height: 150px; font-size: 5rem; }
+  .vlog-feature          { grid-template-columns: 1fr; }
+}
