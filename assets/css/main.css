@@ -239,3 +239,53 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
+
+/* ── Temple Reactions Widget ──────────────────────────────── */
+.mh-reaction-box {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+.mh-reaction-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--maroon);
+  margin-bottom: 1rem;
+  font-family: 'Tiro Telugu', serif;
+}
+.mh-reaction-btns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.mh-btn-like, .mh-btn-dislike {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  border: 2px solid var(--border);
+  border-radius: 50px;
+  background: var(--white);
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.mh-btn-like:hover { border-color: #22c55e; color: #22c55e; }
+.mh-btn-dislike:hover { border-color: #ef4444; color: #ef4444; }
+.mh-btn-like.active { background: #22c55e; color: white; border-color: #22c55e; }
+.mh-btn-dislike.active { background: #ef4444; color: white; border-color: #ef4444; }
+.mh-btn-like span, .mh-btn-dislike span {
+  background: rgba(0,0,0,0.1);
+  border-radius: 50px;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.8rem;
+}
+.mh-visit-count {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
