@@ -138,3 +138,40 @@
     flex-shrink: 0;
   }
 }
+
+/* ── Chapter Next/Prev Navigation Buttons ────────────────── */
+.chapter-nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+.chapter-btn {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  color: var(--maroon);
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-family: inherit;
+  font-weight: 600;
+  transition: all 0.2s;
+  max-width: 48%;
+  text-align: left;
+}
+.chapter-btn-next {
+  text-align: right;
+  margin-left: auto;
+  background: var(--maroon);
+  color: white;
+  border-color: var(--maroon);
+}
+.chapter-btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-md); }
+.chapter-btn-next:hover { background: var(--saffron); border-color: var(--saffron); }
+@media (max-width: 600px) {
+  .chapter-btn { font-size: 0.78rem; padding: 0.6rem 0.8rem; }
+}
