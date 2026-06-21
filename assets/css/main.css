@@ -393,3 +393,40 @@ body {
 .mh-comment-name { font-weight: 600; font-size: 0.9rem; color: var(--text); display: block; }
 .mh-comment-date { font-size: 0.75rem; color: var(--text-muted); }
 .mh-comment-text { font-size: 0.88rem; color: var(--text); line-height: 1.6; }
+
+/* ── Mobile Accordion Submenu ─────────────────────────────── */
+.mobile-nav-group { border-bottom: 1px solid var(--cream-dark); }
+.mobile-nav-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--maroon);
+  font-family: inherit;
+  font-size: 0.95rem;
+  padding: 0.55rem 0;
+  cursor: pointer;
+  text-align: left;
+}
+.mobile-nav-toggle .arrow { font-size: 0.7rem; transition: transform 0.2s; color: var(--saffron); }
+.mobile-nav-toggle.open .arrow { transform: rotate(180deg); }
+.mobile-nav-submenu {
+  display: none;
+  flex-direction: column;
+  padding-left: 1rem;
+  background: var(--cream);
+  border-radius: 8px;
+  margin-bottom: 0.4rem;
+}
+.mobile-nav-submenu.open { display: flex; }
+.mobile-nav-submenu a {
+  font-size: 0.85rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.mobile-nav-submenu a:last-child { border-bottom: none; }
+.mobile-nav a.mobile-plain {
+  display: block;
+}

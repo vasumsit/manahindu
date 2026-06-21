@@ -25,7 +25,15 @@ const MH = {
 // ── Mobile Nav Toggle ──────────────────────────────────────
 function toggleMenu() {
   const nav = document.getElementById('mobileNav');
-  if (nav) nav.classList.toggle('open');
+  if (nav) {
+    const willOpen = !nav.classList.contains('open');
+    nav.classList.toggle('open');
+    // Reset submenus closed whenever the main mobile nav is closed or freshly opened
+    if (!willOpen) {
+      document.querySelectorAll('.mobile-nav-submenu.open').forEach(el => el.classList.remove('open'));
+      document.querySelectorAll('.mobile-nav-toggle.open').forEach(el => el.classList.remove('open'));
+    }
+  }
 }
 
 // Close mobile nav on outside click
@@ -48,3 +56,11 @@ document.querySelectorAll('.nav-item').forEach(function(item) {
     if (dropdown) dropdown.scrollTop = 0;
   });
 });
+
+// ── Mobile Accordion Submenu Toggle ───────────────────────
+function toggleMobileSubmenu(id) {
+  const submenu = document.getElementById(id);
+  const toggle = document.querySelector('[data-toggle="' + id + '"]');
+  if (submenu) submenu.classList.toggle('open');
+  if (toggle) toggle.classList.toggle('open');
+}

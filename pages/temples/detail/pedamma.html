@@ -67,40 +67,52 @@
       <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
     </div>
             <div class="mobile-nav" id="mobileNav">
-      <a href="../../../index.html">హోమ్</a>
-      <a href="../../../pages/hinduism/index.html">హిందూమతం</a>
-      <a href="../../../pages/temples/index.html" style="font-weight:600;">🛕 దేవాలయాలు (అన్నీ)</a>
-      <a href="../../../pages/temples/detail/tirupati.html" style="padding-left:1.5rem;font-size:0.85rem;">— తిరుపతి వేంకటేశ్వర స్వామి</a>
-      <a href="../../../pages/temples/detail/srisailam.html" style="padding-left:1.5rem;font-size:0.85rem;">— శ్రీశైలం మల్లికార్జున స్వామి</a>
-      <a href="../../../pages/temples/detail/kotappakonda.html" style="padding-left:1.5rem;font-size:0.85rem;">— కొటప్పకొండ త్రికోటేశ్వర స్వామి</a>
-      <a href="../../../pages/temples/detail/mahanandi.html" style="padding-left:1.5rem;font-size:0.85rem;">— మహానంది శివాలయం</a>
-      <a href="../../../pages/temples/detail/boppudi-anjaneya.html" style="padding-left:1.5rem;font-size:0.85rem;">— బొప్పూడి ప్రసన్నాంజనేయ స్వామి</a>
-      <a href="../../../pages/temples/detail/singarakonda-anjaneya.html" style="padding-left:1.5rem;font-size:0.85rem;">— సింగరకొండ ప్రసన్నాంజనేయ స్వామి</a>
-      <a href="../../../pages/temples/detail/singarayakonda.html" style="padding-left:1.5rem;font-size:0.85rem;">— సింగరాయకొండ నరసింహ స్వామి</a>
-      <a href="../../../pages/temples/detail/alampur.html" style="padding-left:1.5rem;font-size:0.85rem;">— ఆలంపూర్ నవబ్రహ్మ దేవాలయాలు</a>
-      <a href="../../../pages/temples/detail/vemulawada.html" style="padding-left:1.5rem;font-size:0.85rem;">— వేములవాడ రాజరాజేశ్వర స్వామి</a>
-      <a href="../../../pages/temples/detail/kondagattu.html" style="padding-left:1.5rem;font-size:0.85rem;">— కొండగట్టు ఆంజనేయ స్వామి</a>
-      <a href="../../../pages/temples/detail/pedamma.html" style="padding-left:1.5rem;font-size:0.85rem;">— పెద్దమ్మ తల్లి, హైదరాబాద్</a>
-      <a href="../../../pages/temples/detail/ttd-jubileehills.html" style="padding-left:1.5rem;font-size:0.85rem;">— TTD శ్రీ వేంకటేశ్వర స్వామి, హైద్</a>
-      <a href="../../../pages/temples/detail/purijagannath.html" style="padding-left:1.5rem;font-size:0.85rem;">— జగన్నాథ మందిరం, హైదరాబాద్</a>
-      <a href="../../../pages/temples/detail/shirdi.html" style="padding-left:1.5rem;font-size:0.85rem;">— శిర్డీ సాయి బాబా మందిర్</a>
-      <a href="../../../pages/temples/detail/shani-shingnapur.html" style="padding-left:1.5rem;font-size:0.85rem;">— శని శింగణాపూర్</a>
-      <a href="../../../pages/temples/detail/palani.html" style="padding-left:1.5rem;font-size:0.85rem;">— పళని ధండాయుధపాణి స్వామి</a>
-      <a href="../../../pages/temples/detail/srirangam.html" style="padding-left:1.5rem;font-size:0.85rem;">— శ్రీరంగం రంగనాథ స్వామి</a>
-      <a href="../../../pages/temples/detail/thanjavur-brihadeeswarar.html" style="padding-left:1.5rem;font-size:0.85rem;">— తంజావూర్ బృహదీశ్వర దేవాలయం</a>
-      <a href="../../../pages/temples/detail/punnainallur-mariamman.html" style="padding-left:1.5rem;font-size:0.85rem;">— పున్నైనల్లూర్ మరియమ్మన్</a>
-      <a href="../../../pages/vlogs/index.html">వ్లాగ్స్</a>
-      <div class="nav-item">
-          <a href="../../../pages/news/index.html">వార్తలు</a>
-          <div class="dropdown">
-            <a href="../../../pages/news/index.html">తాజా వార్తలు</a>
-            <a href="../../../pages/slokalu/index.html">శ్లోకాలు</a>
-          </div>
+      <a href="../../../index.html" class="mobile-plain">హోమ్</a>
+      <a href="../../../pages/hinduism/index.html" class="mobile-plain">హిందూమతం</a>
+
+      <div class="mobile-nav-group">
+        <button class="mobile-nav-toggle" data-toggle="m-temples" onclick="toggleMobileSubmenu('m-temples')">
+          🛕 దేవాలయాలు <span class="arrow">▾</span>
+        </button>
+        <div class="mobile-nav-submenu" id="m-temples">
+        <a href="../../../pages/temples/detail/tirupati.html">తిరుపతి వేంకటేశ్వర స్వామి</a>
+        <a href="../../../pages/temples/detail/srisailam.html">శ్రీశైలం మల్లికార్జున స్వామి</a>
+        <a href="../../../pages/temples/detail/kotappakonda.html">కొటప్పకొండ త్రికోటేశ్వర స్వామి</a>
+        <a href="../../../pages/temples/detail/mahanandi.html">మహానంది శివాలయం</a>
+        <a href="../../../pages/temples/detail/boppudi-anjaneya.html">బొప్పూడి ప్రసన్నాంజనేయ స్వామి</a>
+        <a href="../../../pages/temples/detail/singarakonda-anjaneya.html">సింగరకొండ ప్రసన్నాంజనేయ స్వామి</a>
+        <a href="../../../pages/temples/detail/singarayakonda.html">సింగరాయకొండ నరసింహ స్వామి</a>
+        <a href="../../../pages/temples/detail/alampur.html">ఆలంపూర్ నవబ్రహ్మ దేవాలయాలు</a>
+        <a href="../../../pages/temples/detail/vemulawada.html">వేములవాడ రాజరాజేశ్వర స్వామి</a>
+        <a href="../../../pages/temples/detail/kondagattu.html">కొండగట్టు ఆంజనేయ స్వామి</a>
+        <a href="../../../pages/temples/detail/pedamma.html">పెద్దమ్మ తల్లి, హైదరాబాద్</a>
+        <a href="../../../pages/temples/detail/ttd-jubileehills.html">TTD వేంకటేశ్వర స్వామి, హైద్</a>
+        <a href="../../../pages/temples/detail/purijagannath.html">జగన్నాథ మందిరం, హైదరాబాద్</a>
+        <a href="../../../pages/temples/detail/shirdi.html">శిర్డీ సాయి బాబా మందిర్</a>
+        <a href="../../../pages/temples/detail/shani-shingnapur.html">శని శింగణాపూర్</a>
+        <a href="../../../pages/temples/detail/palani.html">పళని ధండాయుధపాణి స్వామి</a>
+        <a href="../../../pages/temples/detail/srirangam.html">శ్రీరంగం రంగనాథ స్వామి</a>
+        <a href="../../../pages/temples/detail/thanjavur-brihadeeswarar.html">తంజావూర్ బృహదీశ్వర దేవాలయం</a>
+        <a href="../../../pages/temples/detail/punnainallur-mariamman.html">పున్నైనల్లూర్ మరియమ్మన్</a>
+        <a href="../../../pages/temples/index.html" style="font-weight:600;color:var(--maroon);">అన్నీ చూడండి →</a>
         </div>
-      <a href="../../../pages/festivals/index.html">పండుగలు</a>
-      <a href="../../../pages/about/index.html">మా గురించి</a>
-    </div>
-  </header>
+      </div>
+
+      <a href="../../../pages/vlogs/index.html" class="mobile-plain">వ్లాగ్స్</a>
+
+      <div class="mobile-nav-group">
+        <button class="mobile-nav-toggle" data-toggle="m-news" onclick="toggleMobileSubmenu('m-news')">
+          వార్తలు <span class="arrow">▾</span>
+        </button>
+        <div class="mobile-nav-submenu" id="m-news">
+          <a href="../../../pages/news/index.html">తాజా వార్తలు</a>
+          <a href="../../../pages/slokalu/index.html">శ్లోకాలు</a>
+        </div>
+      </div>
+
+      <a href="../../../pages/festivals/index.html" class="mobile-plain">పండుగలు</a>
+      <a href="../../../pages/about/index.html" class="mobile-plain">మా గురించి</a>
+    </div></header>
 
   <div class="article-hero">
     <div class="container article-hero-inner">
