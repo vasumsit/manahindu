@@ -430,3 +430,16 @@ body {
 .mobile-nav a.mobile-plain {
   display: block;
 }
+
+/* ── Dropdown Section Group Headers ──────────────────────── */
+.dropdown-group-label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--saffron);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.6rem 1.2rem 0.3rem;
+  background: var(--cream);
+}
+.dropdown-group-label:first-child { padding-top: 0.4rem; }
