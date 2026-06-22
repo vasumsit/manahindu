@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>శివ పురాణం — Siva Purana | మన హిందూ ManaHindu</title>
+  <meta name="description" content="Siva Purana సార సంగ్రహం — ముఖ్య కథలు, తత్వాలు తెలుగులో." />
+  <link rel="stylesheet" href="../../../assets/css/main.css" />
+  <link rel="stylesheet" href="../../../assets/css/components.css" />
+  <link rel="stylesheet" href="../../../assets/css/typography.css" />
+  <link rel="stylesheet" href="../../../assets/css/slokalu.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Telugu&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="topbar"><span class="topbar-date" id="topdate"></span><span class="topbar-lang"><a href="#" class="active">తెలుగు</a> | <a href="#">English</a></span></div>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="../../../index.html"><div class="logo-om">ॐ</div><div><div class="logo-title">మన హిందూ</div><div class="logo-sub">ManaHindu</div></div></a>
+      <nav class="nav">
+        <a href="../../../index.html">హోమ్</a>
+        <div class="nav-item">
+          <a href="../index.html">హిందూమతం</a>
+          <div class="dropdown">
+            <a href="../index.html">హిందూమతం హోమ్</a>
+            <span class="dropdown-group-label">ఆచార్యులు</span>
+            <a href="../adi-shankaracharya/index.html">🕉️ ఆది శంకరాచార్యులు</a>
+            <a href="index.html" class="active">🧘 రమణ మహర్షి</a>
+            <span class="dropdown-group-label">దైవ చరితలు</span>
+            <a href="../sri-rama-jeevitham/index.html">🏹 శ్రీరామ జీవితం</a>
+            <a href="../sri-krishna-jeevitham/index.html">🦚 శ్రీకృష్ణ జీవితం</a>
+            <a href="../sri-venkateswara-jeevitham/index.html">🛕 వేంకటేశ్వర చరితం</a>
+            <a href="../sri-ganesha-jeevitham/index.html">🐘 గణేశ చరితం</a>
+            <a href="../sri-muruga-jeevitham/index.html">🦚 సుబ్రహ్మణ్య చరితం</a>
+            <a href="../sri-hanuman-jeevitham/index.html">🐒 హనుమాన్ చరితం</a>
+            <span class="dropdown-group-label">భక్తుల త్యాగ గాథలు</span>
+            <a href="../bhakti-charithalu/annamayya/index.html">🎶 అన్నమయ్య</a>
+            <a href="../bhakti-charithalu/meera-bai/index.html">🪕 మీరాబాయి</a>
+            <a href="../bhakti-charithalu/bhakta-ramadasu/index.html">🙏 భక్త రామదాసు</a>
+            <a href="../bhakti-charithalu/bhakta-prahlada/index.html">👦 భక్త ప్రహ్లాదుడు</a>
+            <div class="dropdown-divider"></div>
+            <a href="../deva-charithalu/index.html" style="color:var(--maroon);font-weight:600;">🙏 దైవ చరితలు అన్నీ →</a>
+            <a href="../bhakti-charithalu/index.html" style="color:var(--maroon);font-weight:600;">🙏 భక్తుల గాథలు అన్నీ →</a>
+          </div>
+        </div>
+        <a href="../../../pages/temples/index.html">దేవాలయాలు</a>
+        <a href="../../../pages/vlogs/index.html">వ్లాగ్స్</a>
+        <div class="nav-item">
+          <a href="../../../pages/news/index.html">వార్తలు</a>
+          <div class="dropdown">
+            <a href="../../../pages/news/index.html">తాజా వార్తలు</a>
+            <div class="dropdown-divider"></div>
+            <a href="../../../pages/slokalu/index.html">📜 శ్లోకాలు హోమ్</a>
+            <a href="../../../pages/slokalu/hanuman-chalisa/index.html" class="highlight-item">🐒 హనుమాన్ చాలీసా</a>
+            <a href="../../../pages/slokalu/sumati-satakam/index.html">సుమతీ శతకం</a>
+            <a href="../../../pages/slokalu/vemana-satakam/index.html">వేమన శతకం</a>
+            <a href="../../../pages/slokalu/index.html" style="color:var(--maroon);font-weight:600;">📜 మరిన్ని శ్లోకాలు →</a>
+          </div>
+        </div>
+        <a href="../../../pages/festivals/index.html">పండుగలు</a>
+        <a href="../../../pages/about/index.html">మా గురించి</a>
+      </nav>
+      <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="../../../index.html" class="mobile-plain">హోమ్</a>
+      <a href="../index.html" class="mobile-plain">హిందూమతం</a>
+      <div class="mobile-nav-group">
+        <button class="mobile-nav-toggle" data-toggle="m-acharyulu" onclick="toggleMobileSubmenu('m-acharyulu')">
+          🕉️ ఆచార్యులు <span class="arrow">▾</span>
+        </button>
+        <div class="mobile-nav-submenu" id="m-acharyulu">
+          <a href="../adi-shankaracharya/index.html">— 🕉️ ఆది శంకరాచార్యులు</a>
+          <a href="index.html">— 🧘 రమణ మహర్షి</a>
+        </div>
+      </div>
+      <div class="mobile-nav-group">
+        <button class="mobile-nav-toggle" data-toggle="m-puranas" onclick="toggleMobileSubmenu('m-puranas')">
+          📖 పురాణాలు <span class="arrow">▾</span>
+        </button>
+        <div class="mobile-nav-submenu" id="m-puranas">
+          <a href="index.html">— 🔱 శివ పురాణం</a>
+          <a href="../vishnu-puranam/index.html">— 🪷 విష్ణు పురాణం</a>
+        </div>
+      </div>
+      <div class="mobile-nav-group">
+        <button class="mobile-nav-toggle" data-toggle="m-deities" onclick="toggleMobileSubmenu('m-deities')">
+          🙏 దైవ చరితలు <span class="arrow">▾</span>
+        </button>
+        <div class="mobile-nav-submenu" id="m-deities">
+          <a href="../sri-rama-jeevitham/index.html">— 🏹 శ్రీరామ జీవితం</a>
+          <a href="../sri-krishna-jeevitham/index.html">— 🦚 శ్రీకృష్ణ జీవితం</a>
+          <a href="../sri-venkateswara-jeevitham/index.html">— 🛕 వేంకటేశ్వర చరితం</a>
+          <a href="../sri-ganesha-jeevitham/index.html">— 🐘 గణేశ చరితం</a>
+          <a href="../sri-muruga-jeevitham/index.html">— 🦚 సుబ్రహ్మణ్య చరితం</a>
+          <a href="../sri-hanuman-jeevitham/index.html">— 🐒 హనుమాన్ చరితం</a>
+        </div>
+      </div>
+      <div class="mobile-nav-group">
+        <button class="mobile-nav-toggle" data-toggle="m-bhaktas" onclick="toggleMobileSubmenu('m-bhaktas')">
+          🙏 భక్తుల త్యాగ గాథలు <span class="arrow">▾</span>
+        </button>
+        <div class="mobile-nav-submenu" id="m-bhaktas">
+          <a href="../bhakti-charithalu/annamayya/index.html">— 🎶 అన్నమయ్య</a>
+          <a href="../bhakti-charithalu/meera-bai/index.html">— 🪕 మీరాబాయి</a>
+          <a href="../bhakti-charithalu/bhakta-ramadasu/index.html">— 🙏 భక్త రామదాసు</a>
+          <a href="../bhakti-charithalu/bhakta-prahlada/index.html">— 👦 భక్త ప్రహ్లాదుడు</a>
+        </div>
+      </div>
+      <a href="../../../pages/temples/index.html" class="mobile-plain">దేవాలయాలు</a>
+      <a href="../../../pages/vlogs/index.html" class="mobile-plain">వ్లాగ్స్</a>
+      <div class="mobile-nav-group">
+        <button class="mobile-nav-toggle" data-toggle="m-news" onclick="toggleMobileSubmenu('m-news')">
+          వార్తలు <span class="arrow">▾</span>
+        </button>
+        <div class="mobile-nav-submenu" id="m-news">
+          <a href="../../../pages/news/index.html">తాజా వార్తలు</a>
+          <a href="../../../pages/slokalu/index.html">శ్లోకాలు</a>
+        </div>
+      </div>
+      <a href="../../../pages/festivals/index.html" class="mobile-plain">పండుగలు</a>
+      <a href="../../../pages/about/index.html" class="mobile-plain">మా గురించి</a>
+    </div>
+  
+
+
+  <div class="life-hero">
+    <div class="container">
+      <h1>🔱 శివ పురాణం</h1>
+      <p>సార సంగ్రహం — 7 సంహితల ముఖ్య కథలు</p>
+    </div>
+  </div>
+
+  <div class="container" style="padding-top:2rem;">
+    <div class="breadcrumb" style="margin-bottom:1.5rem;">
+      <a href="../../../index.html">హోమ్</a><span>›</span>
+      <a href="../index.html">హిందూమతం</a><span>›</span>
+      శివ పురాణం
+    </div>
+
+    <div class="satakam-intro">
+      <p><strong>శివ మహాపురాణం</strong> — అష్టాదశ మహాపురాణాలలో శైవ సాహిత్యానికి ఆధార గ్రంథం. ఏడు సంహితలుగా విభజించబడిన ఈ పురాణం, శివతత్వం, సతీ-పార్వతి గాథలు, శివుని రాక్షస సంహార గాథలు, జ్యోతిర్లింగ క్షేత్ర మహత్యాలను వివరిస్తుంది. ఇది పూర్తి పురాణం కాదు — 7 సంహితల ముఖ్య సారాంశాన్ని 7 అధ్యాయాలలో అందిస్తున్నాం.</p>
+    </div>
+
+    <div class="life-story-layout">
+      <div class="chapter-nav">
+        <h4>📖 అంశాలు</h4>
+        <a class="chapter-nav-item active" data-chapter="ch1" onclick="ManaHinduChapters.show('ch1')">గ్రంథ పరిచయం & విద్యేశ్వర సంహిత</a>
+          <a class="chapter-nav-item" data-chapter="ch2" onclick="ManaHinduChapters.show('ch2')">రుద్ర సంహిత (1) — సృష్టి ఖండం</a>
+          <a class="chapter-nav-item" data-chapter="ch3" onclick="ManaHinduChapters.show('ch3')">రుద్ర సంహిత (2) — పార్వతీ & కుమార ఖండాలు</a>
+          <a class="chapter-nav-item" data-chapter="ch4" onclick="ManaHinduChapters.show('ch4')">రుద్ర సంహిత (3) — యుద్ధ ఖండం</a>
+          <a class="chapter-nav-item" data-chapter="ch5" onclick="ManaHinduChapters.show('ch5')">శతరుద్ర సంహిత, కోటిరుద్ర సంహిత & ఉమా సంహిత</a>
+          <a class="chapter-nav-item" data-chapter="ch6" onclick="ManaHinduChapters.show('ch6')">కైలాస సంహిత & వాయవీయ సంహిత</a>
+          <a class="chapter-nav-item" data-chapter="ch7" onclick="ManaHinduChapters.show('ch7')">శివ పురాణం యొక్క సందేశం & ప్రాముఖ్యత</a>
+          
+      </div>
+      <div class="chapter-content">
+        <div class="chapter-section active" id="ch1"><h2>1. గ్రంథ పరిచయం & విద్యేశ్వర సంహిత</h2>
+<p><strong>శివ మహాపురాణం</strong> అష్టాదశ (18) మహాపురాణాలలో ఒకటి, శైవ సాహిత్యంలో అత్యంత ప్రముఖమైన గ్రంథం. ఇది ప్రధానంగా శివుడు, పార్వతీ దేవి చుట్టూ తిరుగుతుంది, కానీ అన్ని దేవతలను గౌరవంగా ప్రస్తావిస్తుంది. మూల గ్రంథం కోటి శ్లోకాలు ఉన్నదని, అది క్రమంగా సంక్షిప్తమై లక్ష శ్లోకాలుగా, తరువాత ఇంకా సంక్షిప్తమైందని పురాణ గాథ. వ్యాస మహర్షి దీనిని <strong>ఏడు సంహితలు (విభాగాలు)</strong>గా విభజించారు.</p>
+<p>మొదటి సంహిత <strong>విద్యేశ్వర సంహిత</strong> — 25 అధ్యాయాలతో కూడినది. ఇందులో శివ తత్వ పరిచయం, శివలింగ పూజా విధానం, రుద్రాక్ష ధారణ మహత్యం, బిల్వపత్ర పూజా విధులు వివరించబడ్డాయి. ముఖ్యంగా ఈ సంహితలో <strong>శివ పంచాక్షరి మంత్రం ("ఓం నమః శివాయ")</strong> యొక్క మహిమ, శివరాత్రి వ్రత విధానం, శివలింగ ఆవిర్భావ గాథ (బ్రహ్మ-విష్ణువుల అహంకార నివృత్తి కోసం అనంత జ్యోతిర్లింగ రూపంలో శివుడు దర్శనమివ్వడం) వివరించబడ్డాయి.</p>
+<p>ఈ సంహితలో శివుని వివిధ నామాలు, రూపాలు — శంభుడు, భోళా శంకరుడు, దక్షిణామూర్తి (గురు రూపం), ఆశుతోషుడు (సులభంగా కరుణించేవాడు), కాలభైరవుడు, నటరాజు — వంటి విభిన్న పార్శ్వాలు పరిచయం చేయబడతాయి. శివుడు పరస్పర విరుద్ధమైన గుణాలను (సౌందర్యం-భయంకరత్వం, నియమం-యోగి స్వేచ్ఛ) ఒక్కటిగా కలిగి ఉండే తత్వంగా ఇక్కడ వర్ణించబడ్డాడు.</p></div>
+        <div class="chapter-section" id="ch2"><h2>2. రుద్ర సంహిత (1) — సృష్టి ఖండం</h2>
+<p><strong>రుద్ర సంహిత</strong> శివ పురాణంలో రెండవది, మరియు అతిపెద్ద సంహితలలో ఒకటి. ఇది ఐదు ఖండాలుగా (ఉప-విభాగాలు) విభజించబడింది — సృష్టి ఖండం, సతీ ఖండం, పార్వతీ ఖండం, కుమార ఖండం, యుద్ధ ఖండం.</p>
+<p><strong>సృష్టి ఖండం</strong>లో విశ్వ సృష్టి ప్రక్రియ, బ్రహ్మ-విష్ణు-రుద్రుల ఆవిర్భావం, త్రిమూర్తుల పాత్రల విభజన వివరించబడింది. శివుని నుండి రుద్రుని పదకొండు అవతారాలు (ఏకాదశ రుద్రులు) ఆవిర్భవించడం, వాటి ప్రాముఖ్యత ఇక్కడ చెప్పబడుతుంది. ఈ ఖండంలో సృష్టి, స్థితి, లయ చక్రాల వెనుక ఉన్న తాత్విక సూత్రాలను కథల రూపంలో వివరించడం ఒక విశేషం.</p>
+<p><strong>సతీ ఖండం</strong> — ఇది శివ పురాణంలో అత్యంత ప్రసిద్ధ గాథలలో ఒకటి. దక్ష ప్రజాపతి కుమార్తె <strong>సతీదేవి</strong> శివుని ప్రేమించి, తండ్రి ఆశీర్వాదం లేకుండానే వివాహమాడింది. దక్షుడు ఒక మహాయజ్ఞం నిర్వహించి, శివుని, సతీదేవిని ఆహ్వానించకుండా అవమానించాడు. సతీదేవి తన తండ్రి ఇంటికి వెళ్ళి అవమానం భరించలేక ఆ యజ్ఞంలోనే ప్రాణత్యాగం చేసింది. ఆగ్రహించిన శివుడు యజ్ఞాన్ని నాశనం చేసి, సతీదేవి శరీరాన్ని భుజాన మోస్తూ విశ్వాంతరాలలో సంచరించాడు. విష్ణువు తన చక్రాయుధంతో ఆ శరీరాన్ని 18 భాగాలుగా ఖండించగా, ఆ భాగాలు పడిన స్థలాలే <strong>18 శక్తి పీఠాలు</strong>గా పరిగణించబడుతున్నాయి.</p></div>
+        <div class="chapter-section" id="ch3"><h2>3. రుద్ర సంహిత (2) — పార్వతీ & కుమార ఖండాలు</h2>
+<p><strong>పార్వతీ ఖండం</strong> — సతీదేవి హిమవంతుని కుమార్తె <strong>పార్వతి</strong>గా పునర్జన్మ పొందింది. శివుడు తన సన్యాసి జీవితంలో, వైరాగ్యంలో మునిగిపోయి ఉండగా, పార్వతి తీవ్రమైన తపస్సు చేసి శివుని మనస్సును గెలుచుకుంది. దేవతలు, మన్మథుడు (కామదేవుడు) సహాయంతో శివుని ధ్యానం నుండి మేల్కొల్పే ప్రయత్నం చేయగా, శివుడు కోపంతో తన మూడవ నేత్రంతో మన్మథుని భస్మం చేశాడు — అయితే పార్వతి అచంచల తపస్సుకు మెచ్చి చివరికి శివుడు ఆమెను వివాహమాడాడు.</p>
+<p>శివ-పార్వతుల వివాహం ఒక అపూర్వ గాథ — శివుడు తన భయంకర, విచిత్ర రూపంలో (జడలు, విభూతి, రక్తం కారే ఏనుగు చర్మం ధరించి, వికృత రూపాలున్న భూత ప్రేత గణాలతో) వివాహ వేదికకు వచ్చినప్పుడు, పార్వతి తల్లి మీనాదేవి భయపడి మూర్ఛపోయింది. కానీ పార్వతి తన ప్రేమతో, వివేకంతో ఆ పరిస్థితిని చక్కదిద్దింది — ఇది లౌకిక సౌందర్యానికి అతీతంగా ఉన్న ప్రేమ, అంగీకారానికి సంకేతం.</p>
+<p><strong>కుమార ఖండం</strong> — శివపార్వతుల కుమారుడు <strong>కార్తికేయుడు (సుబ్రహ్మణ్యుడు)</strong> జననం, తారకాసుర సంహారం కోసం ఆయన అవతరించడం ఇక్కడ వివరించబడింది. శివుని తేజస్సు అగ్నిలో, తరువాత గంగానదిలో, చివరికి శరవణం (రెల్లు పొదలు)లో పడి కార్తికేయుడు జన్మించిన గాథ ఇక్కడ సవివరంగా ఉంటుంది.</p></div>
+        <div class="chapter-section" id="ch4"><h2>4. రుద్ర సంహిత (3) — యుద్ధ ఖండం</h2>
+<p><strong>యుద్ధ ఖండం</strong>లో శివుని వివిధ రాక్షస సంహార గాథలు వివరించబడ్డాయి. <strong>త్రిపురాసుర సంహారం</strong> ఇందులో ప్రముఖమైనది — ముగ్గురు రాక్షస సోదరులు మూడు మహా నగరాలను (త్రిపురాలు) నిర్మించి దేవతలను తీవ్రంగా బాధించగా, శివుడు ఒక్క బాణంతో ఆ మూడు పురాలను భస్మం చేశాడు. ఈ గాథ నుండే శివుని <strong>"త్రిపురాంతకుడు"</strong> అనే నామం వచ్చింది.</p>
+<p><strong>జలంధరుడు</strong> అనే రాక్షసునితో జరిగిన యుద్ధం కూడా ఈ ఖండంలో వివరించబడింది — ఇతను సముద్రుని కుమారుడు, అపారమైన శక్తి కలిగినవాడు. శివుడు అతనిని సంహరించిన గాథ ఇక్కడ చెప్పబడింది.</p>
+<p>ఈ ఖండంలో మరో ముఖ్యమైన గాథ — శివుని భక్తుడైన <strong>బాణాసురుని</strong> రక్షించడానికి శివుడు స్వయంగా శ్రీకృష్ణునితో యుద్ధం చేయడం. ఇది శివుని భక్త రక్షణ తత్వానికి, మరియు శివ-విష్ణు సంబంధానికి ఉదాహరణగా చెప్పబడుతుంది — తన భక్తుని రక్షించడానికి శివుడు ఎంతటి వారితోనైనా తలపడతాడని చూపే గాథ.</p></div>
+        <div class="chapter-section" id="ch5"><h2>5. శతరుద్ర సంహిత, కోటిరుద్ర సంహిత & ఉమా సంహిత</h2>
+<p><strong>శతరుద్ర సంహిత</strong>లో శివుని వంద రూపాలు (శతరుద్రులు), వాటి ప్రాముఖ్యత వివరించబడ్డాయి. ఇందులో శివుని విభిన్న అవతారాలు — శాంత రూపాలు మరియు భయంకర (రుద్ర) రూపాలు రెండూ చర్చించబడతాయి, ప్రతి అవతారం వెనుక ఉన్న ప్రయోజనం, సందర్భం వివరించబడుతుంది.</p>
+<p><strong>కోటిరుద్ర సంహిత</strong>లో అనేక శివ స్తోత్రాలు, శివలింగ క్షేత్రాల మహత్యం, ముఖ్యంగా ద్వాదశ జ్యోతిర్లింగాల (సోమనాథ్, మల్లికార్జున, మహాకాళేశ్వర్, ఓంకారేశ్వర్, వైద్యనాథ్, భీమశంకర్, రామేశ్వరం, త్రయంబకేశ్వర్, వైజనాథ్, నాగేశ్వర్, విశ్వనాథ్ కాశీ, ఘృష్ణేశ్వర్) ప్రాముఖ్యత వివరించబడింది.</p>
+<p><strong>ఉమా సంహిత</strong>లో పార్వతీదేవి (ఉమ) యొక్క విభిన్న రూపాలు, శక్తి తత్వం, ధర్మశాస్త్ర సంబంధిత బోధనలు ఉంటాయి. ఇందులో గృహస్థ ధర్మం, వివాహ వ్యవస్థ, స్త్రీ ధర్మాల గురించి కూడా ప్రస్తావన ఉంటుంది — శివుడు పార్వతికి ఈ ధర్మాలను బోధించే రూపంలో ఈ సంహిత ఉంటుంది.</p></div>
+        <div class="chapter-section" id="ch6"><h2>6. కైలాస సంహిత & వాయవీయ సంహిత</h2>
+<p><strong>కైలాస సంహిత</strong>లో శివుని నివాస స్థలమైన కైలాస పర్వతం, దాని ఆధ్యాత్మిక ప్రాముఖ్యత, యోగ సాధనా మార్గాలు వివరించబడ్డాయి. ఇందులో ప్రణవ మంత్రం ("ఓం"), శివ యోగ సాధనా పద్ధతులు, శివుని నిర్గుణ (గుణాతీత) స్వరూపం గురించి తాత్విక చర్చ ఉంటుంది.</p>
+<p><strong>వాయవీయ సంహిత</strong> — ఇది శివ పురాణంలో అతిపెద్ద, చివరి సంహిత. ఇది రెండు భాగాలుగా విభజించబడింది. ఇందులో వాయుదేవుడు చెప్పిన శివ తత్వ బోధనలు, సృష్టి రహస్యాలు, పంచభూతాల (భూమి, నీరు, అగ్ని, వాయువు, ఆకాశం) తత్వం, వాటి శివతత్వంతో సంబంధం వివరించబడింది.</p>
+<p>ఈ సంహితలో <strong>శివ సహస్రనామ స్తోత్రం</strong> కూడా ప్రముఖంగా ప్రస్తావించబడింది — ఇది విష్ణువు స్వయంగా శివుని వెయ్యి నామాలతో స్తుతించిన స్తోత్రం, సుదర్శన చక్రాన్ని పొందడానికి విష్ణువు ఈ స్తోత్రాన్ని పఠించాడని గాథ. ఈ సంహిత మొక్షదాయక జ్ఞానంతో ముగుస్తుంది — శివ పురాణాన్ని శ్రద్ధగా చదివేవారికి, వినేవారికి సర్వపాపాలు తొలగి, శివలోక ప్రాప్తి కలుగుతుందని పేర్కొనబడింది.</p></div>
+        <div class="chapter-section" id="ch7"><h2>7. శివ పురాణం యొక్క సందేశం & ప్రాముఖ్యత</h2>
+<p>శివ పురాణం కేవలం పురాణ గాథల సంకలనం కాదు — ఇది లోతైన తాత్విక సందేశాలను కథల రూపంలో అందించే గ్రంథం. శివుడు తన పాత్రలో పరస్పర విరుద్ధమైన గుణాలను (సౌందర్యం-భయంకరత్వం, నియమబద్ధత-యోగి స్వేచ్ఛ, శాంతం-రౌద్రం) ఏకం చేసి చూపిస్తాడు — జీవితంలోని వైరుధ్యాలను అంగీకరించి, మించిపోవడమే నిజమైన ఆధ్యాత్మిక పరిణతి అని ఈ పురాణం బోధిస్తుంది.</p>
+<p>సతీదేవి, పార్వతి గాథలు <strong>నిజమైన భక్తి, ప్రేమ, ఆత్మగౌరవాన్ని</strong> చూపుతాయి. దక్ష యజ్ఞ గాథ అహంకారం, అవమానం యొక్క పరిణామాలను తెలియజేస్తుంది. త్రిపురాసుర, జలంధర సంహార గాథలు అధర్మంపై ధర్మం విజయం సాధించే సందేశాన్ని ఇస్తాయి.</p>
+<p style="font-style:italic;background:var(--cream);padding:1rem 1.2rem;border-radius:10px;border-left:4px solid var(--saffron);">
+శివ పురాణం బోధించే అంతిమ సందేశం — <strong>శివుడు సర్వాంతర్యామి, అన్ని వ్యత్యాసాలకు అతీతుడు</strong>. రాజైనా, బిచ్చగాడైనా, దేవతైనా, రాక్షసుడైనా అందరూ శివుని ఆశ్రయించవచ్చు, ఆయన కరుణకు అర్హులే. "ఓం నమః శివాయ" అనే పంచాక్షరి మంత్రాన్ని భక్తితో జపించడం ద్వారా ఎవరైనా, ఎంతటి పాపాత్ముడైనా సరే, శివలోక ప్రాప్తి పొందగలడని ఈ పురాణం హామీ ఇస్తుంది.
+</p>
+<div class="source-note" style="margin-top:1rem;">
+<strong>⚠️ ముఖ్య గమనిక:</strong> ఇది శివ మహాపురాణం యొక్క <strong>సార సంగ్రహం మాత్రమే</strong> — 7 సంహితలలోని ముఖ్య కథాంశాలు, తత్వాలను సంక్షిప్తంగా పరిచయం చేసే ప్రయత్నం. మూల గ్రంథంలో వేలాది శ్లోకాలు, లోతైన తాత్విక చర్చలు, అనేక ఉప కథలు ఉన్నాయి. పూర్తి పాఠం కోసం ప్రామాణిక శివ మహాపురాణం ప్రతులను సంప్రదించండి.
+</div></div>
+        
+        <div id="mh-reactions"></div>
+        <div id="mh-comments"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand"><div class="logo-om" style="font-size:2rem;color:#f59e0b;">ॐ</div><div><div class="logo-title" style="font-size:1.2rem;color:#fff;">మన హిందూ</div><div class="logo-sub">ManaHindu</div></div></div>
+      <div class="footer-links">
+        <div><h4>హిందూమతం</h4><a href="../index.html">హిందూమతం హోమ్</a></div>
+        <div><h4>మా చానెల్</h4><a href="https://www.youtube.com/@Vasu11tv" target="_blank">▶ YouTube — v11tv</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 మన హిందూ | ManaHindu 🙏</p></div>
+  </footer>
+
+  <script src="../../../assets/js/main.js"></script>
+  <script src="../../../assets/js/chapter-nav.js"></script>
+  <script src="../../../assets/js/temple-reactions.js"></script>
+  <script src="../../../assets/js/temple-comments.js"></script>
+</body>
+</html>
