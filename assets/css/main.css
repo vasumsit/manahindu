@@ -443,3 +443,47 @@ body {
   background: var(--cream);
 }
 .dropdown-group-label:first-child { padding-top: 0.4rem; }
+
+/* ── Nested "మరిన్ని" submenu + highlighted dropdown item ──── */
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu > .submenu-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.55rem 1.2rem;
+  font-size: 0.85rem;
+  color: var(--text);
+  cursor: pointer;
+}
+.dropdown-submenu > .submenu-trigger:hover { background: var(--cream); color: var(--maroon); }
+.dropdown-submenu .submenu-panel {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--saffron);
+  border-radius: 0 10px 10px 10px;
+  min-width: 220px;
+  box-shadow: var(--shadow-lg);
+  padding: 0.5rem 0;
+  z-index: 600;
+}
+.dropdown-submenu:hover .submenu-panel { display: block; }
+@media (max-width: 1100px) {
+  .dropdown-submenu .submenu-panel { left: auto; right: 100%; border-radius: 10px 0 10px 10px; }
+}
+.dropdown a.highlight-item {
+  background: linear-gradient(90deg, #fef3c7, transparent);
+  font-weight: 700;
+  color: var(--maroon);
+  border-left: 3px solid var(--saffron);
+}
+.dropdown a.highlight-item::after {
+  content: "⭐";
+  margin-left: 0.4rem;
+  font-size: 0.75rem;
+}

@@ -64,3 +64,18 @@ function toggleMobileSubmenu(id) {
   if (submenu) submenu.classList.toggle('open');
   if (toggle) toggle.classList.toggle('open');
 }
+
+// ── Nested dropdown submenu (మరిన్ని) — click toggle for touch devices ──
+document.addEventListener('click', function(e) {
+  const trigger = e.target.closest('.submenu-trigger');
+  if (trigger) {
+    e.stopPropagation();
+    const panel = trigger.nextElementSibling;
+    const isOpen = panel.style.display === 'block';
+    // Close all other open submenu panels first
+    document.querySelectorAll('.submenu-panel').forEach(p => p.style.display = 'none');
+    panel.style.display = isOpen ? 'none' : 'block';
+  } else if (!e.target.closest('.submenu-panel')) {
+    document.querySelectorAll('.submenu-panel').forEach(p => p.style.display = 'none');
+  }
+});
