@@ -61,6 +61,8 @@
             <a href="../../../pages/slokalu/hanuman-chalisa/index.html" class="highlight-item">🐒 హనుమాన్ చాలీసా</a>
             <a href="../../../pages/slokalu/sumati-satakam/index.html">సుమతీ శతకం</a>
             <a href="../../../pages/slokalu/vemana-satakam/index.html">వేమన శతకం</a>
+            <a href="../shiva-panchakshari/index.html">శివ పంచాక్షరి స్తోత్రం</a>
+            <a href="../kanakadhara-stotram/index.html">కనకధారా స్తోత్రం</a>
             <a href="../../../pages/slokalu/index.html" style="color:var(--maroon);font-weight:600;">📜 మరిన్ని శ్లోకాలు →</a>
           </div>
         </div>
@@ -168,6 +170,8 @@
           <a href="../../../pages/slokalu/hanuman-chalisa/index.html">— 🐒 హనుమాన్ చాలీసా</a>
           <a href="../../../pages/slokalu/sumati-satakam/index.html">— సుమతీ శతకం</a>
           <a href="../../../pages/slokalu/vemana-satakam/index.html">— వేమన శతకం</a>
+          <a href="../../../pages/slokalu/shiva-panchakshari/index.html">— శివ పంచాక్షరి స్తోత్రం</a>
+          <a href="../../../pages/slokalu/kanakadhara-stotram/index.html">— కనకధారా స్తోత్రం</a>
         </div>
       </div>
       <a href="../../../pages/festivals/index.html" class="mobile-plain">పండుగలు</a>
@@ -196,9 +200,16 @@
 </div>
     </div>
 
-    <div class="article-layout">
-      <div class="article-body" style="max-width:100%;">
-        
+    <div class="life-story-layout">
+      <div class="chapter-nav">
+        <h4>📖 శ్లోకాల జాబితా</h4>
+        <a class="chapter-nav-item active" data-chapter="group1" onclick="ManaHinduChapters.show('group1')">1 – 2</a>
+          <a class="chapter-nav-item" data-chapter="group2" onclick="ManaHinduChapters.show('group2')">3 – 4</a>
+          <a class="chapter-nav-item" data-chapter="group3" onclick="ManaHinduChapters.show('group3')">5 – ఫలశ్రుతి</a>
+          
+      </div>
+      <div class="chapter-content">
+        <div class="chapter-section active" id="group1">
         <div class="padyam-card">
           <span class="padyam-number" style="width:auto;border-radius:14px;padding:0 0.6rem;">1</span>
           <div class="padyam-text">నాగేంద్రహారాయ త్రిలోచనాయ
@@ -213,6 +224,8 @@
 మందార ముఖ్య బహుపుష్ప సుపూజితాయ
 తస్మై "మ"కారాయ నమః శివాయ ||</div>
         </div>
+        </div>
+        <div class="chapter-section" id="group2">
         <div class="padyam-card">
           <span class="padyam-number" style="width:auto;border-radius:14px;padding:0 0.6rem;">3</span>
           <div class="padyam-text">శివాయ గౌరీ వదనాబ్జ బృంద
@@ -227,6 +240,8 @@
 చంద్రార్క వైశ్వానర లోచనాయ
 తస్మై "వ"కారాయ నమః శివాయ ||</div>
         </div>
+        </div>
+        <div class="chapter-section" id="group3">
         <div class="padyam-card">
           <span class="padyam-number" style="width:auto;border-radius:14px;padding:0 0.6rem;">5</span>
           <div class="padyam-text">యజ్ఞ స్వరూపాయ జటాధరాయ
@@ -235,12 +250,14 @@
 తస్మై "య"కారాయ నమః శివాయ ||</div>
         </div>
         <div class="padyam-card">
-          <span class="padyam-number" style="width:auto;border-radius:14px;padding:0 0.6rem;">ముగింపు</span>
+          <span class="padyam-number" style="width:auto;border-radius:14px;padding:0 0.6rem;">ఫలశ్రుతి</span>
           <div class="padyam-text">పంచాక్షరమిదం పుణ్యం
 యః పఠేచ్ఛివ సన్నిధౌ |
 శివలోకమవాప్నోతి
 శివేన సహ మోదతే ||</div>
         </div>
+        </div>
+        
 
         <div class="mh-share-container" id="mh-share"></div>
         <div id="mh-reactions"></div>
@@ -261,6 +278,7 @@
   </footer>
 
   <script src="../../../assets/js/main.js"></script>
+  <script src="../../../assets/js/chapter-nav.js"></script>
   <script src="../../../assets/js/temple-reactions.js"></script>
   <script src="../../../assets/js/temple-comments.js"></script>
   <script src="../../../assets/js/share-widget.js"></script>
