@@ -659,3 +659,106 @@ body {
 }
 .info-table td { border-color: var(--border) !important; }
 .info-table tr:nth-child(even) td { background: rgba(253,248,240,0.6); }
+
+/* ═══════════════════════════════════════════════════════════
+   FESTIVAL & HINDUISM CARD GRID (shared — homepage + festivals hub)
+   ═══════════════════════════════════════════════════════════ */
+.fest-card-grid, .topic-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.4rem;
+  margin-top: 1.5rem;
+}
+.fest-card, .topic-card {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #fffdf8 0%, var(--cream) 100%);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.6rem 1.4rem;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(180,83,9,0.07);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.fest-card::before, .topic-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 5px;
+  background: var(--grad-saffron);
+}
+.fest-card:hover, .topic-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 28px rgba(180,83,9,0.16);
+}
+.fest-card-icon, .topic-card-icon { font-size: 2.6rem; line-height: 1; margin-bottom: 0.8rem; }
+.fest-card-title, .topic-card-title {
+  font-family: 'Tiro Telugu', serif;
+  font-size: 1.2rem;
+  color: var(--maroon);
+  margin: 0 0 0.4rem;
+  font-weight: 700;
+}
+.fest-card-en, .topic-card-en {
+  font-size: 0.76rem;
+  color: var(--gold-rich);
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  margin-bottom: 0.7rem;
+}
+.fest-card-desc, .topic-card-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  flex-grow: 1;
+}
+.fest-card-cta, .topic-card-cta {
+  margin-top: 1rem;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--saffron-deep);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: gap 0.2s ease;
+}
+.fest-card:hover .fest-card-cta, .topic-card:hover .topic-card-cta { gap: 0.6rem; }
+.fest-intro-band {
+  background: var(--grad-warm);
+  border-radius: 14px;
+  padding: 1.5rem 1.8rem;
+  margin-bottom: 0.5rem;
+  border-left: 4px solid var(--saffron);
+  line-height: 1.8;
+}
+.fest-intro-band h2 {
+  font-family: 'Tiro Telugu', serif;
+  color: var(--maroon);
+  font-size: 1.3rem;
+  margin: 0 0 0.5rem;
+}
+.fest-intro-band p { color: var(--text); font-size: 0.95rem; margin: 0; }
+.homepage-section-title {
+  font-family: 'Tiro Telugu', serif;
+  font-size: 1.7rem;
+  color: var(--maroon);
+  margin-bottom: 0.3rem;
+}
+.homepage-section-sub {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+}
+.section-view-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1.6rem;
+  font-weight: 600;
+  color: var(--maroon);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
