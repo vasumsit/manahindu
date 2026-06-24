@@ -12,7 +12,10 @@
   --maroon:       #7c1c1c;
   --maroon-dark:  #5a1212;
   --saffron:      #f59e0b;
+  --saffron-deep: #ea7a0c;   /* richer warm saffron for accents */
   --gold:         #d97706;
+  --gold-rich:    #b45309;   /* deeper antique gold */
+  --gold-light:   #fbbf24;   /* luminous highlight gold */
   --cream:        #fdf8f0;
   --cream-dark:   #f5ede0;
   --white:        #ffffff;
@@ -22,6 +25,11 @@
   --radius:       10px;
   --shadow:       0 2px 12px rgba(124,28,28,0.08);
   --shadow-lg:    0 4px 24px rgba(124,28,28,0.12);
+
+  /* Saffron-gold gradient accents */
+  --grad-saffron: linear-gradient(135deg, #fbbf24 0%, #f59e0b 45%, #d97706 100%);
+  --grad-gold:    linear-gradient(135deg, #f59e0b 0%, #d97706 55%, #b45309 100%);
+  --grad-warm:    linear-gradient(135deg, #fef3c7 0%, #fde8c4 100%);
 
   /* Depth levels */
   --z-nav:        100;
@@ -60,7 +68,8 @@ body {
 /* ── Header ──────────────────────────────────────────────── */
 .header {
   background: var(--white);
-  border-bottom: 3px solid var(--saffron);
+  border-bottom: 3px solid transparent;
+  border-image: var(--grad-gold) 1;
   position: sticky;
   top: 0;
   z-index: var(--z-nav);
@@ -92,7 +101,7 @@ body {
   transition: background 0.2s, color 0.2s;
 }
 .nav a:hover     { background: var(--cream); color: var(--maroon-dark); }
-.nav a.active    { background: var(--saffron); color: var(--maroon-dark); font-weight: 700; }
+.nav a.active    { background: var(--grad-saffron); color: var(--maroon-dark); font-weight: 700; }
 
 /* ── Mobile Nav ──────────────────────────────────────────── */
 .hamburger {
@@ -158,6 +167,8 @@ body {
   text-align: center;
   position: relative;
   overflow: hidden;
+  border-bottom: 3px solid transparent;
+  border-image: var(--grad-gold) 1;
 }
 .page-hero::before {
   content: 'ॐ';
@@ -179,7 +190,7 @@ body {
 .breadcrumb span { margin: 0 0.4rem; }
 
 /* ── Footer ──────────────────────────────────────────────── */
-.footer { background: #1a0505; color: #c9a07a; padding: 2.5rem 0 0; }
+.footer { background: #1a0505; color: #c9a07a; padding: 2.5rem 0 0; border-top: 4px solid transparent; border-image: var(--grad-gold) 1; }
 .footer-inner { display: flex; gap: 3rem; flex-wrap: wrap; padding-bottom: 2rem; }
 .footer-brand { display: flex; align-items: center; gap: 0.8rem; }
 .footer-links { display: flex; gap: 3rem; flex-wrap: wrap; }
@@ -533,3 +544,118 @@ body {
 @media (max-width: 480px) {
   .mh-share-btn { font-size: 0.76rem; padding: 0.45rem 0.8rem; }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   THEME POLISH — saffron-gold richness (appended)
+   Self-contained enhancement layer. Adds warmth & depth to
+   heroes, cards, padyam blocks, nav accents. Structure unchanged.
+   ═══════════════════════════════════════════════════════════ */
+
+/* Warm paper texture on body — very subtle gold wash */
+body {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(245,158,11,0.05) 0%, transparent 42%),
+    radial-gradient(circle at 88% 92%, rgba(217,119,6,0.05) 0%, transparent 42%),
+    var(--cream);
+  background-attachment: fixed;
+}
+
+/* Heroes — richer maroon-to-saffron depth + soft gold glow at base */
+.life-hero, .page-hero {
+  background:
+    radial-gradient(ellipse at 50% 140%, rgba(245,158,11,0.28) 0%, transparent 60%),
+    linear-gradient(135deg, #3d0c0c 0%, var(--maroon) 48%, #4a0e0e 100%) !important;
+  position: relative;
+}
+.life-hero h1, .page-hero h1 {
+  text-shadow: 0 2px 14px rgba(0,0,0,0.35);
+  letter-spacing: 0.3px;
+}
+/* gold hairline shimmer under hero text */
+.life-hero h1::after, .page-hero h1::after {
+  content: '';
+  display: block;
+  width: 70px; height: 3px;
+  margin: 0.7rem auto 0;
+  border-radius: 3px;
+  background: var(--grad-saffron);
+  box-shadow: 0 0 12px rgba(245,158,11,0.6);
+}
+
+/* Padyam (mantra) cards — antique-gold framing + warm fill */
+.padyam-card {
+  background: linear-gradient(135deg, #fffdf8 0%, var(--cream) 100%) !important;
+  border-left: 4px solid transparent !important;
+  border-image: var(--grad-gold) 1 !important;
+  box-shadow: 0 3px 16px rgba(180,83,9,0.10), inset 0 1px 0 rgba(255,255,255,0.6);
+  position: relative;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.padyam-card:hover {
+  box-shadow: 0 6px 22px rgba(180,83,9,0.16);
+  transform: translateY(-1px);
+}
+.padyam-text {
+  color: #4a2810;
+}
+
+/* Satakam / intro band — soft saffron gradient edge */
+.satakam-intro {
+  background: var(--grad-warm) !important;
+  border-left: 4px solid transparent;
+  border-image: var(--grad-saffron) 1;
+  box-shadow: var(--shadow);
+}
+
+/* Chapter nav — active item gets a rich gold gradient pill */
+.chapter-nav-item.active {
+  background: var(--grad-gold) !important;
+  color: #fff !important;
+  font-weight: 600;
+  box-shadow: 0 2px 10px rgba(180,83,9,0.30);
+}
+.chapter-nav-item {
+  transition: background 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
+}
+.chapter-nav-item:hover:not(.active) {
+  background: var(--cream-dark);
+  padding-left: 1rem;
+  color: var(--maroon);
+}
+
+/* Source-note — parchment look */
+.source-note {
+  background: linear-gradient(135deg, #fdf6e9 0%, #f9edd6 100%);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--gold-rich);
+  border-radius: 8px;
+  padding: 0.9rem 1.1rem;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+/* Dropdown group labels — gold uppercase elegance */
+.dropdown-group-label {
+  color: var(--gold-rich) !important;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Header logo Om — subtle gold glow */
+.logo-om {
+  text-shadow: 0 0 16px rgba(245,158,11,0.35);
+}
+
+/* Footer — warm gold top accent already present; enrich brand Om */
+.footer .logo-om {
+  text-shadow: 0 0 18px rgba(245,158,11,0.45);
+}
+
+/* Info tables (festival pages) — warm header, gold gridlines */
+.info-table th {
+  background: var(--grad-gold) !important;
+  color: #fff !important;
+  border-color: var(--gold-rich) !important;
+}
+.info-table td { border-color: var(--border) !important; }
+.info-table tr:nth-child(even) td { background: rgba(253,248,240,0.6); }

@@ -113,10 +113,12 @@
 .chapter-section h2 { color: var(--maroon); margin-bottom: 1rem; }
 .chapter-section p { line-height: 1.85; margin-bottom: 1rem; }
 .life-hero {
-  background: linear-gradient(135deg, var(--maroon), #6b1414);
+  background: linear-gradient(135deg, #3d0c0c 0%, var(--maroon) 50%, #4a0e0e 100%);
   padding: 2.5rem 0;
   color: white;
   text-align: center;
+  border-bottom: 3px solid transparent;
+  border-image: var(--grad-gold) 1;
 }
 .life-hero h1 { color: white; font-size: 1.9rem; margin-bottom: 0.5rem; }
 .life-hero p { color: #f5ddb0; font-size: 0.95rem; }
