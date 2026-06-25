@@ -263,3 +263,143 @@
   .quick-tiles { grid-template-columns: repeat(2, 1fr); }
   .hero-stats { gap: 1.4rem; }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   DEVOTIONAL / TEMPLE-ART HOMEPAGE THEME (homepage only)
+   Deeper sanctum colors, gold-leaf ornamentation, layered richness.
+   Scoped to body.home-devotional so other pages are unaffected.
+   ═══════════════════════════════════════════════════════════ */
+
+body.home-devotional {
+  --t-oxblood:   #3a0a0a;
+  --t-maroon:    #5e1212;
+  --t-vermilion: #a8201a;
+  --t-goldleaf:  #c9962e;
+  --t-goldbright:#e8b54d;
+  --t-sandstone: #f3e8d0;
+  --t-sanddeep:  #e7d5b0;
+  background:
+    radial-gradient(circle at 8% 4%, rgba(168,32,26,0.05) 0%, transparent 38%),
+    radial-gradient(circle at 92% 96%, rgba(201,150,46,0.07) 0%, transparent 40%),
+    var(--t-sandstone);
+}
+
+/* ── HERO as temple sanctum ── */
+body.home-devotional .hero {
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 118%, rgba(232,181,77,0.30) 0%, transparent 62%),
+    radial-gradient(circle at 50% 38%, rgba(168,32,26,0.35) 0%, transparent 55%),
+    linear-gradient(160deg, #2c0707 0%, #5e1212 50%, #2c0707 100%) !important;
+  min-height: 600px !important;
+  border-bottom: none !important;
+  position: relative;
+}
+/* gold gopuram-style top & bottom rules */
+body.home-devotional .hero::after {
+  height: 6px !important;
+  background: repeating-linear-gradient(90deg,
+    var(--t-goldleaf) 0px, var(--t-goldbright) 14px, var(--t-goldleaf) 28px) !important;
+}
+body.home-devotional .hero::before {
+  font-size: 26rem !important;
+  color: rgba(232,181,77,0.07) !important;
+}
+body.home-devotional .hero-eyebrow {
+  background: rgba(232,181,77,0.12) !important;
+  border: 1px solid rgba(232,181,77,0.4) !important;
+  color: var(--t-goldbright) !important;
+  letter-spacing: 1px;
+}
+body.home-devotional .hero-title { color: #fff7e6 !important; }
+body.home-devotional .hero-title::after {
+  background: repeating-linear-gradient(90deg,
+    var(--t-goldleaf) 0px, var(--t-goldbright) 10px, var(--t-goldleaf) 20px) !important;
+  width: 120px !important; height: 5px !important;
+  box-shadow: 0 0 18px rgba(232,181,77,0.7) !important;
+}
+body.home-devotional .hero-sub { color: #f0dcc0 !important; }
+body.home-devotional .hero-btns .btn-primary {
+  background: linear-gradient(135deg, var(--t-goldbright), var(--t-goldleaf)) !important;
+  color: #3a0a0a !important;
+  font-weight: 700;
+  box-shadow: 0 4px 20px rgba(201,150,46,0.45) !important;
+}
+body.home-devotional .hero-btns .btn-outline {
+  border: 1.5px solid var(--t-goldbright) !important;
+  color: var(--t-goldbright) !important;
+}
+body.home-devotional .hero-stat-num { color: var(--t-goldbright) !important; }
+body.home-devotional .hero-stats { border-top-color: rgba(232,181,77,0.25) !important; }
+
+/* ── Quick tiles: temple-niche style ── */
+body.home-devotional .quick-tile {
+  background: linear-gradient(165deg, #fffaf0 0%, var(--t-sandstone) 100%);
+  border: 1px solid var(--t-sanddeep);
+  border-top: 3px solid var(--t-goldleaf);
+  color: var(--t-maroon);
+}
+body.home-devotional .quick-tile:hover {
+  border-color: var(--t-vermilion);
+  box-shadow: 0 14px 32px rgba(94,18,18,0.2);
+}
+body.home-devotional .quick-tile-label { color: var(--t-maroon); }
+
+/* ── Section titles: gold-flanked, traditional ── */
+body.home-devotional .homepage-section-title,
+body.home-devotional .section-title {
+  color: var(--t-maroon) !important;
+  text-align: center;
+  position: relative;
+  padding-bottom: 0.7rem;
+}
+body.home-devotional .homepage-section-title::after,
+body.home-devotional .section-title::after {
+  content: '❁';
+  display: block;
+  color: var(--t-goldleaf);
+  font-size: 1.1rem;
+  margin: 0.5rem auto 0;
+  text-align: center;
+}
+body.home-devotional .homepage-section-sub { text-align: center; }
+
+/* ── Cards: richer sandstone with gold edge ── */
+body.home-devotional .fest-card,
+body.home-devotional .topic-card {
+  background: linear-gradient(165deg, #fffaf0 0%, var(--t-sandstone) 100%);
+  border: 1px solid var(--t-sanddeep);
+}
+body.home-devotional .fest-card::before,
+body.home-devotional .topic-card::before {
+  background: repeating-linear-gradient(90deg,
+    var(--t-goldleaf) 0px, var(--t-goldbright) 12px, var(--t-goldleaf) 24px) !important;
+}
+body.home-devotional .fest-card-title,
+body.home-devotional .topic-card-title { color: var(--t-maroon); }
+body.home-devotional .fest-card-cta,
+body.home-devotional .topic-card-cta { color: var(--t-vermilion); }
+body.home-devotional .fest-intro-band {
+  background: linear-gradient(135deg, #fbf0d8 0%, #f3e3c2 100%);
+  border-left: 4px solid var(--t-vermilion);
+}
+body.home-devotional .fest-intro-band h2 { color: var(--t-maroon); }
+
+/* ── Alternating section backgrounds for depth ── */
+body.home-devotional section.section:nth-of-type(even) {
+  background: #f7eeda !important;
+}
+body.home-devotional section.section:nth-of-type(odd) {
+  background: var(--t-sandstone) !important;
+}
+
+/* ── Featured temple card: sanctum framing ── */
+body.home-devotional .featured-card {
+  border: 1px solid var(--t-sanddeep);
+  box-shadow: 0 8px 30px rgba(94,18,18,0.14);
+}
+body.home-devotional .featured-card-img {
+  background: linear-gradient(160deg, #5e1212 0%, #3a0a0a 100%) !important;
+}
+
+/* ── section-view-all link ── */
+body.home-devotional .section-view-all { color: var(--t-vermilion); }
