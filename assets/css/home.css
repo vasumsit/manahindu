@@ -284,12 +284,16 @@ body.home-devotional {
     var(--t-sandstone);
 }
 
-/* ── HERO as temple sanctum ── */
+/* ── HERO as temple sanctum, with skyline silhouette ── */
 body.home-devotional .hero {
   background:
     radial-gradient(ellipse 70% 55% at 50% 118%, rgba(232,181,77,0.30) 0%, transparent 62%),
-    radial-gradient(circle at 50% 38%, rgba(168,32,26,0.35) 0%, transparent 55%),
-    linear-gradient(160deg, #2c0707 0%, #5e1212 50%, #2c0707 100%) !important;
+    radial-gradient(circle at 50% 38%, rgba(168,32,26,0.30) 0%, transparent 55%),
+    linear-gradient(160deg, rgba(44,7,7,0.55) 0%, rgba(94,18,18,0.45) 45%, rgba(44,7,7,0.72) 100%),
+    url('../img/temple-skyline-hero.svg') !important;
+  background-size: auto, auto, auto, cover !important;
+  background-position: center, center, center, bottom center !important;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat !important;
   min-height: 600px !important;
   border-bottom: none !important;
   position: relative;

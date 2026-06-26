@@ -1,0 +1,101 @@
+<svg viewBox="0 0 1600 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2c0707"/>
+      <stop offset="55%" stop-color="#5e1212"/>
+      <stop offset="100%" stop-color="#7c1c1c"/>
+    </linearGradient>
+    <linearGradient id="goldFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8b54d" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#c9962e" stop-opacity="0.30"/>
+    </linearGradient>
+    <linearGradient id="goldFadeBack" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a8201a" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#5e1212" stop-opacity="0.45"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="50%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#f3cf7d" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#f3cf7d" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="500" fill="url(#skyGrad)"/>
+  <circle cx="800" cy="160" r="260" fill="url(#sunGlow)"/>
+
+  <!-- ===== BACK LAYER: distant smaller temple silhouettes, fully across width ===== -->
+  <g fill="url(#goldFadeBack)" opacity="0.9">
+    <!-- far-left small shikhara cluster -->
+    <path d="M40,500 L40,360 L55,360 L55,330 L70,330 L70,300 L60,300 L60,260 L80,260 L80,300 L70,300 L70,330 L85,330 L85,360 L100,360 L100,500 Z"/>
+    <!-- small gopuram tiers -->
+    <path d="M150,500 L150,300 Q150,280 165,275 L165,255 Q165,240 180,235 Q195,240 195,255 L195,275 Q210,280 210,300 L210,500 Z"/>
+    <path d="M260,500 L260,340 L270,340 L270,310 L290,310 L290,340 L300,340 L300,500 Z"/>
+    <!-- onward to the right, more distant shapes -->
+    <path d="M1310,500 L1310,340 L1320,340 L1320,310 L1340,310 L1340,340 L1350,340 L1350,500 Z"/>
+    <path d="M1400,500 L1400,300 Q1400,280 1415,275 L1415,255 Q1415,240 1430,235 Q1445,240 1445,255 L1445,275 Q1460,280 1460,300 L1460,500 Z"/>
+    <path d="M1500,500 L1500,360 L1515,360 L1515,330 L1530,330 L1530,300 L1520,300 L1520,260 L1540,260 L1540,300 L1530,300 L1530,330 L1545,330 L1545,360 L1560,360 L1560,500 Z"/>
+  </g>
+
+  <!-- ===== MID LAYER: four regional temple silhouettes, south to north ===== -->
+  <g fill="url(#goldFade)">
+
+    <!-- 1. DRAVIDIAN GOPURAM (South — stepped pyramid tower, Tamil Nadu style) -->
+    <g transform="translate(120,0)">
+      <path d="M0,500 L0,430 L20,430 L20,500 Z"/>
+      <path d="M30,500 L30,260 L50,210 L70,170 L90,140 L110,120 L130,140 L150,170 L170,210 L190,260 L190,500 Z"/>
+      <!-- tiers -->
+      <rect x="34" y="230" width="152" height="14"/>
+      <rect x="44" y="200" width="132" height="12"/>
+      <rect x="54" y="172" width="112" height="11"/>
+      <rect x="64" y="148" width="92" height="10"/>
+      <rect x="74" y="128" width="72" height="9"/>
+      <!-- kalasam finial -->
+      <circle cx="110" cy="108" r="7"/>
+      <rect x="106" y="95" width="8" height="16"/>
+      <path d="M200,500 L200,440 L220,440 L220,500 Z"/>
+    </g>
+
+    <!-- 2. KALINGA / ODISHA SHIKHARA (East — curved beehive tower, Puri style) -->
+    <g transform="translate(560,0)">
+      <path d="M0,500 L0,300 Q5,200 60,140 Q70,128 70,118 Q70,108 80,108 Q90,108 90,118 Q90,128 100,140 Q155,200 160,300 L160,500 Z"/>
+      <!-- amalaka ring -->
+      <ellipse cx="80" cy="120" rx="16" ry="6"/>
+      <rect x="74" y="96" width="12" height="22"/>
+      <circle cx="80" cy="90" r="8"/>
+      <!-- horizontal banding -->
+      <rect x="6" y="340" width="148" height="6"/>
+      <rect x="2" y="380" width="156" height="6"/>
+      <rect x="0" y="420" width="160" height="6"/>
+    </g>
+
+    <!-- 3. NORTH INDIAN NAGARA SHIKHARA (curved, Khajuraho/Kashi style) -->
+    <g transform="translate(950,0)">
+      <path d="M0,500 L0,320 Q10,200 50,150 Q60,138 60,128 L60,118 Q60,108 70,108 Q80,108 80,118 L80,128 Q80,138 90,150 Q130,200 140,320 L140,500 Z"/>
+      <circle cx="70" cy="100" r="9"/>
+      <rect x="65" y="84" width="10" height="18"/>
+      <path d="M10,500 L10,440 Q70,420 130,440 L130,500 Z" opacity="0.7"/>
+    </g>
+
+    <!-- 4. HIMALAYAN HILL TEMPLE (Kedarnath/Badrinath — stone pyramidal roof) -->
+    <g transform="translate(1280,0)">
+      <path d="M0,500 L0,360 L15,360 L15,320 L100,320 L100,360 L115,360 L115,500 Z"/>
+      <path d="M5,320 L57,230 L109,320 Z"/>
+      <rect x="48" y="200" width="18" height="34"/>
+      <circle cx="57" cy="195" r="7"/>
+      <!-- mountain backdrop hint -->
+      <path d="M-40,500 L-10,420 L20,460 L60,380 L100,450 L140,410 L170,500 Z" opacity="0.5"/>
+    </g>
+  </g>
+
+  <!-- ===== FOREGROUND: dark ground silhouette band for depth ===== -->
+  <path d="M0,500 L0,470 Q400,440 800,465 Q1200,490 1600,455 L1600,500 Z" fill="#2c0707" opacity="0.85"/>
+
+  <!-- subtle diya/lamp dots along the base -->
+  <g fill="#f3cf7d" opacity="0.55">
+    <circle cx="200" cy="478" r="2.2"/>
+    <circle cx="420" cy="472" r="2.2"/>
+    <circle cx="650" cy="480" r="2.2"/>
+    <circle cx="900" cy="476" r="2.2"/>
+    <circle cx="1150" cy="470" r="2.2"/>
+    <circle cx="1380" cy="478" r="2.2"/>
+  </g>
+</svg>
