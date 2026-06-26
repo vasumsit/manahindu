@@ -445,15 +445,15 @@ body {
 /* ── Dropdown Section Group Headers ──────────────────────── */
 .dropdown-group-label {
   display: block;
-  font-size: 0.68rem;
-  font-weight: 700;
+  font-size: 0.62rem;
+  font-weight: 600;
   color: var(--saffron);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  padding: 0.6rem 1.2rem 0.3rem;
+  letter-spacing: 0.04em;
+  padding: 0.5rem 1.2rem 0.25rem;
   background: var(--cream);
 }
-.dropdown-group-label:first-child { padding-top: 0.4rem; }
+.dropdown-group-label:first-child { padding-top: 0.35rem; }
 
 /* ── Nested "మరిన్ని" submenu + highlighted dropdown item ──── */
 .dropdown-submenu {
@@ -637,8 +637,8 @@ body {
 /* Dropdown group labels — gold uppercase elegance */
 .dropdown-group-label {
   color: var(--gold-rich) !important;
-  font-weight: 700;
-  letter-spacing: 0.5px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
 }
 
 /* Header logo Om — subtle gold glow */
