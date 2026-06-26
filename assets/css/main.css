@@ -223,7 +223,7 @@ body {
   border: 1px solid var(--border);
   border-top: 3px solid var(--saffron);
   border-radius: 0 0 10px 10px;
-  min-width: 260px;
+  min-width: 290px;
   max-height: 70vh;
   overflow-y: auto;
   box-shadow: var(--shadow-lg);
@@ -239,10 +239,10 @@ body {
 .nav-item:hover .dropdown { display: block; }
 .dropdown a {
   display: block;
-  padding: 0.55rem 1.2rem;
+  padding: 0.48rem 1.2rem;
   color: var(--text-muted);
   text-decoration: none;
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   border-bottom: 1px solid var(--cream-dark);
   transition: background 0.15s, color 0.15s;
 }
