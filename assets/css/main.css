@@ -108,26 +108,42 @@ body {
   display: none;
   background: none;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: var(--maroon);
   cursor: pointer;
 }
 .mobile-nav {
   display: none;
   flex-direction: column;
-  background: var(--white);
-  border-top: 1px solid var(--border);
-  padding: 0.5rem 1.2rem 1rem;
+  background: linear-gradient(180deg, #fffdf9 0%, #fdf3e3 100%);
+  border-top: 3px solid transparent;
+  border-image: var(--grad-gold) 1;
+  padding: 0.75rem 1rem 1.5rem;
   z-index: var(--z-mobile-nav);
+  box-shadow: inset 0 -1px 0 rgba(180,83,9,0.06);
 }
-.mobile-nav a {
+.mobile-nav > a {
   color: var(--maroon);
   text-decoration: none;
-  padding: 0.55rem 0;
-  font-size: 0.95rem;
-  border-bottom: 1px solid var(--cream-dark);
+  padding: 0.85rem 0.9rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-bottom: none;
+  border-radius: 10px;
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.18s ease, transform 0.12s ease;
 }
-.mobile-nav a.active { color: var(--saffron); font-weight: 700; }
+.mobile-nav > a:active { transform: scale(0.98); }
+.mobile-nav > a:hover { background: rgba(245,158,11,0.10); }
+.mobile-nav a.active {
+  color: var(--maroon-dark);
+  font-weight: 700;
+  background: var(--grad-warm);
+  box-shadow: inset 3px 0 0 var(--saffron-deep);
+}
 .mobile-nav.open { display: flex; }
 
 /* ── News Ticker ─────────────────────────────────────────── */
@@ -406,7 +422,10 @@ body {
 .mh-comment-text { font-size: 0.88rem; color: var(--text); line-height: 1.6; }
 
 /* ── Mobile Accordion Submenu ─────────────────────────────── */
-.mobile-nav-group { border-bottom: 1px solid var(--cream-dark); }
+.mobile-nav-group {
+  border-bottom: none;
+  margin-bottom: 0.25rem;
+}
 .mobile-nav-toggle {
   display: flex;
   align-items: center;
@@ -416,30 +435,56 @@ body {
   border: none;
   color: var(--maroon);
   font-family: inherit;
-  font-size: 0.95rem;
-  padding: 0.55rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.85rem 0.9rem;
   cursor: pointer;
   text-align: left;
+  border-radius: 10px;
+  transition: background 0.18s ease;
+  gap: 0.5rem;
 }
-.mobile-nav-toggle .arrow { font-size: 0.7rem; transition: transform 0.2s; color: var(--saffron); }
+.mobile-nav-toggle:hover { background: rgba(245,158,11,0.10); }
+.mobile-nav-toggle.open {
+  background: var(--grad-warm);
+  color: var(--maroon-dark);
+}
+.mobile-nav-toggle .arrow {
+  font-size: 0.7rem;
+  transition: transform 0.25s ease;
+  color: var(--saffron-deep);
+  flex-shrink: 0;
+}
 .mobile-nav-toggle.open .arrow { transform: rotate(180deg); }
 .mobile-nav-submenu {
   display: none;
   flex-direction: column;
-  padding-left: 1rem;
-  background: var(--cream);
-  border-radius: 8px;
-  margin-bottom: 0.4rem;
+  padding: 0.35rem 0.4rem 0.5rem 0.9rem;
+  background: linear-gradient(180deg, rgba(253,243,227,0.7) 0%, rgba(250,235,210,0.5) 100%);
+  border-radius: 12px;
+  margin: 0.15rem 0 0.5rem;
+  border-left: 3px solid var(--gold-light);
 }
 .mobile-nav-submenu.open { display: flex; }
 .mobile-nav-submenu a {
-  font-size: 0.85rem;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid var(--border);
+  font-size: 0.92rem;
+  padding: 0.6rem 0.7rem;
+  border-bottom: none;
+  border-radius: 8px;
+  color: var(--maroon);
+  transition: background 0.15s ease, padding-left 0.15s ease;
+}
+.mobile-nav-submenu a:hover {
+  background: rgba(245,158,11,0.12);
+  padding-left: 1rem;
 }
 .mobile-nav-submenu a:last-child { border-bottom: none; }
+.mobile-nav-submenu .dropdown-group-label {
+  padding: 0.5rem 0.7rem 0.2rem;
+  margin-top: 0.2rem;
+}
 .mobile-nav a.mobile-plain {
-  display: block;
+  display: flex;
 }
 
 /* ── Dropdown Section Group Headers ──────────────────────── */
