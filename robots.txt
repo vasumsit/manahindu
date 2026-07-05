@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Google AdSense crawler
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: Google-Display-Ads-Bot
+Allow: /
+
+Sitemap: https://manahindu.com/sitemap.xml
