@@ -10,9 +10,13 @@ const ManaHinduComments = {
   _cache: null,
 
   getPageKey() {
-    const path = window.location.pathname;
-    const match = path.match(/\/([^\/]+)\.html$/);
-    return 'comments_' + (match ? match[1] : 'home');
+    // Unique per-page key from full path (was: filename-only, which made
+    // every folder "index.html" share one comment thread).
+    let path = window.location.pathname;
+    path = path.replace(/index\.html$/, '');
+    path = path.replace(/\.html$/, '');
+    path = path.replace(/^\/+|\/+$/g, '');
+    return 'comments_' + (path ? path.replace(/\//g, '_') : 'home');
   },
 
   async loadAll() {

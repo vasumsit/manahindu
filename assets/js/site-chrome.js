@@ -180,7 +180,7 @@
 </div>
 </div>
 </div>
-<div class="footer-bottom"><p>© 2025 మన హిందూ | ManaHindu — జై శ్రీ వేంకటేశ్వర 🙏</p></div>
+<div class="footer-bottom"><p>© 2025 మన హిందూ | ManaHindu — జై శ్రీ వేంకటేశ్వర 🙏</p><p class="footer-sitevisits" style="margin-top:0.4rem;font-size:0.85rem;opacity:0.85;">👁️ మొత్తం సందర్శకులు: <strong id="mh-site-visits">…</strong></p></div>
 </footer>`;
 
   function applyRoot(html) { return html.split('{ROOT}').join(ROOT); }
@@ -192,6 +192,7 @@
     if (h) h.innerHTML = applyRoot(HEADER);
     if (f) f.innerHTML = applyRoot(FOOTER);
     highlightActive();
+    showSiteVisits();
     // Re-bind the mobile hamburger + dropdown toggles if main.js exposes them.
     if (window.ManaHinduNav && typeof window.ManaHinduNav.bind === 'function') {
       try { window.ManaHinduNav.bind(); } catch (e) {}
@@ -210,6 +211,41 @@
       if (here === path && path.length > bestLen) { bestEl = a; bestLen = path.length; }
     }
     if (bestEl) bestEl.classList.add('active');
+  }
+
+  // 5) Whole-site visitor total in the footer.
+  //    Reads the shared JSONBin store and SUMS every page's visit count,
+  //    so the site total always stays consistent with the per-page numbers
+  //    (no separate counter to drift). Read-only here; per-page visits are
+  //    recorded by temple-reactions.js on the content pages.
+  var VISITS = {
+    BIN_ID:  '6a3168a5da38895dfeca560b',
+    API_KEY: '$2a$10$qKtXWnseApIuvvFkuCcYqeiGduPMLn3VKQnTyGYk1X5ZXlgLDPcYG',
+    BASE_URL: 'https://api.jsonbin.io/v3/b'
+  };
+  function fmt(n) { return (n || 0).toLocaleString('en-IN'); }
+  function showSiteVisits() {
+    var el = document.getElementById('mh-site-visits');
+    if (!el) return;
+    fetch(VISITS.BASE_URL + '/' + VISITS.BIN_ID + '/latest', {
+      headers: { 'X-Master-Key': VISITS.API_KEY }
+    }).then(function (r) { return r.json(); }).then(function (json) {
+      var rec = (json && json.record) || {};
+      var reactions = rec.reactions || {};
+      var total = 0;
+      for (var k in reactions) {
+        if (reactions.hasOwnProperty(k)) total += (reactions[k].visits || 0);
+      }
+      el.textContent = fmt(total);
+    }).catch(function () {
+      // Fallback: local backup if the API is unreachable.
+      try {
+        var d = JSON.parse(localStorage.getItem('mh_global_data') || '{"reactions":{}}');
+        var t = 0, rr = d.reactions || {};
+        for (var k in rr) { if (rr.hasOwnProperty(k)) t += (rr[k].visits || 0); }
+        el.textContent = fmt(t);
+      } catch (e) { el.textContent = '—'; }
+    });
   }
 
   if (document.readyState === 'loading') {

@@ -18,9 +18,15 @@ const ManaHinduReactions = {
   _saving: false,
 
   getPageKey() {
-    const path = window.location.pathname;
-    const match = path.match(/\/([^\/]+)\.html$/);
-    return match ? match[1] : 'home';
+    // Build a UNIQUE key from the full folder path — not just the filename.
+    // Old bug: every ".../index.html" collapsed to "index", so all folder
+    // pages shared one counter. Now we use the whole path.
+    let path = window.location.pathname;          // e.g. /pages/hinduism/varaha-puranam/index.html
+    path = path.replace(/index\.html$/, '');       // drop trailing index.html
+    path = path.replace(/\.html$/, '');            // drop .html on named files (temples)
+    path = path.replace(/^\/+|\/+$/g, '');         // trim leading/trailing slashes
+    if (!path) return 'home';                      // site root
+    return path.replace(/\//g, '_');               // /pages/hinduism/varaha-puranam -> pages_hinduism_varaha-puranam
   },
 
   // Load all data from JSONBin
