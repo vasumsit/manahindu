@@ -622,6 +622,13 @@ body {
   padding-left: 1rem;
   color: var(--maroon);
 }
+.ch-sloka-badge {
+  font-size: 0.72rem;
+  opacity: 0.85;
+  margin-left: 0.15rem;
+  vertical-align: baseline;
+}
+.chapter-nav-item.active .ch-sloka-badge { opacity: 1; }
 
 /* Source-note — parchment look */
 .source-note {
