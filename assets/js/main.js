@@ -49,13 +49,23 @@ document.addEventListener('click', function(e) {
 // When migrating to Vue: import { MH } from '@/utils/main.js'
 if (typeof module !== 'undefined') module.exports = { MH };
 
-// Reset dropdown scroll to top on open
-document.querySelectorAll('.nav-item').forEach(function(item) {
-  item.addEventListener('mouseenter', function() {
-    var dropdown = item.querySelector('.dropdown');
-    if (dropdown) dropdown.scrollTop = 0;
+// ── Re-bindable nav wiring (works after site-chrome injects the header) ──
+// site-chrome.js calls window.ManaHinduNav.bind() once the shared header
+// is in the DOM, so injected nav items get their direct listeners too.
+window.ManaHinduNav = window.ManaHinduNav || {};
+window.ManaHinduNav.bind = function () {
+  // Reset dropdown scroll to top on open (direct binding, so re-run after inject)
+  document.querySelectorAll('.nav-item').forEach(function (item) {
+    if (item._mhBound) return;      // avoid double-binding
+    item._mhBound = true;
+    item.addEventListener('mouseenter', function () {
+      var dropdown = item.querySelector('.dropdown');
+      if (dropdown) dropdown.scrollTop = 0;
+    });
   });
-});
+};
+// Bind now for any header that is already inline in the page.
+window.ManaHinduNav.bind();
 
 // ── Mobile Accordion Submenu Toggle ───────────────────────
 function toggleMobileSubmenu(id) {
