@@ -178,6 +178,12 @@
 <a href="https://www.youtube.com/@Vasu11tv" target="_blank">▶ YouTube — v11tv</a>
 <a href="{ROOT}pages/about/index.html">మా గురించి</a>
 </div>
+<div>
+<h4>సమాచారం</h4>
+<a href="{ROOT}pages/about/index.html">మా గురించి</a>
+<a href="{ROOT}pages/contact/index.html">సంప్రదించండి</a>
+<a href="{ROOT}pages/privacy/index.html">గోప్యతా విధానం</a>
+</div>
 </div>
 </div>
 <div class="footer-bottom"><p>© 2025 మన హిందూ | ManaHindu — జై శ్రీ వేంకటేశ్వర 🙏</p><p class="footer-sitevisits" style="margin-top:0.4rem;font-size:0.85rem;opacity:0.85;">👁️ మొత్తం సందర్శకులు: <strong id="mh-site-visits">…</strong></p></div>
