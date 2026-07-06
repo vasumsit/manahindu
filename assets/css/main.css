@@ -241,11 +241,24 @@ body {
 .nav-item > a { display: flex; align-items: center; gap: 0.3rem; }
 .nav-item > a::after { content: "▾"; font-size: 0.7rem; transition: transform 0.2s ease; }
 .nav-item:hover > a::after { transform: rotate(180deg); }
+/* Invisible bridge fills the gap under the button so the mouse can travel
+   from the nav item down to the dropdown without the hover breaking. */
+.nav-item::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 14px;
+  display: none;
+}
+.nav-item:hover::before { display: block; }
 .dropdown {
   display: none;
   position: absolute;
-  top: calc(100% + 8px);
+  top: 100%;
   left: 0;
+  margin-top: 0;
   background: linear-gradient(180deg, #ffffff, #fffaf2);
   border: 1px solid rgba(234,122,12,0.15);
   border-top: 3px solid transparent;

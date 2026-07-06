@@ -6,14 +6,43 @@
 
 /* ── Hero ────────────────────────────────────────────────── */
 .hero {
-  background:
-    linear-gradient(135deg, rgba(61,12,12,0.82) 0%, rgba(124,28,28,0.72) 50%, rgba(74,14,14,0.85) 100%),
-    url('../../pages/temples/images/tirupati/tirumala-night-gopuram.jpg') center/cover no-repeat;
+  background: linear-gradient(135deg, #2a0808 0%, #7c1c1c 55%, #1a0505 100%);
   min-height: 500px;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
+}
+.hero-slides {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: heroFade 25s infinite;
+}
+.hero-slide::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(42,8,8,0.78) 0%, rgba(124,28,28,0.60) 50%, rgba(26,5,5,0.82) 100%);
+}
+.hero-slide:nth-child(1) { animation-delay: 0s; }
+.hero-slide:nth-child(2) { animation-delay: 5s; }
+.hero-slide:nth-child(3) { animation-delay: 10s; }
+.hero-slide:nth-child(4) { animation-delay: 15s; }
+.hero-slide:nth-child(5) { animation-delay: 20s; }
+@keyframes heroFade {
+  0%    { opacity: 0; transform: scale(1.08); }
+  6%    { opacity: 1; }
+  20%   { opacity: 1; transform: scale(1); }
+  26%   { opacity: 0; }
+  100%  { opacity: 0; }
 }
 .hero::before {
   content: 'ॐ';
