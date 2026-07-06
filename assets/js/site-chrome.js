@@ -92,7 +92,7 @@
 </div><div class="nav-item">
 <a href="{ROOT}pages/festivals/index.html">పండుగలు</a>
 <div class="dropdown"><a href="{ROOT}pages/festivals/index.html">పండుగలు హోమ్</a><span class="dropdown-group-label">ముఖ్యమైనవి</span><a href="{ROOT}pages/festivals/vinayaka-chavithi/index.html">🐘 వినాయక చవితి</a><a href="{ROOT}pages/festivals/maha-shivaratri/index.html">🔱 మహా శివరాత్రి</a><a href="{ROOT}pages/festivals/ugadi/index.html">🌿 ఉగాది</a><a href="{ROOT}pages/festivals/sri-rama-navami/index.html">🏹 శ్రీ రామ నవమి</a><span class="dropdown-group-label">చిన్నవి</span><a href="{ROOT}pages/festivals/dasara/index.html">🗡️ దసరా</a><a href="{ROOT}pages/festivals/diwali/index.html">🪔 దీపావళి</a><div class="dropdown-divider"></div><a href="{ROOT}pages/festivals/index.html" style="color:var(--maroon);font-weight:600;">అన్నీ చూడండి (12) →</a></div>
-</div><div class="nav-item"><a href="#">మరిన్ని</a><div class="dropdown"><a href="{ROOT}pages/vlogs/index.html">🎥 వ్లాగ్స్</a><a href="{ROOT}pages/news/index.html">📰 వార్తలు</a><a href="{ROOT}pages/about/index.html">ℹ️ మా గురించి</a></div></div></nav>
+</div><div class="nav-item"><a href="#">మరిన్ని</a><div class="dropdown"><a href="{ROOT}pages/vlogs/index.html">🎥 వ్లాగ్స్</a><a href="{ROOT}pages/gallery/index.html">📸 ఫోటో గ్యాలరీ</a><a href="{ROOT}pages/news/index.html">📰 వార్తలు</a><a href="{ROOT}pages/about/index.html">ℹ️ మా గురించి</a></div></div></nav>
 <button aria-label="Menu" class="hamburger" onclick="toggleMenu()">☰</button>
 </div>
 <div class="mobile-nav" id="mobileNav">
@@ -158,7 +158,7 @@
           🎉 పండుగలు <span class="arrow">▾</span>
 </button>
 <div class="mobile-nav-submenu" id="m-festivals"><a href="{ROOT}pages/festivals/index.html">— పండుగలు హోమ్</a><span class="dropdown-group-label" style="display:block;padding:0.4rem 0;">ముఖ్యమైనవి</span><a href="{ROOT}pages/festivals/vinayaka-chavithi/index.html">— 🐘 వినాయక చవితి</a><a href="{ROOT}pages/festivals/maha-shivaratri/index.html">— 🔱 మహా శివరాత్రి</a><a href="{ROOT}pages/festivals/ugadi/index.html">— 🌿 ఉగాది</a><a href="{ROOT}pages/festivals/sri-rama-navami/index.html">— 🏹 శ్రీ రామ నవమి</a><span class="dropdown-group-label" style="display:block;padding:0.4rem 0;">చిన్నవి</span><a href="{ROOT}pages/festivals/dasara/index.html">— 🗡️ దసరా</a><a href="{ROOT}pages/festivals/diwali/index.html">— 🪔 దీపావళి</a><a href="{ROOT}pages/festivals/index.html" style="color:var(--maroon);font-weight:600;">అన్నీ చూడండి (12) →</a></div>
-</div><div class="mobile-nav-group"><button class="mobile-nav-toggle" data-toggle="m-more" onclick="toggleMobileSubmenu('m-more')">📂 మరిన్ని <span class="arrow">▾</span></button><div class="mobile-nav-submenu" id="m-more"><a href="{ROOT}pages/vlogs/index.html">— 🎥 వ్లాగ్స్</a><a href="{ROOT}pages/news/index.html">— 📰 వార్తలు</a><a href="{ROOT}pages/about/index.html">— ℹ️ మా గురించి</a></div></div></div></header>`;
+</div><div class="mobile-nav-group"><button class="mobile-nav-toggle" data-toggle="m-more" onclick="toggleMobileSubmenu('m-more')">📂 మరిన్ని <span class="arrow">▾</span></button><div class="mobile-nav-submenu" id="m-more"><a href="{ROOT}pages/vlogs/index.html">— 🎥 వ్లాగ్స్</a><a href="{ROOT}pages/gallery/index.html">— 📸 ఫోటో గ్యాలరీ</a><a href="{ROOT}pages/news/index.html">— 📰 వార్తలు</a><a href="{ROOT}pages/about/index.html">— ℹ️ మా గురించి</a></div></div></div></header>`;
   var FOOTER = `<footer class="footer">
 <div class="container footer-inner">
 <div class="footer-brand">

@@ -856,3 +856,55 @@ body {
   text-decoration: none;
   font-size: 0.95rem;
 }
+
+/* ── Photo Gallery Page ──────────────────────────────────── */
+.gallery-group { margin-bottom: 2.5rem; }
+.gallery-group-title {
+  font-family: 'Tiro Telugu', serif;
+  font-size: 1.4rem;
+  color: var(--maroon);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid transparent;
+  border-image: var(--grad-gold) 1;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.gallery-count {
+  font-size: 0.75rem;
+  font-family: sans-serif;
+  color: #fff;
+  background: linear-gradient(135deg, #fbbf24, #ea7a0c);
+  padding: 3px 12px;
+  border-radius: 14px;
+  font-weight: 700;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+.gallery-item {
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  box-shadow: 0 3px 12px rgba(124,28,28,0.10);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+.gallery-item:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 10px 26px rgba(124,28,28,0.25);
+}
+.gallery-item img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.28s ease;
+}
+.gallery-item:hover img { filter: brightness(1.08); }
+@media (max-width: 640px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+}
