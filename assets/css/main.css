@@ -908,3 +908,82 @@ body {
 @media (max-width: 640px) {
   .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
 }
+
+/* ── Photo Lightbox ──────────────────────────────────────── */
+.mh-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(20,6,6,0.94);
+  backdrop-filter: blur(4px);
+  align-items: center;
+  justify-content: center;
+}
+.mh-lightbox.open { display: flex; }
+.mh-lb-stage {
+  max-width: 92vw;
+  max-height: 86vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+.mh-lb-stage img {
+  max-width: 92vw;
+  max-height: 78vh;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  object-fit: contain;
+}
+.mh-lb-caption {
+  color: #ffe8bf;
+  font-size: 0.95rem;
+  text-align: center;
+  font-family: 'Tiro Telugu', serif;
+}
+.mh-lb-close {
+  position: absolute;
+  top: 18px; right: 26px;
+  color: #fff;
+  font-size: 2.4rem;
+  cursor: pointer;
+  line-height: 1;
+  z-index: 2;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+.mh-lb-close:hover { color: var(--saffron); transform: scale(1.15); }
+.mh-lb-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 2.2rem;
+  cursor: pointer;
+  padding: 0.6rem 0.9rem;
+  background: rgba(124,28,28,0.55);
+  border-radius: 50%;
+  user-select: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+  z-index: 2;
+}
+.mh-lb-nav:hover { background: linear-gradient(135deg, #fbbf24, #ea7a0c); color: #4a1010; transform: translateY(-50%) scale(1.1); }
+.mh-lb-prev { left: 18px; }
+.mh-lb-next { right: 18px; }
+.mh-lb-counter {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffe8bf;
+  font-size: 0.9rem;
+  background: rgba(0,0,0,0.4);
+  padding: 4px 14px;
+  border-radius: 14px;
+}
+@media (max-width: 640px) {
+  .mh-lb-nav { font-size: 1.6rem; padding: 0.4rem 0.6rem; }
+  .mh-lb-prev { left: 8px; }
+  .mh-lb-next { right: 8px; }
+  .mh-lb-close { top: 12px; right: 16px; font-size: 2rem; }
+}
