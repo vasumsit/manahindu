@@ -148,6 +148,14 @@
   .pcard:hover{border-color:var(--gold);transform:translateY(-3px);}
   .plabel{display:block;font-size:0.78rem;color:var(--muted);margin-bottom:6px;letter-spacing:0.03em;}
   .pval{display:block;font-size:1.1rem;color:var(--gold-soft);font-weight:500;}
+  /* News cards */
+  .hnews{background:var(--ink-2);border:1px solid rgba(212,175,55,0.2);border-radius:14px;
+    padding:18px 20px;transition:border-color .3s,transform .3s;text-decoration:none;display:block;}
+  .hnews:hover{border-color:var(--gold);transform:translateY(-3px);}
+  .hnews-date{font-size:0.72rem;color:var(--gold-deep);letter-spacing:0.05em;margin-bottom:6px;}
+  .hnews-title{font-family:'Tiro Telugu',serif;font-size:1.2rem;color:var(--gold-soft);margin-bottom:6px;}
+  .hnews-body{font-family:'Tiro Telugu',serif;color:var(--muted);font-size:0.92rem;line-height:1.7;}
+  .hnews-empty{text-align:center;color:var(--muted);padding:1.5rem;font-family:'Tiro Telugu',serif;}
 </style>
 </head>
 <body>
@@ -167,10 +175,11 @@
 <!-- STATS -->
 <div class="wrap">
   <div class="stats">
-    <div class="stat"><div class="num display">20+</div><div class="lbl tel">దేవాలయాలు</div></div>
+    <div class="stat"><div class="num display">58</div><div class="lbl tel">దేవాలయాలు</div></div>
     <div class="stat"><div class="num display">18</div><div class="lbl tel">మహాపురాణాలు</div></div>
-    <div class="stat"><div class="num display">9</div><div class="lbl tel">శ్లోకాలు</div></div>
+    <div class="stat"><div class="num display">10</div><div class="lbl tel">శ్లోకాలు</div></div>
     <div class="stat"><div class="num display">53</div><div class="lbl tel">యాత్రా ఫోటోలు</div></div>
+    <div class="stat"><div class="num display" id="visitCount">—</div><div class="lbl tel">సందర్శకులు</div></div>
   </div>
 </div>
 
@@ -190,13 +199,23 @@
       <p class="tel">అష్టాదశ మహాపురాణాలు — అసలైన శ్లోకాలతో, తాత్పర్యంతో.</p>
       <span class="go tel">చదవండి →</span>
     </a>
+    <a class="door" href="pages/hinduism/index.html">
+      <div class="icon">🕉️</div><h3 class="tel">హిందూమతం</h3>
+      <p class="tel">ఆచార్యులు, దైవ చరితలు, భక్తుల త్యాగ గాథలు.</p>
+      <span class="go tel">తెలుసుకోండి →</span>
+    </a>
+    <a class="door" href="pages/sanatana-dharma/index.html">
+      <div class="icon">📜</div><h3 class="tel">సనాతన ధర్మం</h3>
+      <p class="tel">హిందూమతం చరిత్ర, తత్త్వం &amp; పవిత్ర గ్రంథాలు.</p>
+      <span class="go tel">చదవండి →</span>
+    </a>
     <a class="door" href="pages/festivals/index.html">
       <div class="icon">🪔</div><h3 class="tel">పండుగలు</h3>
       <p class="tel">పండుగల కథ, విశిష్టత, పూజా విధానం, మంత్రాలు.</p>
       <span class="go tel">తెలుసుకోండి →</span>
     </a>
     <a class="door" href="pages/slokalu/index.html">
-      <div class="icon">📜</div><h3 class="tel">శ్లోకాలు</h3>
+      <div class="icon">🕉</div><h3 class="tel">శ్లోకాలు</h3>
       <p class="tel">హనుమాన్ చాలీసా, శతకాలు, స్తోత్రాలు — భక్తితో.</p>
       <span class="go tel">పఠించండి →</span>
     </a>
@@ -209,6 +228,11 @@
       <div class="icon">🎬</div><h3 class="tel">వ్లాగ్స్</h3>
       <p class="tel">దేవాలయ యాత్రల వీడియోలు — YouTube లో.</p>
       <span class="go tel">చూడండి →</span>
+    </a>
+    <a class="door" href="pages/news/index.html">
+      <div class="icon">📰</div><h3 class="tel">వార్తలు</h3>
+      <p class="tel">దేవాలయ వార్తలు, పండుగ ప్రకటనలు, తాజా సమాచారం.</p>
+      <span class="go tel">చదవండి →</span>
     </a>
   </div>
 </section>
@@ -227,6 +251,17 @@
     <div class="pcard"><span class="plabel tel">కరణం</span><span class="pval tel" id="p-karana">—</span></div>
     <div class="pcard"><span class="plabel tel">రాహు కాలం</span><span class="pval tel" id="p-rahu">—</span></div>
     <div class="pcard"><span class="plabel tel">యమగండం</span><span class="pval tel" id="p-yama">—</span></div>
+  </div>
+</section>
+
+<!-- LATEST NEWS -->
+<section class="sec wrap">
+  <div class="sec-eyebrow">Latest</div>
+  <h2 class="sec-title tel">📰 తాజా వార్తలు</h2>
+  <p class="sec-desc tel">దేవాలయ వార్తలు · పండుగ ప్రకటనలు · తాజా సమాచారం</p>
+  <div id="homeNews" style="display:grid;gap:14px;"></div>
+  <div style="text-align:center;margin-top:20px;">
+    <a class="btn-line tel" href="pages/news/index.html" style="display:inline-block;">అన్ని వార్తలు చూడండి →</a>
   </div>
 </section>
 
@@ -250,5 +285,38 @@
 </footer>
 
 <script src="assets/js/panchangam.js"></script>
+<script>
+(function(){
+  // Live total visitor count from JSONBin (sum of all page visits)
+  var el=document.getElementById('visitCount');
+  if(!el) return;
+  fetch('https://api.jsonbin.io/v3/b/6a3168a5da38895dfeca560b/latest',{headers:{'X-Master-Key':'$2a$10$qKtXWnseApIuvvFkuCcYqeiGduPMLn3VKQnTyGYk1X5ZXlgLDPcYG'}})
+    .then(function(r){return r.json();}).then(function(j){
+      var rec=(j&&j.record)||{}, reactions=rec.reactions||{}, total=0;
+      for(var k in reactions){ if(reactions.hasOwnProperty(k)) total+=(reactions[k].visits||0); }
+      el.textContent=(total||0).toLocaleString('en-IN');
+    }).catch(function(){ el.textContent='—'; });
+})();
+</script>
+<script>
+(function(){
+  var SHEET_API="https://script.google.com/macros/s/AKfycbzN4ltI-0Mg6n6YYrCIIsO5lTzXpCxQ2tg4fMCWMgnIVrDnGodNBhw7EXxHBU3rEwk/exec";
+  var el=document.getElementById('homeNews');
+  if(!el) return;
+  fetch(SHEET_API).then(function(r){return r.json();}).then(function(j){
+    var news=(j&&j.news)?j.news:[];
+    if(!news.length){ el.innerHTML='<div class="hnews-empty">🙏 త్వరలో వార్తలు అప్‌డేట్ అవుతాయి.</div>'; return; }
+    el.innerHTML='';
+    news.slice(0,3).forEach(function(n){
+      var d=new Date(n.date).toLocaleDateString('te-IN',{year:'numeric',month:'long',day:'numeric'});
+      var body=(n.body||'').replace(/</g,'&lt;');
+      if(body.length>140) body=body.substring(0,140)+'...';
+      el.innerHTML+='<a class="hnews" href="pages/news/index.html"><div class="hnews-date">📅 '+d+
+        '</div><div class="hnews-title">'+(n.title||'').replace(/</g,'&lt;')+
+        '</div><div class="hnews-body">'+body+'</div></a>';
+    });
+  }).catch(function(){ el.innerHTML='<div class="hnews-empty">🙏 త్వరలో వార్తలు అప్‌డేట్ అవుతాయి.</div>'; });
+})();
+</script>
 </body>
 </html>
