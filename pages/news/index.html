@@ -48,7 +48,7 @@
       el.innerHTML='';
       news.forEach(function(n){
         var d=new Date(n.date).toLocaleDateString('te-IN',{year:'numeric',month:'long',day:'numeric'});
-        var img=n.img?'<img src="'+n.img+'" alt="'+(n.title||'')+'" loading="lazy"/>':'';
+        var img='';
         var body=(n.body||'').replace(/</g,'&lt;');
         el.innerHTML+='<div class="news-item">'+img+'<div class="news-body"><div class="news-title">'+
           (n.title||'').replace(/</g,'&lt;')+'</div><div class="news-date">📅 '+d+'</div><div class="news-text">'+body+'</div></div></div>';

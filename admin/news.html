@@ -69,14 +69,6 @@
       <label class="tel">📝 వివరాలు (Details)</label>
       <textarea id="body" class="tel" placeholder="వార్త వివరాలు ఇక్కడ రాయండి..."></textarea>
 
-      <label class="tel">📷 ఫోటో (మీ ఫోన్ నుండి ఎంచుకోండి)</label>
-      <input type="file" id="photo" accept="image/*"/>
-      <div id="preview" class="preview"><img id="previewImg" src="" alt=""/></div>
-
-      <div id="setupNote" class="setup-note">
-        ⚙️ <b>ఒకసారి సెటప్:</b> Google Sheet web app URL ని <code>SHEET_API</code> దగ్గర పెట్టండి. ఫోటో కోసం ImgBB key (ఐచ్ఛికం) — లేకపోతే ఫోటో URL పేస్ట్ చేయవచ్చు.
-      </div>
-
       <button class="btn" onclick="publish()">🚀 ప్రచురించండి · Publish</button>
       <div id="pubMsg" class="msg"></div>
     </div>
@@ -96,7 +88,6 @@
 /* ========= CONFIG ========= */
 var ADMIN_PASSWORD = "vasu@manahindu";   // your login password (must match SECRET in Apps Script)
 var SHEET_API = "https://script.google.com/macros/s/AKfycbzN4ltI-0Mg6n6YYrCIIsO5lTzXpCxQ2tg4fMCWMgnIVrDnGodNBhw7EXxHBU3rEwk/exec";  // paste your Apps Script web app URL
-var IMGBB_KEY = "PASTE_YOUR_IMGBB_KEY_HERE";  // optional: for photo file upload
 /* ========================== */
 
 function login(){
@@ -106,35 +97,14 @@ function login(){
     sessionStorage.setItem('mh_admin','1');
     document.getElementById('gate').classList.add('hidden');
     document.getElementById('panel').classList.remove('hidden');
-    if(IMGBB_KEY && IMGBB_KEY.indexOf('PASTE')===-1) document.getElementById('setupNote').style.display='none';
+    
     loadNews();
   } else { m.className='msg err'; m.textContent='తప్పు పాస్‌వర్డ్ · Wrong password'; }
 }
 function logout(){ sessionStorage.removeItem('mh_admin'); location.reload(); }
-if(sessionStorage.getItem('mh_admin')==='1'){ window.addEventListener('DOMContentLoaded',function(){document.getElementById('gate').classList.add('hidden');document.getElementById('panel').classList.remove('hidden');if(IMGBB_KEY&&IMGBB_KEY.indexOf('PASTE')===-1)document.getElementById('setupNote').style.display='none';loadNews();}); }
+if(sessionStorage.getItem('mh_admin')==='1'){ window.addEventListener('DOMContentLoaded',function(){document.getElementById('gate').classList.add('hidden');document.getElementById('panel').classList.remove('hidden');loadNews();}); }
 
-/* image preview */
-document.addEventListener('change',function(e){
-  if(e.target && e.target.id==='photo'){
-    var f=e.target.files[0]; if(!f) return;
-    var r=new FileReader();
-    r.onload=function(ev){ document.getElementById('previewImg').src=ev.target.result; document.getElementById('preview').style.display='block'; };
-    r.readAsDataURL(f);
-  }
-});
 
-function uploadImage(){
-  return new Promise(function(resolve){
-    var f=document.getElementById('photo').files[0];
-    if(!f){ resolve(''); return; }
-    if(!IMGBB_KEY || IMGBB_KEY.indexOf('PASTE')!==-1){ resolve(''); return; }
-    var fd=new FormData(); fd.append('image', f);
-    fetch('https://api.imgbb.com/1/upload?key='+IMGBB_KEY,{method:'POST',body:fd})
-      .then(function(r){return r.json();})
-      .then(function(j){ resolve((j&&j.data&&j.data.url)?j.data.url:''); })
-      .catch(function(){ resolve(''); });
-  });
-}
 
 function getNews(){
   return fetch(SHEET_API)
@@ -156,9 +126,7 @@ function publish(){
   var m=document.getElementById('pubMsg');
   if(!title){ m.className='msg err'; m.textContent='శీర్షిక అవసరం · Headline required'; return; }
   m.className='msg info'; m.textContent='⏳ ప్రచురిస్తోంది... Publishing...';
-  uploadImage().then(function(imgUrl){
-    return postToSheet({ title:title, body:body, img:imgUrl, date:new Date().toISOString() });
-  }).then(function(){
+  postToSheet({ title:title, body:body, img:"", date:new Date().toISOString() }).then(function(){
     m.className='msg ok'; m.textContent='✅ ప్రచురించబడింది! Published!';
     document.getElementById('title').value=''; document.getElementById('body').value='';
     document.getElementById('photo').value=''; document.getElementById('preview').style.display='none';
@@ -174,7 +142,7 @@ function loadNews(){
     el.innerHTML='';
     arr.forEach(function(n){
       var d=new Date(n.date).toLocaleDateString('te-IN');
-      var img=n.img?'<img src="'+n.img+'" alt="">':'';
+      var img='';
       el.innerHTML+='<div class="item">'+img+'<div><div class="t">'+n.title+'</div><div class="d">'+d+'</div></div><button class="del" onclick="delNews(\''+n.date+'\',\''+(n.title||'').replace(/'/g,"")+'\')">×</button></div>';
     });
   });
