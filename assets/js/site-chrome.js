@@ -47,7 +47,7 @@
 <a href="{ROOT}index.html">హోమ్</a><div class="nav-item">
 <a href="{ROOT}pages/hinduism/index.html">హిందూమతం</a>
 <div class="dropdown">
-<a href="{ROOT}pages/hinduism/index.html">హిందూమతం హోమ్</a>
+<a href="{ROOT}pages/hinduism/index.html">హిందూమతం హోమ్</a><a href="{ROOT}pages/sanatana-dharma/index.html">🕉️ సనాతన ధర్మం (చరిత్ర)</a>
 <span class="dropdown-group-label">ఆచార్యులు</span>
 <a href="{ROOT}pages/hinduism/adi-shankaracharya/index.html">🕉️ ఆది శంకరాచార్యులు</a>
 <a href="{ROOT}pages/hinduism/sri-ramana-maharshi/index.html">🧘 రమణ మహర్షి</a>

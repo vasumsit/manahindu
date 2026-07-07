@@ -37,7 +37,7 @@
 <script src="../../assets/js/site-chrome.js"></script>
 <script>
 (function(){
-  var SHEET_API="PASTE_YOUR_GOOGLE_SHEET_WEBAPP_URL_HERE";
+  var SHEET_API="https://script.google.com/macros/s/AKfycbzN4ltI-0Mg6n6YYrCIIsO5lTzXpCxQ2tg4fMCWMgnIVrDnGodNBhw7EXxHBU3rEwk/exec";
   var el=document.getElementById('newsContainer');
   if(SHEET_API.indexOf('PASTE')!==-1){ el.innerHTML='<div class="news-empty">🙏 వార్తలు త్వరలో అందుబాటులోకి వస్తాయి.</div>'; return; }
   fetch(SHEET_API)
