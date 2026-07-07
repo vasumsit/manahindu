@@ -1,0 +1,130 @@
+/* ═══════════════════════════════════════════════════════════
+   ManaHindu — PREMIUM MAROON + GOLD + IVORY THEME
+   Dark-gold headers/footers wrapping bright ivory reading pages.
+   Loaded LAST to refine the base look site-wide.
+   Includes animated ribbon/accent variety.
+   ═══════════════════════════════════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap');
+
+:root{
+  --p-ink:#0d0b12; --p-ink2:#1c1826;
+  --p-maroon:#3a0f14; --p-maroon2:#5a1620;
+  --p-gold:#d4af37; --p-gold-soft:#e8cf8a; --p-gold-deep:#a8862a;
+  --p-ivory:#fbf7ef; --p-cream:#f4ecdd;
+  --p-text:#2a2320; --p-text-soft:#5a4a3a;
+}
+
+/* ── Reading surface ── */
+body{ background:var(--p-ivory) !important; color:var(--p-text) !important; }
+.section{ background:transparent !important; }
+
+/* Body text: crisp, readable, roomy */
+p, li, td{ color:var(--p-text) !important; line-height:1.95 !important; }
+.satakam-intro p, .chapter-section p, .chapter-content p{
+  color:var(--p-text) !important; font-size:1.06rem !important; line-height:2 !important;
+}
+.text-muted,.muted,small{ color:var(--p-text-soft) !important; }
+
+/* ── Headings: elegant ── */
+h1,h2,h3,h4{ color:var(--p-maroon) !important; }
+.chapter-section h2, .satakam-intro h2{
+  font-family:'Tiro Telugu',serif !important;
+  position:relative; padding-top:0.3rem;
+}
+
+/* ═══ ANIMATED RIBBONS / ACCENTS (variety) ═══ */
+
+/* Ribbon 1 — shimmering gold bar that sweeps (under section titles) */
+.chapter-section h2::before, .satakam-intro h2::before{
+  content:''; display:block; width:54px; height:4px; border-radius:4px; margin-bottom:12px;
+  background:linear-gradient(90deg,var(--p-gold-deep),var(--p-gold-soft),var(--p-gold),var(--p-gold-soft),var(--p-gold-deep));
+  background-size:200% 100%;
+  animation:ribbonShimmer 3s linear infinite;
+}
+@keyframes ribbonShimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+/* Ribbon 2 — page-hero bottom ribbon that flows */
+.page-hero, .article-hero, .life-hero{
+  background:linear-gradient(135deg,var(--p-maroon),var(--p-ink2)) !important;
+  position:relative; overflow:hidden;
+}
+.page-hero::after, .article-hero::after, .life-hero::after{
+  content:''; position:absolute; left:0; right:0; bottom:0; height:4px;
+  background:linear-gradient(90deg,transparent,var(--p-gold),var(--p-gold-soft),var(--p-gold),transparent);
+  background-size:200% 100%;
+  animation:ribbonFlow 4s linear infinite;
+}
+@keyframes ribbonFlow{0%{background-position:0 0}100%{background-position:200% 0}}
+
+.page-hero h1,.article-hero h1,.life-hero h1,.article-hero-title{ color:var(--p-gold-soft) !important; }
+.page-hero p,.article-hero p,.life-hero p{ color:#e8dcc4 !important; }
+.breadcrumb, .breadcrumb a{ color:var(--p-gold-soft) !important; }
+.breadcrumb span{ color:#c9b896 !important; }
+
+/* ── Header / Nav ── */
+.header{ background:linear-gradient(180deg,var(--p-ink),var(--p-ink2)) !important; border-bottom:1px solid rgba(212,175,55,0.25) !important; box-shadow:0 4px 20px rgba(0,0,0,0.35) !important; }
+.logo-title{ color:var(--p-ivory) !important; }
+.logo-sub,.logo-om{ color:var(--p-gold) !important; }
+.nav a{ color:var(--p-ivory) !important; }
+.nav a:hover{ background:rgba(212,175,55,0.15) !important; color:var(--p-gold-soft) !important; }
+.nav a.active{ background:linear-gradient(135deg,var(--p-gold-soft),var(--p-gold-deep)) !important; color:var(--p-ink) !important; }
+.hamburger{ color:var(--p-gold-soft) !important; }
+
+/* Ribbon 3 — animated gradient underline on the header itself */
+.header::after{
+  content:''; position:absolute; left:0; right:0; bottom:-1px; height:2px;
+  background:linear-gradient(90deg,transparent,var(--p-gold),transparent);
+  background-size:200% 100%; animation:ribbonFlow 5s linear infinite;
+}
+
+/* ── Dropdowns ── */
+.dropdown{ background:linear-gradient(180deg,#fff,#fdf6e8) !important; border:1px solid rgba(212,175,55,0.3) !important; border-image:none !important; box-shadow:0 18px 44px rgba(58,15,20,0.25) !important; }
+.dropdown a{ color:var(--p-text) !important; }
+.dropdown a:hover{ background:rgba(212,175,55,0.14) !important; color:var(--p-maroon) !important; }
+.dropdown-group-label{ color:var(--p-gold-deep) !important; border-left-color:var(--p-gold) !important; }
+
+/* ── Mobile nav ── */
+.mobile-nav{ background:linear-gradient(180deg,#fff,#fdf6e8) !important; border-top:3px solid var(--p-gold) !important; border-image:none !important; }
+.mobile-nav > a,.mobile-nav-toggle{ color:var(--p-maroon) !important; }
+.mobile-nav > a.active,.mobile-nav-toggle.open{ background:linear-gradient(135deg,var(--p-gold-soft),rgba(212,175,55,0.3)) !important; color:var(--p-maroon) !important; }
+
+/* ── Cards ── */
+.satakam-intro,.card,.fest-card,.showcase-card,.temple-card,.info-box,.padyam-card,.source-note,.comment-box,.chapter-nav{
+  background:linear-gradient(135deg,#fff,#fdf6e8) !important;
+  border:1px solid #ecd9a8 !important;
+  box-shadow:0 4px 16px rgba(124,28,28,0.07) !important;
+}
+.padyam-card{ border-left:4px solid var(--p-gold) !important; }
+.padyam-text{ color:var(--p-maroon) !important; }
+
+/* Chapter nav sidebar */
+.chapter-nav-item{ color:var(--p-text) !important; }
+.chapter-nav-item:hover:not(.active){ background:rgba(212,175,55,0.12) !important; color:var(--p-maroon) !important; }
+.chapter-nav-item.active{ background:linear-gradient(135deg,var(--p-gold-soft),var(--p-gold-deep)) !important; color:var(--p-ink) !important; }
+
+/* ── Buttons ── */
+.btn-primary{ background:linear-gradient(135deg,var(--p-gold-soft),var(--p-gold)) !important; color:var(--p-ink) !important; border:none !important; box-shadow:0 6px 18px rgba(212,175,55,0.3) !important; }
+.btn-primary:hover{ transform:translateY(-2px); }
+.btn-outline{ border:1px solid var(--p-gold) !important; color:var(--p-maroon) !important; }
+.btn-outline:hover{ background:var(--p-gold) !important; color:var(--p-ink) !important; }
+
+/* ── Footer ── */
+.footer{ background:linear-gradient(180deg,var(--p-ink2),var(--p-ink)) !important; border-top:1px solid rgba(212,175,55,0.25) !important; color:#c9b896 !important; position:relative; }
+.footer::before{ /* Ribbon 4 — top edge shimmer */
+  content:''; position:absolute; top:0; left:0; right:0; height:3px;
+  background:linear-gradient(90deg,transparent,var(--p-gold),var(--p-gold-soft),var(--p-gold),transparent);
+  background-size:200% 100%; animation:ribbonFlow 6s linear infinite;
+}
+.footer h4{ color:var(--p-gold) !important; }
+.footer a{ color:#c9b896 !important; }
+.footer a:hover{ color:var(--p-gold-soft) !important; }
+
+/* ── Gallery ── */
+.gallery-group-title{ color:var(--p-maroon) !important; border-image:none !important; border-bottom:2px solid var(--p-gold) !important; }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion:reduce){
+  .chapter-section h2::before,.satakam-intro h2::before,
+  .page-hero::after,.article-hero::after,.life-hero::after,
+  .header::after,.footer::before{ animation:none !important; }
+}
