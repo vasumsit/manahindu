@@ -167,7 +167,7 @@
     var css = document.createElement('style');
     css.id = 'mh-sidebar-css';
     css.textContent = [
-      '.header-inner{display:flex;align-items:center;justify-content:space-between;}','.header-inner .logo{margin-right:auto;}','.sidebar-toggle{margin-left:auto;background:linear-gradient(135deg,#e8cf8a,#d4af37);color:#0d0b12;border:none;border-radius:22px;padding:9px 20px;font-family:"Tiro Telugu",serif;font-size:0.95rem;font-weight:600;cursor:pointer;transition:transform .2s;order:3;}',
+      '.header-inner{display:flex !important;align-items:center !important;justify-content:space-between !important;flex-wrap:nowrap !important;}','.header-inner .logo{margin-right:auto !important;}','.header-inner > nav.nav#mhSidebar{position:fixed !important;}','.header-inner > .sidebar-backdrop{position:fixed !important;}','.sidebar-toggle{display:inline-block !important;}','.sidebar-toggle{margin-left:auto;background:linear-gradient(135deg,#e8cf8a,#d4af37);color:#0d0b12;border:none;border-radius:22px;padding:9px 20px;font-family:"Tiro Telugu",serif;font-size:0.95rem;font-weight:600;cursor:pointer;transition:transform .2s;order:3;}',
       '.sidebar-toggle:active{transform:scale(0.96);}',
       '.sidebar-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.6);backdrop-filter:blur(3px);z-index:1400;opacity:0;visibility:hidden;transition:opacity .3s;}',
       'body.mh-sidebar-open .sidebar-backdrop{opacity:1;visibility:visible;}',

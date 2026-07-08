@@ -57,14 +57,16 @@ h1,h2,h3,h4{ color:var(--p-maroon) !important; }
 }
 
 /* ── Page hero: keep it clean, remove busy animated bar; add a soft elegant base line ── */
-.page-hero, .article-hero, .life-hero{
+.page-hero, .article-hero, .life-hero, .satakam-hero{
   background:linear-gradient(135deg,var(--p-hero1),var(--p-hero2)) !important;
   position:relative; overflow:hidden;
 }
-.page-hero::after, .article-hero::after, .life-hero::after{
+.page-hero::after, .article-hero::after, .life-hero::after, .satakam-hero::after{
   content:''; position:absolute; left:0; right:0; bottom:0; height:3px;
   background:linear-gradient(90deg,var(--p-gold-deep),var(--p-gold),var(--p-gold-soft),var(--p-gold),var(--p-gold-deep));
 }
+.satakam-hero h1{ color:var(--p-gold-soft) !important; }
+.satakam-hero p{ color:#e8dcc4 !important; }
 
 .page-hero h1,.article-hero h1,.life-hero h1,.article-hero-title{ color:var(--p-gold-soft) !important; }
 .page-hero p,.article-hero p,.life-hero p{ color:#e8dcc4 !important; }
