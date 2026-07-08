@@ -129,3 +129,14 @@ h1,h2,h3,h4{ color:var(--p-maroon) !important; }
   .page-hero::after,.article-hero::after,.life-hero::after,
   .header::after,.footer::before{ animation:none !important; }
 }
+
+/* ── Quick page fade-in (inner pages) ──────────────────────── */
+@keyframes mhPageIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.article-hero, .page-hero, .life-hero { animation: mhPageIn 0.5s ease both; }
+.section, .container > .article-layout { animation: mhPageIn 0.6s ease 0.1s both; }
+@media (prefers-reduced-motion: reduce){
+  .article-hero, .page-hero, .life-hero, .section, .container > .article-layout { animation: none !important; }
+}

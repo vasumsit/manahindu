@@ -43,7 +43,10 @@
 <div class="logo-om">ॐ</div>
 <div><div class="logo-title">మన హిందూ</div><div class="logo-sub">ManaHindu</div></div>
 </a>
-<nav class="nav">
+<button class="sidebar-toggle" onclick="window.MHSidebar&&window.MHSidebar.open()" aria-label="మెను">☰ మెను</button>
+<div class="sidebar-backdrop" id="mhSidebarBackdrop" onclick="window.MHSidebar&&window.MHSidebar.close()"></div>
+<nav class="nav" id="mhSidebar">
+<div class="sidebar-head"><span>🕉️ మెను</span><button class="sidebar-close" onclick="window.MHSidebar&&window.MHSidebar.close()" aria-label="మూసివేయి">✕</button></div>
 <a href="{ROOT}index.html">హోమ్</a><div class="nav-item">
 <a href="{ROOT}pages/hinduism/index.html">హిందూమతం</a>
 <div class="dropdown">
@@ -202,6 +205,7 @@
     if (f) f.innerHTML = applyRoot(FOOTER);
     highlightActive();
     showSiteVisits();
+    setupSidebar();
     // Re-bind the mobile hamburger + dropdown toggles if main.js exposes them.
     if (window.ManaHinduNav && typeof window.ManaHinduNav.bind === 'function') {
       try { window.ManaHinduNav.bind(); } catch (e) {}
@@ -255,6 +259,82 @@
         el.textContent = fmt(t);
       } catch (e) { el.textContent = '—'; }
     });
+  }
+
+  // 6) Sidebar: expandable slide-in menu, remembers open/closed state.
+  function setupSidebar() {
+    if (document.getElementById('mh-sidebar-css')) return afterCss();
+    var css = document.createElement('style');
+    css.id = 'mh-sidebar-css';
+    css.textContent = [
+      '.sidebar-toggle{margin-left:auto;background:linear-gradient(135deg,#e8cf8a,#d4af37);color:#0d0b12;border:none;border-radius:22px;padding:9px 20px;font-family:"Tiro Telugu",serif;font-size:0.95rem;font-weight:600;cursor:pointer;transition:transform .2s;}',
+      '.sidebar-toggle:active{transform:scale(0.96);}',
+      '.sidebar-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.6);backdrop-filter:blur(3px);z-index:1400;opacity:0;visibility:hidden;transition:opacity .3s;}',
+      'body.mh-sidebar-open .sidebar-backdrop{opacity:1;visibility:visible;}',
+      'nav.nav#mhSidebar{position:fixed;top:0;right:0;height:100%;width:min(330px,86vw);flex-direction:column;gap:0;background:linear-gradient(180deg,#15121c,#0d0b12);border-left:1px solid rgba(212,175,55,0.3);box-shadow:-12px 0 40px rgba(0,0,0,0.5);z-index:1500;padding:16px;overflow-y:auto;transform:translateX(100%);transition:transform .3s cubic-bezier(.4,0,.2,1);display:flex;}',
+      'body.mh-sidebar-open nav.nav#mhSidebar{transform:translateX(0);}',
+      '.sidebar-head{display:flex;align-items:center;justify-content:space-between;padding-bottom:14px;margin-bottom:8px;border-bottom:1px solid rgba(212,175,55,0.2);color:#e8cf8a;font-family:"Tiro Telugu",serif;font-size:1.15rem;}',
+      '.sidebar-close{background:none;border:none;color:#e8cf8a;font-size:1.4rem;cursor:pointer;width:36px;height:36px;border-radius:50%;transition:background .2s;}',
+      '.sidebar-close:hover{background:rgba(212,175,55,0.15);}',
+      'nav.nav#mhSidebar > a{display:block;color:#f4ecdd;text-decoration:none;padding:13px 14px;border-radius:10px;font-size:1.02rem;transition:background .2s;}',
+      'nav.nav#mhSidebar > a:hover{background:rgba(212,175,55,0.14);color:#e8cf8a;}',
+      'nav.nav#mhSidebar .nav-item{position:static;display:block;}',
+      'nav.nav#mhSidebar .nav-item > a{display:flex;align-items:center;justify-content:space-between;color:#f4ecdd;text-decoration:none;padding:13px 14px;border-radius:10px;font-size:1.02rem;cursor:pointer;}',
+      'nav.nav#mhSidebar .nav-item > a::after{content:"▾";color:#d4af37;font-size:0.8rem;transition:transform .25s;}',
+      'nav.nav#mhSidebar .nav-item.expanded > a::after{transform:rotate(180deg);}',
+      'nav.nav#mhSidebar .nav-item > a:hover{background:rgba(212,175,55,0.1);}',
+      'nav.nav#mhSidebar .dropdown{position:static;display:none;background:transparent;border:none;box-shadow:none;min-width:0;max-height:none;padding:2px 0 6px 12px;margin:0 0 4px 12px;border-left:2px solid rgba(212,175,55,0.3);border-radius:0;animation:none;}',
+      'nav.nav#mhSidebar .nav-item.expanded .dropdown{display:block;}',
+      'nav.nav#mhSidebar .dropdown a{color:#c9b896;font-size:0.9rem;padding:9px 10px;border-radius:8px;}',
+      'nav.nav#mhSidebar .dropdown a:hover{background:rgba(212,175,55,0.12);color:#e8cf8a;padding-left:14px;}',
+      'nav.nav#mhSidebar .dropdown-group-label{color:#d4af37;font-size:0.7rem;padding:8px 10px 3px;border-left:none;margin:4px 0 0;background:transparent;}',
+      '@media(min-width:900px){.sidebar-toggle{display:block;}}'
+    ].join('\n');
+    document.head.appendChild(css);
+    afterCss();
+
+    function afterCss() {
+      var backdrop = document.getElementById('mhSidebarBackdrop');
+      var sidebar = document.getElementById('mhSidebar');
+      if (!sidebar) return;
+
+      window.MHSidebar = {
+        open: function () { document.body.classList.add('mh-sidebar-open'); try{localStorage.setItem('mh_sidebar','open');}catch(e){} },
+        close: function () { document.body.classList.remove('mh-sidebar-open'); try{localStorage.setItem('mh_sidebar','closed');}catch(e){} }
+      };
+
+      // Expand/collapse dropdown sections on tap (these do NOT navigate or close)
+      var items = sidebar.querySelectorAll('.nav-item');
+      for (var i = 0; i < items.length; i++) {
+        (function (item) {
+          var link = item.querySelector(':scope > a');
+          var dd = item.querySelector(':scope > .dropdown');
+          if (!link || !dd) return;
+          link.setAttribute('data-section', '1');
+          link.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            item.classList.toggle('expanded');
+          });
+        })(items[i]);
+      }
+
+      // Clicking any REAL link (not a section header) closes the sidebar
+      var allLinks = sidebar.querySelectorAll('a[href]');
+      for (var j = 0; j < allLinks.length; j++) {
+        if (allLinks[j].getAttribute('data-section') === '1') continue;
+        allLinks[j].addEventListener('click', function () { window.MHSidebar.close(); });
+      }
+
+      // Restore remembered state (default OPEN on first visit)
+      var state = null;
+      try { state = localStorage.getItem('mh_sidebar'); } catch (e) {}
+      if (state === 'closed') { document.body.classList.remove('mh-sidebar-open'); }
+      else { document.body.classList.add('mh-sidebar-open'); }  // open by default
+
+      // Escape closes
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') window.MHSidebar.close(); });
+    }
   }
 
   if (document.readyState === 'loading') {
