@@ -8,7 +8,8 @@
 
 :root{
   --p-ink:#0d0b12; --p-ink2:#1c1826;
-  --p-maroon:#3a0f14; --p-maroon2:#5a1620;
+  --p-maroon:#5a2e14; --p-maroon2:#6b3818;
+  --p-hero1:#4a2c18; --p-hero2:#2a2018;
   --p-gold:#d4af37; --p-gold-soft:#e8cf8a; --p-gold-deep:#a8862a;
   --p-ivory:#fbf7ef; --p-cream:#f4ecdd;
   --p-text:#2a2320; --p-text-soft:#5a4a3a;
@@ -45,7 +46,7 @@ h1,h2,h3,h4{ color:var(--p-maroon) !important; }
 
 /* Ribbon 2 — page-hero bottom ribbon that flows */
 .page-hero, .article-hero, .life-hero{
-  background:linear-gradient(135deg,var(--p-maroon),var(--p-ink2)) !important;
+  background:linear-gradient(135deg,var(--p-hero1),var(--p-hero2)) !important;
   position:relative; overflow:hidden;
 }
 .page-hero::after, .article-hero::after, .life-hero::after{

@@ -156,10 +156,121 @@
   .hnews-title{font-family:'Tiro Telugu',serif;font-size:1.2rem;color:var(--gold-soft);margin-bottom:6px;}
   .hnews-body{font-family:'Tiro Telugu',serif;color:var(--muted);font-size:0.92rem;line-height:1.7;}
   .hnews-empty{text-align:center;color:var(--muted);padding:1.5rem;font-family:'Tiro Telugu',serif;}
+
+  /* Splash top nav bar */
+  .splash-topbar{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;
+    justify-content:space-between;padding:12px 20px;
+    background:rgba(13,11,18,0.82);backdrop-filter:blur(10px);border-bottom:1px solid rgba(212,175,55,0.2);}
+  .splash-logo{display:flex;align-items:center;gap:8px;text-decoration:none;}
+  .splash-logo-om{font-size:1.6rem;color:var(--gold);}
+  .splash-logo-text{color:var(--ivory);font-size:1.15rem;}
+  .splash-menu-btn{background:linear-gradient(135deg,var(--gold-soft),var(--gold));color:var(--ink);
+    border:none;border-radius:24px;padding:9px 20px;font-family:'Tiro Telugu',serif;font-size:0.95rem;
+    font-weight:600;cursor:pointer;transition:transform .2s;}
+  .splash-menu-btn:active{transform:scale(0.96);}
+
+  /* Slide-out menu */
+  .splash-menu-overlay{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(3px);display:none;}
+  .splash-menu-overlay.open{display:block;}
+  .splash-menu-panel{position:absolute;top:0;right:0;height:100%;width:min(320px,85vw);
+    background:linear-gradient(180deg,#15121c,#0d0b12);border-left:1px solid rgba(212,175,55,0.25);
+    padding:20px;overflow-y:auto;box-shadow:-10px 0 40px rgba(0,0,0,0.5);
+    transform:translateX(100%);transition:transform .3s ease;}
+  .splash-menu-overlay.open .splash-menu-panel{transform:translateX(0);}
+  .splash-menu-head{display:flex;align-items:center;justify-content:space-between;
+    padding-bottom:14px;margin-bottom:12px;border-bottom:1px solid rgba(212,175,55,0.2);}
+  .splash-menu-close{background:none;border:none;color:var(--gold-soft);font-size:1.4rem;cursor:pointer;
+    width:36px;height:36px;border-radius:50%;transition:background .2s;}
+  .splash-menu-close:hover{background:rgba(212,175,55,0.15);}
+  .splash-menu-panel a{display:block;color:var(--ivory);text-decoration:none;padding:13px 14px;
+    border-radius:10px;font-size:1.05rem;margin-bottom:4px;transition:background .2s,padding-left .2s;}
+  .splash-menu-panel a:hover{background:rgba(212,175,55,0.14);color:var(--gold-soft);padding-left:20px;}
+  /* push hero down so it's not under the fixed bar */
+  .hero{padding-top:80px;}
+
+  /* Guide button (quiet, corner) */
+  #guideBtn{position:fixed;bottom:20px;left:20px;z-index:9997;
+    background:linear-gradient(135deg,#3a2416,#1c1826);color:#e8cf8a;
+    border:1px solid rgba(212,175,55,0.5);border-radius:24px;padding:10px 18px;
+    font-family:'Tiro Telugu',serif;font-size:0.9rem;cursor:pointer;
+    box-shadow:0 4px 16px rgba(0,0,0,0.4);transition:transform .2s;}
+  #guideBtn:hover{transform:scale(1.06);}
+  /* Om sound button */
+  #omSoundBtn{position:fixed;bottom:20px;right:20px;z-index:9997;width:52px;height:52px;
+    border-radius:50%;border:1px solid rgba(212,175,55,0.5);
+    background:linear-gradient(135deg,#3a2416,#1c1826);color:#e8cf8a;font-size:1.4rem;
+    cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,0.4);transition:transform .2s;}
+  #omSoundBtn:hover{transform:scale(1.1);}
+  /* Interactive Tour */
+  .tour-spotlight{position:fixed;z-index:10000;border-radius:16px;pointer-events:none;
+    box-shadow:0 0 0 9999px rgba(0,0,0,0.75), 0 0 0 3px #d4af37, 0 0 30px rgba(212,175,55,0.6);
+    transition:all .4s cubic-bezier(.4,0,.2,1);display:none;}
+  .tour-spotlight.on{display:block;}
+  .tour-tip{position:fixed;z-index:10001;background:linear-gradient(180deg,#1a1622,#0d0b12);
+    border:1px solid rgba(212,175,55,0.4);border-radius:16px;padding:20px;max-width:300px;width:calc(100% - 40px);
+    box-shadow:0 12px 40px rgba(0,0,0,0.6);display:none;transition:all .4s cubic-bezier(.4,0,.2,1);}
+  .tour-tip.on{display:block;}
+  .tour-tip-step{font-size:0.72rem;color:var(--gold-deep);letter-spacing:0.1em;margin-bottom:6px;}
+  .tour-tip-title{font-size:1.25rem;color:var(--gold-soft);margin-bottom:6px;}
+  .tour-tip-text{font-size:0.95rem;color:#c9b896;line-height:1.65;margin-bottom:16px;}
+  .tour-tip-btns{display:flex;gap:10px;justify-content:space-between;align-items:center;}
+  .tour-skip{background:none;border:none;color:#8a7f6e;font-size:0.88rem;cursor:pointer;font-family:'Tiro Telugu',serif;}
+  .tour-skip:hover{color:#c9b896;}
+  .tour-next{background:linear-gradient(135deg,#e8cf8a,#d4af37);color:#0d0b12;border:none;
+    border-radius:24px;padding:10px 22px;font-size:0.95rem;font-weight:600;cursor:pointer;font-family:'Tiro Telugu',serif;}
+  .tour-next:active{transform:scale(0.97);}
 </style>
 </head>
 <body>
 <div class="bg-glow"></div>
+
+<!-- TOP NAV BAR -->
+<div class="splash-topbar">
+  <a href="#top" class="splash-logo"><span class="splash-logo-om">ॐ</span><span class="splash-logo-text tel">మన హిందూ</span></a>
+  <button class="splash-menu-btn" data-tour="menu" onclick="toggleMenu()" aria-label="మెను">☰ మెను</button>
+</div>
+
+<!-- SLIDE-OUT MENU -->
+<div class="splash-menu-overlay" id="menuOverlay" onclick="if(event.target.id==='menuOverlay')this.classList.remove('open')">
+  <div class="splash-menu-panel">
+    <div class="splash-menu-head">
+      <span class="tel" style="color:#e8cf8a;font-size:1.2rem;">🕉️ మెను</span>
+      <button class="splash-menu-close" onclick="document.getElementById('menuOverlay').classList.remove('open')" aria-label="మూసివేయి">✕</button>
+    </div>
+    <a href="pages/temples/index.html" class="tel">🛕 దేవాలయాలు</a>
+    <a href="pages/hinduism/puranas/index.html" class="tel">📖 18 మహాపురాణాలు</a>
+    <a href="pages/hinduism/index.html" class="tel">🕉️ హిందూమతం</a>
+    <a href="pages/sanatana-dharma/index.html" class="tel">📜 సనాతన ధర్మం</a>
+    <a href="pages/festivals/index.html" class="tel">🪔 పండుగలు</a>
+    <a href="pages/slokalu/index.html" class="tel">🕉 శ్లోకాలు</a>
+    <a href="pages/gallery/index.html" class="tel">📸 ఫోటో గ్యాలరీ</a>
+    <a href="pages/vlogs/index.html" class="tel">🎬 వ్లాగ్స్</a>
+    <a href="pages/news/index.html" class="tel">📰 వార్తలు</a>
+    <a href="pages/about/index.html" class="tel">🙏 మా గురించి</a>
+    <a href="pages/contact/index.html" class="tel">📧 సంప్రదించండి</a>
+  </div>
+</div>
+<span id="top"></span>
+
+<!-- GUIDE BUTTON (always available, quiet in corner) -->
+<button id="guideBtn" onclick="openGuide()" aria-label="గైడ్">❓ గైడ్</button>
+
+<!-- OM SOUND BUTTON -->
+<button id="omSoundBtn" onclick="toggleOm()" aria-label="ఓం ధ్వని" title="ఓం ధ్వని ప్లే / మ్యూట్">🔇</button>
+<audio id="omAudio" loop preload="none" src="assets/audio/om.mp3"></audio>
+
+<!-- GUIDE POPUP (interactive tour) -->
+<div id="tourSpotlight" class="tour-spotlight"></div>
+<div id="tourTip" class="tour-tip">
+  <div class="tour-tip-step" id="tourStepNum">1 / 5</div>
+  <div class="tour-tip-title tel" id="tourTitle">స్వాగతం!</div>
+  <div class="tour-tip-text tel" id="tourText">ఇలా వాడండి</div>
+  <div class="tour-tip-btns">
+    <button class="tour-skip tel" onclick="endTour()">మూసివేయి</button>
+    <button class="tour-next tel" id="tourNextBtn" onclick="nextTourStep()">తర్వాత →</button>
+  </div>
+</div>
 
 <!-- HERO -->
 <header class="hero">
@@ -175,7 +286,7 @@
 <!-- STATS -->
 <div class="wrap">
   <div class="stats">
-    <div class="stat"><div class="num display">58</div><div class="lbl tel">దేవాలయాలు</div></div>
+    <div class="stat"><div class="num display">64</div><div class="lbl tel">దేవాలయాలు</div></div>
     <div class="stat"><div class="num display">18</div><div class="lbl tel">మహాపురాణాలు</div></div>
     <div class="stat"><div class="num display">10</div><div class="lbl tel">శ్లోకాలు</div></div>
     <div class="stat"><div class="num display">53</div><div class="lbl tel">యాత్రా ఫోటోలు</div></div>
@@ -189,12 +300,12 @@
   <h2 class="sec-title tel">ఏమి అన్వేషించాలి?</h2>
   <p class="sec-desc tel">ప్రతి విభాగం — మన ధర్మ సంపదలోకి ఒక ద్వారం. క్లిక్ చేసి పూర్తి వివరాలు చూడండి.</p>
   <div class="doors">
-    <a class="door" href="pages/temples/index.html">
+    <a class="door" data-tour="temples" href="pages/temples/index.html">
       <div class="icon">🛕</div><h3 class="tel">దేవాలయాలు</h3>
       <p class="tel">తిరుపతి, శ్రీశైలం, కొండగట్టు — నిజమైన యాత్రా ఫోటోలతో.</p>
       <span class="go tel">చూడండి →</span>
     </a>
-    <a class="door" href="pages/hinduism/puranas/index.html">
+    <a class="door" data-tour="puranas" href="pages/hinduism/puranas/index.html">
       <div class="icon">📖</div><h3 class="tel">18 మహాపురాణాలు</h3>
       <p class="tel">అష్టాదశ మహాపురాణాలు — అసలైన శ్లోకాలతో, తాత్పర్యంతో.</p>
       <span class="go tel">చదవండి →</span>
@@ -219,7 +330,7 @@
       <p class="tel">హనుమాన్ చాలీసా, శతకాలు, స్తోత్రాలు — భక్తితో.</p>
       <span class="go tel">పఠించండి →</span>
     </a>
-    <a class="door" href="pages/gallery/index.html">
+    <a class="door" data-tour="gallery" href="pages/gallery/index.html">
       <div class="icon">📸</div><h3 class="tel">ఫోటో గ్యాలరీ</h3>
       <p class="tel">మేము స్వయంగా సందర్శించిన క్షేత్రాల చిత్రాలు.</p>
       <span class="go tel">చూడండి →</span>
@@ -229,7 +340,7 @@
       <p class="tel">దేవాలయ యాత్రల వీడియోలు — YouTube లో.</p>
       <span class="go tel">చూడండి →</span>
     </a>
-    <a class="door" href="pages/news/index.html">
+    <a class="door" data-tour="news" href="pages/news/index.html">
       <div class="icon">📰</div><h3 class="tel">వార్తలు</h3>
       <p class="tel">దేవాలయ వార్తలు, పండుగ ప్రకటనలు, తాజా సమాచారం.</p>
       <span class="go tel">చదవండి →</span>
@@ -285,6 +396,78 @@
 </footer>
 
 <script src="assets/js/panchangam.js"></script>
+<script>
+  function toggleMenu(){ document.getElementById('menuOverlay').classList.add('open'); }
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ document.getElementById('menuOverlay').classList.remove('open'); endTour(); } });
+
+  // ── Interactive Tour ──
+  var tourSteps=[
+    { sel:'[data-tour="menu"]',    title:'☰ మెను',          text:'ఏ విభాగానికైనా వెళ్ళడానికి ఇక్కడ నొక్కండి.' },
+    { sel:'[data-tour="temples"]', title:'🛕 దేవాలయాలు',     text:'దేవాలయాల చరిత్ర, దర్శన వివరాలు చూడటానికి ఈ కార్డ్ నొక్కండి.' },
+    { sel:'[data-tour="puranas"]', title:'📖 మహాపురాణాలు',   text:'18 మహాపురాణాలు శ్లోకాలతో చదవడానికి ఇక్కడ నొక్కండి.' },
+    { sel:'[data-tour="gallery"]', title:'📸 ఫోటో గ్యాలరీ',   text:'యాత్రా ఫోటోలు చూడటానికి ఈ కార్డ్ నొక్కండి.' },
+    { sel:'[data-tour="news"]',    title:'📰 వార్తలు',       text:'తాజా వార్తలు, ప్రకటనలు ఇక్కడ చూడవచ్చు. ఇప్పుడు మీరు సిద్ధం! 🙏' }
+  ];
+  var tourIdx=0;
+  function openGuide(){ tourIdx=0; startTour(); }
+  function startTour(){ showTourStep(0); }
+  function showTourStep(i){
+    var step=tourSteps[i];
+    var el=document.querySelector(step.sel);
+    var spot=document.getElementById('tourSpotlight');
+    var tip=document.getElementById('tourTip');
+    if(!el){ nextTourStep(); return; }
+    // scroll element into view
+    el.scrollIntoView({behavior:'smooth',block:'center'});
+    setTimeout(function(){
+      var r=el.getBoundingClientRect();
+      var pad=8;
+      spot.style.left=(r.left-pad)+'px';
+      spot.style.top=(r.top-pad)+'px';
+      spot.style.width=(r.width+pad*2)+'px';
+      spot.style.height=(r.height+pad*2)+'px';
+      spot.classList.add('on');
+      // position tip below or above the element
+      document.getElementById('tourStepNum').textContent=(i+1)+' / '+tourSteps.length;
+      document.getElementById('tourTitle').textContent=step.title;
+      document.getElementById('tourText').textContent=step.text;
+      document.getElementById('tourNextBtn').textContent=(i===tourSteps.length-1)?'పూర్తయింది ✓':'తర్వాత →';
+      tip.classList.add('on');
+      var tipTop=r.bottom+16;
+      if(tipTop+180 > window.innerHeight) tipTop=r.top-190;
+      if(tipTop<10) tipTop=10;
+      tip.style.top=tipTop+'px';
+      var tipLeft=r.left; if(tipLeft+300>window.innerWidth) tipLeft=window.innerWidth-320;
+      if(tipLeft<20) tipLeft=20;
+      tip.style.left=tipLeft+'px';
+    },350);
+  }
+  function nextTourStep(){
+    tourIdx++;
+    if(tourIdx>=tourSteps.length){ endTour(); return; }
+    showTourStep(tourIdx);
+  }
+  function endTour(){
+    document.getElementById('tourSpotlight').classList.remove('on');
+    document.getElementById('tourTip').classList.remove('on');
+    try{ localStorage.setItem('mh_guide_seen','1'); }catch(e){}
+  }
+  window.addEventListener('DOMContentLoaded', function(){
+    var seen=false;
+    try{ seen = localStorage.getItem('mh_guide_seen')==='1'; }catch(e){}
+    if(!seen){ setTimeout(openGuide, 1000); }
+  });
+  window.addEventListener('resize', function(){ if(document.getElementById('tourTip').classList.contains('on')) showTourStep(tourIdx); });
+  // Om sound: play/mute on tap (browser-safe, only on user action)
+  function toggleOm(){
+    var a=document.getElementById('omAudio'), b=document.getElementById('omSoundBtn');
+    if(a.paused){
+      var p=a.play();
+      if(p&&p.catch) p.catch(function(err){ b.innerHTML='🔇'; alert('ఓం ధ్వని ప్లే కాలేదు. om.mp3 ఫైల్ assets/audio/ లో ఉందో చూడండి.'); });
+      b.innerHTML='🔊';
+    } else { a.pause(); b.innerHTML='🔇'; }
+  }
+</script>
 <script>
 (function(){
   // Live total visitor count from JSONBin (sum of all page visits)

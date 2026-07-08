@@ -169,14 +169,17 @@
 <div>
 <h4>విభాగాలు</h4>
 <a href="{ROOT}pages/hinduism/index.html">హిందూమతం</a>
-<a href="{ROOT}pages/temples/detail/tirupati.html">తిరుపతి వేంకటేశ్వర స్వామి</a>
-<a href="{ROOT}pages/temples/index.html">మరిన్ని దేవాలయాలు</a>
+<a href="{ROOT}pages/temples/index.html">దేవాలయాలు</a>
+<a href="{ROOT}pages/hinduism/puranas/index.html">18 మహాపురాణాలు</a>
 <a href="{ROOT}pages/festivals/index.html">పండుగలు</a>
+<a href="{ROOT}pages/slokalu/index.html">శ్లోకాలు</a>
 </div>
 <div>
-<h4>మా చానెల్</h4>
+<h4>మరిన్ని</h4>
+<a href="{ROOT}pages/gallery/index.html">📸 ఫోటో గ్యాలరీ</a>
+<a href="{ROOT}pages/news/index.html">📰 వార్తలు</a>
+<a href="{ROOT}pages/vlogs/index.html">🎥 వ్లాగ్స్</a>
 <a href="https://www.youtube.com/@Vasu11tv" target="_blank">▶ YouTube — v11tv</a>
-<a href="{ROOT}pages/about/index.html">మా గురించి</a>
 </div>
 <div>
 <h4>సమాచారం</h4>
@@ -186,7 +189,7 @@
 </div>
 </div>
 </div>
-<div class="footer-bottom"><p>© 2025 మన హిందూ | ManaHindu — జై శ్రీ వేంకటేశ్వర 🙏</p><p class="footer-sitevisits" style="margin-top:0.4rem;font-size:0.85rem;opacity:0.85;">👁️ మొత్తం సందర్శకులు: <strong id="mh-site-visits">…</strong></p></div>
+<div class="footer-bottom"><p>© 2026 మన హిందూ | ManaHindu — జై శ్రీ వేంకటేశ్వర 🙏</p><p class="footer-sitevisits" style="margin-top:0.4rem;font-size:0.85rem;opacity:0.85;">👁️ మొత్తం సందర్శకులు: <strong id="mh-site-visits">…</strong></p></div>
 </footer>`;
 
   function applyRoot(html) { return html.split('{ROOT}').join(ROOT); }
