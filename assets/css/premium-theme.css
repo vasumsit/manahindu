@@ -33,29 +33,38 @@ h1,h2,h3,h4{ color:var(--p-maroon) !important; }
   position:relative; padding-top:0.3rem;
 }
 
-/* ═══ ANIMATED RIBBONS / ACCENTS (variety) ═══ */
+/* ═══ ELEGANT ORNAMENTAL ACCENTS (rich redesign) ═══ */
 
-/* Ribbon 1 — shimmering gold bar that sweeps (under section titles) */
-.chapter-section h2::before, .satakam-intro h2::before{
-  content:''; display:block; width:54px; height:4px; border-radius:4px; margin-bottom:12px;
-  background:linear-gradient(90deg,var(--p-gold-deep),var(--p-gold-soft),var(--p-gold),var(--p-gold-soft),var(--p-gold-deep));
-  background-size:200% 100%;
-  animation:ribbonShimmer 3s linear infinite;
+/* Heading accent — refined gold underline with a diamond, sits clearly under the heading */
+.chapter-section h2, .satakam-intro h2{
+  position:relative;
+  padding-bottom:14px;
+  margin-bottom:8px;
 }
-@keyframes ribbonShimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+.chapter-section h2::after, .satakam-intro h2::after{
+  content:'';
+  position:absolute; left:0; bottom:0;
+  width:60px; height:0;
+  border-bottom:2px solid var(--p-gold);
+  box-shadow:0 0 0 rgba(0,0,0,0);
+}
+.chapter-section h2::before, .satakam-intro h2::before{
+  content:'❖';
+  position:absolute; left:70px; bottom:-11px;
+  color:var(--p-gold);
+  font-size:0.75rem;
+  line-height:1;
+}
 
-/* Ribbon 2 — page-hero bottom ribbon that flows */
+/* ── Page hero: keep it clean, remove busy animated bar; add a soft elegant base line ── */
 .page-hero, .article-hero, .life-hero{
   background:linear-gradient(135deg,var(--p-hero1),var(--p-hero2)) !important;
   position:relative; overflow:hidden;
 }
 .page-hero::after, .article-hero::after, .life-hero::after{
-  content:''; position:absolute; left:0; right:0; bottom:0; height:4px;
-  background:linear-gradient(90deg,transparent,var(--p-gold),var(--p-gold-soft),var(--p-gold),transparent);
-  background-size:200% 100%;
-  animation:ribbonFlow 4s linear infinite;
+  content:''; position:absolute; left:0; right:0; bottom:0; height:3px;
+  background:linear-gradient(90deg,var(--p-gold-deep),var(--p-gold),var(--p-gold-soft),var(--p-gold),var(--p-gold-deep));
 }
-@keyframes ribbonFlow{0%{background-position:0 0}100%{background-position:200% 0}}
 
 .page-hero h1,.article-hero h1,.life-hero h1,.article-hero-title{ color:var(--p-gold-soft) !important; }
 .page-hero p,.article-hero p,.life-hero p{ color:#e8dcc4 !important; }
@@ -71,11 +80,10 @@ h1,h2,h3,h4{ color:var(--p-maroon) !important; }
 .nav a.active{ background:linear-gradient(135deg,var(--p-gold-soft),var(--p-gold-deep)) !important; color:var(--p-ink) !important; }
 .hamburger{ color:var(--p-gold-soft) !important; }
 
-/* Ribbon 3 — animated gradient underline on the header itself */
+/* Header bottom edge — clean gold line */
 .header::after{
   content:''; position:absolute; left:0; right:0; bottom:-1px; height:2px;
-  background:linear-gradient(90deg,transparent,var(--p-gold),transparent);
-  background-size:200% 100%; animation:ribbonFlow 5s linear infinite;
+  background:linear-gradient(90deg,transparent,var(--p-gold),var(--p-gold-soft),var(--p-gold),transparent);
 }
 
 /* ── Dropdowns ── */
@@ -111,10 +119,9 @@ h1,h2,h3,h4{ color:var(--p-maroon) !important; }
 
 /* ── Footer ── */
 .footer{ background:linear-gradient(180deg,var(--p-ink2),var(--p-ink)) !important; border-top:1px solid rgba(212,175,55,0.25) !important; color:#c9b896 !important; position:relative; }
-.footer::before{ /* Ribbon 4 — top edge shimmer */
-  content:''; position:absolute; top:0; left:0; right:0; height:3px;
+.footer::before{ /* footer top edge — clean gold line */
+  content:''; position:absolute; top:0; left:0; right:0; height:2px;
   background:linear-gradient(90deg,transparent,var(--p-gold),var(--p-gold-soft),var(--p-gold),transparent);
-  background-size:200% 100%; animation:ribbonFlow 6s linear infinite;
 }
 .footer h4{ color:var(--p-gold) !important; }
 .footer a{ color:#c9b896 !important; }
@@ -135,8 +142,50 @@ h1,h2,h3,h4{ color:var(--p-maroon) !important; }
   from { opacity: 0; transform: translateY(12px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-.article-hero, .page-hero, .life-hero { animation: mhPageIn 0.5s ease both; }
-.section, .container > .article-layout { animation: mhPageIn 0.6s ease 0.1s both; }
+.article-hero, .page-hero, .life-hero { animation: mhPageIn 0.5s ease; }
+.section, .container > .article-layout { animation: mhPageIn 0.5s ease; }
 @media (prefers-reduced-motion: reduce){
   .article-hero, .page-hero, .life-hero, .section, .container > .article-layout { animation: none !important; }
 }
+
+/* ═══ FINAL CLEAN-UP: consistent padding & spacing everywhere ═══ */
+/* Ensure every page's content has breathing room */
+.section{ padding:2.5rem 0 !important; }
+.container{ padding-left:1.2rem !important; padding-right:1.2rem !important; }
+.article-layout{ padding:0.5rem 0 2rem !important; }
+.article-body{ padding-right:1rem; }
+/* Hero spacing */
+.page-hero, .article-hero, .life-hero{ padding:2.2rem 0 !important; }
+.page-hero .container, .article-hero .container, .article-hero-inner{ padding-top:0.5rem; padding-bottom:0.5rem; }
+/* Card grids get consistent gaps */
+.fest-card-grid, .topic-card-grid{ gap:1.2rem !important; padding:0.5rem 0; }
+/* Headings breathing room */
+.chapter-section, .satakam-intro{ margin-bottom:1.5rem; }
+.chapter-section h2, .satakam-intro h2{ margin-top:1.5rem; }
+/* Paragraph spacing for readability */
+.chapter-section p, .satakam-intro p, .article-body p{ margin-bottom:1rem; }
+/* Mobile: tighter but still padded */
+@media (max-width:640px){
+  .section{ padding:1.8rem 0 !important; }
+  .container{ padding-left:1rem !important; padding-right:1rem !important; }
+  .article-body{ padding-right:0; }
+  .page-hero, .article-hero, .life-hero{ padding:1.6rem 0 !important; }
+}
+
+/* ═══ FORCE edge padding (highest priority) — content must never touch screen edges ═══ */
+body .container,
+body .page-hero .container,
+body .article-hero .container,
+body .article-hero-inner,
+body .header-inner,
+body .footer-inner{
+  padding-left:18px !important;
+  padding-right:18px !important;
+  box-sizing:border-box !important;
+}
+/* Also pad the hero and section blocks directly as a safety net */
+body .page-hero, body .article-hero, body .life-hero{
+  padding-top:26px !important;
+  padding-bottom:22px !important;
+}
+body h1{ padding-top:4px; }
