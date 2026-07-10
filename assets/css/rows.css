@@ -174,3 +174,33 @@
   margin-top:14px; position:relative;
 }
 .article-hero-inner{ position:relative; }
+
+/* ═══ Meta badges — compact, single-line-friendly, mobile-adjusting ═══ */
+.article-hero .article-meta{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:8px !important;
+  justify-content:center !important;
+  margin-top:12px !important;
+}
+.article-hero .meta-badge{
+  background:rgba(212,175,55,0.18) !important;
+  border:1px solid rgba(212,175,55,0.45) !important;
+  color:#e8cf8a !important;
+  font-size:0.72rem !important;
+  padding:5px 12px !important;
+  border-radius:20px !important;
+  white-space:nowrap !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  line-height:1.2 !important;
+}
+/* Map/directions buttons slightly stronger */
+.article-hero .meta-badge[href]{
+  background:rgba(212,175,55,0.25) !important;
+  font-weight:500 !important;
+}
+@media (max-width:640px){
+  .article-hero .article-meta{ gap:6px !important; }
+  .article-hero .meta-badge{ font-size:0.68rem !important; padding:5px 10px !important; }
+}
