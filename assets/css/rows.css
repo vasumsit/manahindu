@@ -140,3 +140,43 @@
   .ribbon-band{ padding:22px 16px; }
   .row-bc{ padding-left:16px; padding-right:16px; }
 }
+
+/* ═══ CONSISTENCY: make detail-page heroes match the ribbon-band look ═══ */
+/* So moving between hub pages and detail pages feels seamless */
+.article-hero, .page-hero, .life-hero, .satakam-hero{
+  position:relative;
+  background:linear-gradient(135deg,#4a2c18,#241a12) !important;
+  overflow:hidden;
+}
+/* faded ॐ watermark like ribbon-band */
+.article-hero::before, .page-hero::before, .life-hero::before{
+  content:'ॐ';
+  position:absolute; right:-8px; top:-24px; font-size:120px;
+  color:rgba(212,175,55,0.09); font-family:serif; line-height:1; pointer-events:none;
+}
+/* diagonal texture like ribbon-band */
+.article-hero .container, .page-hero .container, .life-hero .container{
+  position:relative; z-index:1;
+}
+
+/* Breadcrumb: ALWAYS same fixed bar, same position, on EVERY page */
+.row-bc{
+  padding:11px 18px !important;
+  font-size:0.8rem !important;
+  color:#8a7f6e !important;
+  background:#f4ecdd !important;
+  border-bottom:1px solid #ecd9a8 !important;
+  border-top:none !important;
+  display:flex !important;
+  align-items:center !important;
+  flex-wrap:wrap !important;
+  gap:2px !important;
+  line-height:1.5 !important;
+  margin:0 !important;
+}
+.row-bc a{ color:#a8862a !important; text-decoration:none; font-weight:600; }
+.row-bc span{ margin:0 5px !important; color:#c9b896 !important; }
+
+@media (max-width:640px){
+  .row-bc{ padding:10px 16px !important; }
+}
