@@ -127,9 +127,6 @@
 .article-hero + .row-bc,
 .page-hero + .row-bc{ margin-top:0; }
 
-/* Detail page hero: consistent padding */
-.article-hero .container, .article-hero-inner{ padding-top:1.4rem !important; padding-bottom:1.4rem !important; }
-
 /* Section spacing on detail pages */
 .article-layout{ padding-top:1.5rem !important; padding-bottom:2rem !important; }
 
@@ -145,17 +142,15 @@
 .article-hero, .page-hero, .life-hero, .satakam-hero{
   position:relative !important;
   background:linear-gradient(135deg,#4a2c18,#241a12) !important;
-  padding:26px 0 !important;
+  padding:18px 0 !important;
   overflow:hidden !important;
   border-bottom:1px solid rgba(212,175,55,0.3) !important;
 }
-/* diagonal texture (same as ribbon-band::before) */
 .article-hero::before, .page-hero::before, .life-hero::before, .satakam-hero::before{
   content:'' !important; position:absolute !important; inset:0 !important;
   background:repeating-linear-gradient(45deg,rgba(212,175,55,0.05) 0 12px,transparent 12px 24px) !important;
   pointer-events:none !important;
 }
-/* faded ॐ watermark + ❖ ribbon divider under the hero */
 .article-hero::after, .page-hero::after, .life-hero::after, .satakam-hero::after{
   content:'ॐ' !important;
   position:absolute !important; right:-8px !important; top:-24px !important;
@@ -163,22 +158,17 @@
   font-family:serif !important; line-height:1 !important; pointer-events:none !important;
   background:none !important; height:auto !important; width:auto !important;
 }
-.article-hero .container, .page-hero .container, .life-hero .container, .satakam-hero .container{
+.article-hero .container, .article-hero-inner,
+.page-hero .container, .life-hero .container, .satakam-hero .container{
   position:relative !important; z-index:1 !important;
+  padding-top:0 !important; padding-bottom:0 !important;
 }
-.article-hero h1, .satakam-hero h1{ color:#e8cf8a !important; }
-.article-hero-sub, .satakam-hero p{ color:#e8dcc4 !important; }
-/* the ❖ decorative divider — add after hero content */
+.article-hero h1, .satakam-hero h1{ color:#e8cf8a !important; margin:0 0 4px !important; }
+.article-hero-sub, .satakam-hero p{ color:#e8dcc4 !important; margin:0 !important; }
 .article-hero-inner::after{
-  content:'❖'; display:block; text-align:center; color:#d4af37; font-size:14px;
-  margin-top:10px; position:relative;
+  content:'❖'; display:block; text-align:center; color:#d4af37; font-size:13px;
+  margin-top:8px;
 }
-.article-hero-inner{ position:relative; }
-/* Tighter hero now that badges moved to Quick Facts */
-.article-hero{ padding:20px 0 !important; }
-.article-hero-inner{ padding-top:0.3rem !important; padding-bottom:0.3rem !important; }
-.article-hero h1{ margin-bottom:6px !important; }
-.article-hero-sub{ margin-bottom:0 !important; }
 
 /* ═══ Meta badges — compact, single-line-friendly, mobile-adjusting ═══ */
 .article-hero .article-meta{

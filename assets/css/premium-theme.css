@@ -157,8 +157,8 @@ h1,h2,h3,h4{ color:var(--p-maroon) !important; }
 .article-layout{ padding:0.5rem 0 2rem !important; }
 .article-body{ padding-right:1rem; }
 /* Hero spacing */
-.page-hero, .article-hero, .life-hero{ padding:2.2rem 0 !important; }
-.page-hero .container, .article-hero .container, .article-hero-inner{ padding-top:0.5rem; padding-bottom:0.5rem; }
+.page-hero, .article-hero, .life-hero{ padding:1.3rem 0 !important; }
+.page-hero .container, .article-hero .container, .article-hero-inner{ padding-top:0.2rem !important; padding-bottom:0.2rem !important; }
 /* Card grids get consistent gaps */
 .fest-card-grid, .topic-card-grid{ gap:1.2rem !important; padding:0.5rem 0; }
 /* Headings breathing room */
@@ -171,7 +171,7 @@ h1,h2,h3,h4{ color:var(--p-maroon) !important; }
   .section{ padding:1.8rem 0 !important; }
   .container{ padding-left:1rem !important; padding-right:1rem !important; }
   .article-body{ padding-right:0; }
-  .page-hero, .article-hero, .life-hero{ padding:1.6rem 0 !important; }
+  .page-hero, .article-hero, .life-hero{ padding:1.1rem 0 !important; }
 }
 
 /* ═══ FORCE edge padding (highest priority) — content must never touch screen edges ═══ */
