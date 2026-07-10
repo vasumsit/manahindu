@@ -170,10 +170,15 @@
 .article-hero-sub, .satakam-hero p{ color:#e8dcc4 !important; }
 /* the ❖ decorative divider — add after hero content */
 .article-hero-inner::after{
-  content:'❖'; display:block; text-align:center; color:#d4af37; font-size:15px;
-  margin-top:14px; position:relative;
+  content:'❖'; display:block; text-align:center; color:#d4af37; font-size:14px;
+  margin-top:10px; position:relative;
 }
 .article-hero-inner{ position:relative; }
+/* Tighter hero now that badges moved to Quick Facts */
+.article-hero{ padding:20px 0 !important; }
+.article-hero-inner{ padding-top:0.3rem !important; padding-bottom:0.3rem !important; }
+.article-hero h1{ margin-bottom:6px !important; }
+.article-hero-sub{ margin-bottom:0 !important; }
 
 /* ═══ Meta badges — compact, single-line-friendly, mobile-adjusting ═══ */
 .article-hero .article-meta{
@@ -204,3 +209,20 @@
   .article-hero .article-meta{ gap:6px !important; }
   .article-hero .meta-badge{ font-size:0.68rem !important; padding:5px 10px !important; }
 }
+
+/* ═══ Quick Facts map/direction buttons ═══ */
+.qf-btn{
+  display:block;
+  background:linear-gradient(135deg,#e8cf8a,#d4af37);
+  color:#2a1810 !important;
+  text-decoration:none;
+  text-align:center;
+  padding:10px 14px;
+  border-radius:10px;
+  font-size:0.88rem;
+  font-weight:600;
+  font-family:'Tiro Telugu',serif;
+  transition:transform .15s;
+}
+.qf-btn:active{ transform:scale(0.97); }
+.qf-btn:hover{ filter:brightness(1.05); }
