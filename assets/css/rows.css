@@ -141,42 +141,36 @@
   .row-bc{ padding-left:16px; padding-right:16px; }
 }
 
-/* ═══ CONSISTENCY: make detail-page heroes match the ribbon-band look ═══ */
-/* So moving between hub pages and detail pages feels seamless */
+/* ═══ Detail pages: EXACT same ribbon-band as hub pages ═══ */
 .article-hero, .page-hero, .life-hero, .satakam-hero{
-  position:relative;
+  position:relative !important;
   background:linear-gradient(135deg,#4a2c18,#241a12) !important;
-  overflow:hidden;
+  padding:26px 0 !important;
+  overflow:hidden !important;
+  border-bottom:1px solid rgba(212,175,55,0.3) !important;
 }
-/* faded ॐ watermark like ribbon-band */
-.article-hero::before, .page-hero::before, .life-hero::before{
-  content:'ॐ';
-  position:absolute; right:-8px; top:-24px; font-size:120px;
-  color:rgba(212,175,55,0.09); font-family:serif; line-height:1; pointer-events:none;
+/* diagonal texture (same as ribbon-band::before) */
+.article-hero::before, .page-hero::before, .life-hero::before, .satakam-hero::before{
+  content:'' !important; position:absolute !important; inset:0 !important;
+  background:repeating-linear-gradient(45deg,rgba(212,175,55,0.05) 0 12px,transparent 12px 24px) !important;
+  pointer-events:none !important;
 }
-/* diagonal texture like ribbon-band */
-.article-hero .container, .page-hero .container, .life-hero .container{
-  position:relative; z-index:1;
+/* faded ॐ watermark + ❖ ribbon divider under the hero */
+.article-hero::after, .page-hero::after, .life-hero::after, .satakam-hero::after{
+  content:'ॐ' !important;
+  position:absolute !important; right:-8px !important; top:-24px !important;
+  font-size:120px !important; color:rgba(212,175,55,0.09) !important;
+  font-family:serif !important; line-height:1 !important; pointer-events:none !important;
+  background:none !important; height:auto !important; width:auto !important;
 }
-
-/* Breadcrumb: ALWAYS same fixed bar, same position, on EVERY page */
-.row-bc{
-  padding:11px 18px !important;
-  font-size:0.8rem !important;
-  color:#8a7f6e !important;
-  background:#f4ecdd !important;
-  border-bottom:1px solid #ecd9a8 !important;
-  border-top:none !important;
-  display:flex !important;
-  align-items:center !important;
-  flex-wrap:wrap !important;
-  gap:2px !important;
-  line-height:1.5 !important;
-  margin:0 !important;
+.article-hero .container, .page-hero .container, .life-hero .container, .satakam-hero .container{
+  position:relative !important; z-index:1 !important;
 }
-.row-bc a{ color:#a8862a !important; text-decoration:none; font-weight:600; }
-.row-bc span{ margin:0 5px !important; color:#c9b896 !important; }
-
-@media (max-width:640px){
-  .row-bc{ padding:10px 16px !important; }
+.article-hero h1, .satakam-hero h1{ color:#e8cf8a !important; }
+.article-hero-sub, .satakam-hero p{ color:#e8dcc4 !important; }
+/* the ❖ decorative divider — add after hero content */
+.article-hero-inner::after{
+  content:'❖'; display:block; text-align:center; color:#d4af37; font-size:15px;
+  margin-top:14px; position:relative;
 }
+.article-hero-inner{ position:relative; }
