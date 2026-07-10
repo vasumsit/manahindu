@@ -1,0 +1,142 @@
+/* ═══════════════════════════════════════════════════════════
+   ManaHindu — YouTube-style horizontal ROW layout
+   For main home + all sub-home/section pages. Mobile-first.
+   ═══════════════════════════════════════════════════════════ */
+
+/* Attractive page-wide ribbon banner */
+.ribbon-band{
+  position:relative;
+  background:linear-gradient(135deg,#4a2c18,#241a12);
+  padding:26px 18px;
+  overflow:hidden;
+  border-bottom:1px solid rgba(212,175,55,0.3);
+}
+.ribbon-band::before{
+  content:''; position:absolute; inset:0;
+  background:repeating-linear-gradient(45deg,rgba(212,175,55,0.05) 0 12px,transparent 12px 24px);
+  pointer-events:none;
+}
+.ribbon-band .rb-om{
+  position:absolute; right:-8px; top:-24px; font-size:120px;
+  color:rgba(212,175,55,0.09); font-family:serif; pointer-events:none; line-height:1;
+}
+.ribbon-band h1{
+  position:relative; font-family:'Tiro Telugu',serif; font-size:1.6rem;
+  color:#e8cf8a !important; font-weight:400; margin:0;
+}
+.ribbon-band p{
+  position:relative; color:#e8dcc4 !important; font-size:0.9rem; margin-top:5px;
+}
+.ribbon-deco{
+  position:relative; height:16px; margin-top:14px;
+  display:flex; align-items:center; justify-content:center;
+}
+.ribbon-deco::before,.ribbon-deco::after{
+  content:''; height:2px; flex:1;
+  background:linear-gradient(90deg,transparent,#d4af37);
+}
+.ribbon-deco::after{ background:linear-gradient(90deg,#d4af37,transparent); }
+.ribbon-deco span{ color:#d4af37; font-size:15px; margin:0 12px; }
+
+/* Breadcrumb (row pages) — fixed bar directly under the ribbon */
+.row-bc{
+  padding:11px 18px;
+  font-size:0.8rem;
+  color:#8a7f6e;
+  background:#f4ecdd;
+  border-bottom:1px solid #ecd9a8;
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:2px;
+  line-height:1.5;
+}
+.row-bc a{ color:#a8862a; text-decoration:none; font-weight:600; }
+.row-bc a:hover{ text-decoration:underline; }
+.row-bc span{ margin:0 5px; color:#c9b896; }
+.row-bc .bc-current{ color:#5a2e14; }
+
+/* Row section */
+.row-sec{ margin:20px 0; }
+.row-head{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0 18px 10px;
+}
+.row-head h2{
+  font-family:'Tiro Telugu',serif; font-size:1.2rem; color:#5a2e14 !important;
+  font-weight:400; margin:0; display:flex; align-items:center; gap:8px;
+}
+.row-more{
+  color:#a8862a !important; font-size:0.82rem; text-decoration:none;
+  font-family:'Tiro Telugu',serif; white-space:nowrap; font-weight:600;
+}
+.row-wrap{ position:relative; }
+.row{
+  display:flex; gap:12px; overflow-x:auto;
+  padding:4px 18px 10px; scroll-behavior:smooth;
+  scrollbar-width:none; -webkit-overflow-scrolling:touch;
+}
+.row::-webkit-scrollbar{ display:none; }
+
+/* Cards */
+.rcard{
+  flex:0 0 auto; width:152px;
+  background:linear-gradient(135deg,#fff,#fdf6e8);
+  border:1px solid #ecd9a8; border-radius:14px; overflow:hidden;
+  text-decoration:none; transition:transform .2s,box-shadow .2s;
+  box-shadow:0 3px 12px rgba(124,28,28,0.06);
+}
+.rcard:active{ transform:scale(0.97); }
+.rcard .rc-img{
+  height:88px; background:linear-gradient(135deg,#5a2e14,#3a2416);
+  display:flex; align-items:center; justify-content:center; font-size:34px;
+}
+.rcard .rc-body{ padding:10px 12px; }
+.rcard .rc-ti{ color:#2a2320; font-size:0.92rem; font-family:'Tiro Telugu',serif; line-height:1.3; }
+.rcard .rc-st{ color:#8a7f6e; font-size:0.72rem; margin-top:3px; }
+.rcard.more{
+  display:flex; align-items:center; justify-content:center; width:104px;
+  background:linear-gradient(135deg,#4a2c18,#2a2018); border-color:rgba(212,175,55,0.35);
+}
+.rcard.more .m{ color:#e8cf8a; text-align:center; font-family:'Tiro Telugu',serif; font-size:0.86rem; }
+
+/* Side arrows */
+.row-arrow{
+  position:absolute; top:34px; width:34px; height:34px; border-radius:50%;
+  border:none; background:rgba(13,11,18,0.82); color:#e8cf8a; font-size:17px;
+  cursor:pointer; z-index:5; box-shadow:0 2px 10px rgba(0,0,0,0.4);
+  display:flex; align-items:center; justify-content:center;
+}
+.row-arrow.l{ left:8px; }
+.row-arrow.r{ right:8px; }
+@media (hover:none){ .row-arrow{ opacity:0.85; } }
+
+/* Desktop: wider cards, show more */
+@media (min-width:900px){
+  .rcard{ width:180px; }
+  .rcard .rc-img{ height:110px; font-size:42px; }
+  .ribbon-band h1{ font-size:2rem; }
+}
+
+/* ═══ Consistent padding + header match for row/detail pages ═══ */
+/* Ensure detail page content has proper edge padding */
+.article-body, .article-layout{ padding-left:0; padding-right:0; }
+.container{ padding-left:18px !important; padding-right:18px !important; box-sizing:border-box; }
+
+/* Breadcrumb bar sits flush below hero, consistent everywhere */
+.article-hero + .row-bc,
+.page-hero + .row-bc{ margin-top:0; }
+
+/* Detail page hero: consistent padding */
+.article-hero .container, .article-hero-inner{ padding-top:1.4rem !important; padding-bottom:1.4rem !important; }
+
+/* Section spacing on detail pages */
+.article-layout{ padding-top:1.5rem !important; padding-bottom:2rem !important; }
+
+@media (max-width:640px){
+  .container{ padding-left:16px !important; padding-right:16px !important; }
+  .row{ padding-left:16px; padding-right:16px; }
+  .row-head{ padding-left:16px; padding-right:16px; }
+  .ribbon-band{ padding:22px 16px; }
+  .row-bc{ padding-left:16px; padding-right:16px; }
+}

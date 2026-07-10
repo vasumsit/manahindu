@@ -1,277 +1,36 @@
 <!DOCTYPE html>
-
-<html lang="te">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>హిందూ పండుగలు | ManaHindu – Telugu Hindu Festivals</title>
-<link href="../../assets/css/main.css" rel="stylesheet"/>
-<link href="../../assets/css/components.css" rel="stylesheet"/>
-<link href="../../assets/css/typography.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Tiro+Telugu&amp;family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="festivals.css" rel="stylesheet"/>
+<html lang="te"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>పండుగలు | మన హిందూ ManaHindu</title><meta content="హిందూ పండుగలు — కథలు, పూజా విధానం, ముహూర్తాలతో" name="description"/>
+<link href="../../assets/css/main.css" rel="stylesheet"/><link href="../../assets/css/components.css" rel="stylesheet"/>
+<link href="../../assets/css/typography.css" rel="stylesheet"/><link href="../../assets/css/rows.css" rel="stylesheet"/>
 <link href="../../assets/css/premium-theme.css" rel="stylesheet"/>
-<meta content="హిందూ పండుగల పూర్తి జాబితా — కథలు, పూజా విధానాలు &amp; మంత్రాలతో. తెలుగు పండుగలు ManaHindu." name="description"/>
-<style>
-    .fest-month { margin-bottom: 2.5rem; }
-    .month-header {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      background: var(--maroon);
-      color: #fff;
-      padding: 0.7rem 1.2rem;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-    .month-header h2 {
-      font-family: 'Tiro Telugu', serif;
-      font-size: 1.1rem;
-      margin: 0;
-      color: var(--saffron);
-    }
-    .month-header span { font-size: 0.82rem; color: #f5ddb0; }
-    .fest-list { display: flex; flex-direction: column; gap: 0.6rem; }
-    .fest-item {
-      display: grid;
-      grid-template-columns: 90px 2rem 1fr auto;
-      align-items: center;
-      gap: 0.8rem;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 0.75rem 1rem;
-      transition: box-shadow 0.15s;
-    }
-    .fest-item:hover { box-shadow: var(--shadow); }
-    .fest-item.major { border-left: 4px solid var(--saffron); }
-    .fest-item.past { opacity: 0.5; }
-    .fest-date { font-size: 0.8rem; font-weight: 700; color: var(--maroon); white-space: nowrap; }
-    .fest-icon { font-size: 1.3rem; text-align: center; }
-    .fest-info h4 { font-family: 'Tiro Telugu', serif; font-size: 0.95rem; color: var(--maroon); margin-bottom: 0.1rem; }
-    .fest-info p { font-size: 0.75rem; color: var(--text-muted); }
-    .fest-badge {
-      font-size: 0.65rem;
-      font-weight: 700;
-      padding: 0.2rem 0.5rem;
-      border-radius: 20px;
-      white-space: nowrap;
-    }
-    .badge-major { background: #fef3e2; color: var(--gold); }
-    .badge-telugu { background: #fce8e8; color: var(--maroon); }
-    .badge-vrat { background: #ede9fe; color: #5b21b6; }
-    .badge-done { background: #f0fdf4; color: #166534; }
-
-    .year-strip {
-      background: var(--maroon);
-      color: var(--saffron);
-      text-align: center;
-      padding: 1rem;
-      border-radius: 10px;
-      margin-bottom: 2rem;
-      font-family: 'Tiro Telugu', serif;
-      font-size: 1.1rem;
-    }
-    .year-strip span { color: #f5ddb0; font-size: 0.85rem; font-family: 'Poppins', sans-serif; display: block; margin-top: 0.2rem; }
-
-    @media (max-width: 600px) {
-      .fest-item { grid-template-columns: 75px 1.5rem 1fr; }
-      .fest-badge { display: none; }
-    }
-
-    /* ── Festival card grid ─────────────────────────────── */
-    .fest-card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.4rem;
-      margin-top: 1.5rem;
-    }
-    .fest-card {
-      display: flex;
-      flex-direction: column;
-      background: linear-gradient(135deg, #fffdf8 0%, var(--cream) 100%);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 1.6rem 1.4rem;
-      text-decoration: none;
-      color: inherit;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 2px 12px rgba(180,83,9,0.07);
-      transition: transform 0.22s ease, box-shadow 0.22s ease;
-    }
-    .fest-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 5px;
-      background: var(--grad-saffron, linear-gradient(135deg,#fbbf24,#f59e0b,#d97706));
-    }
-    .fest-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 28px rgba(180,83,9,0.16);
-    }
-    .fest-card-icon {
-      font-size: 2.6rem;
-      line-height: 1;
-      margin-bottom: 0.8rem;
-    }
-    .fest-card-title {
-      font-family: 'Tiro Telugu', serif;
-      font-size: 1.25rem;
-      color: var(--maroon);
-      margin: 0 0 0.4rem;
-      font-weight: 700;
-    }
-    .fest-card-en {
-      font-size: 0.78rem;
-      color: var(--gold-rich, #b45309);
-      letter-spacing: 0.4px;
-      text-transform: uppercase;
-      margin-bottom: 0.7rem;
-    }
-    .fest-card-desc {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-      flex-grow: 1;
-    }
-    .fest-card-cta {
-      margin-top: 1rem;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--saffron-deep, #ea7a0c);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-    }
-    .fest-card:hover .fest-card-cta { gap: 0.6rem; }
-    .fest-card-cta { transition: gap 0.2s ease; }
-    .fest-intro-band {
-      background: var(--grad-warm, linear-gradient(135deg,#fef3c7,#fde8c4));
-      border-radius: 14px;
-      padding: 1.5rem 1.8rem;
-      margin-bottom: 0.5rem;
-      border-left: 4px solid var(--saffron);
-      line-height: 1.8;
-    }
-    .fest-intro-band h2 {
-      font-family: 'Tiro Telugu', serif;
-      color: var(--maroon);
-      font-size: 1.3rem;
-      margin: 0 0 0.5rem;
-    }
-    .fest-intro-band p { color: var(--text); font-size: 0.95rem; margin: 0; }
-  </style>
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Telugu&amp;family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3051172025821579" crossorigin="anonymous"></script>
-</head>
-<body>
-<div class="topbar">
-<span class="topbar-date" id="topdate"></span>
-<span class="topbar-lang"><a class="active" href="#">తెలుగు</a> | <a href="#">English</a></span>
-</div>
+</head><body>
+<div class="topbar"><span class="topbar-date" id="topdate"></span><span class="topbar-lang"><a class="active" href="#">తెలుగు</a> | <a href="#">English</a></span></div>
 <div id="site-header"></div>
-<div class="page-hero">
-<h1>🪔 హిందూ పండుగలు</h1>
-<p>Hindu Festivals — పూర్తి కథలు, పూజా విధానాలు &amp; మంత్రాలతో</p>
-</div>
-<div class="container"><div class="breadcrumb" style="margin:1.2rem 0;"><a href="../../index.html">హోమ్</a><span>›</span> పండుగలు</div></div>
-<section class="section">
-<div class="container">
-<div class="fest-intro-band">
-<h2>🙏 పండుగల వెనుక కథలు &amp; పూజా విధానాలు</h2>
-<p>ప్రతి పండుగ వెనుక ఒక పౌరాణిక గాథ, ఒక లోతైన ఆధ్యాత్మిక సందేశం ఉన్నాయి. ఇక్కడ ప్రతి పండుగకూ పూర్తి కథ, సంపూర్ణ పూజా విధానం, అసలైన మంత్రాలతో సహా వివరంగా అందిస్తున్నాం. మీకు కావలసిన పండుగపై నొక్కి పూర్తి వివరాలు చదవండి.</p>
-</div>
-<div class="fest-card-grid">
-<a class="fest-card" href="makara-sankranti/index.html">
-<div class="fest-card-icon">🌾</div>
-<h3 class="fest-card-title">మకర సంక్రాంతి</h3>
-<div class="fest-card-en">Makara Sankranti</div>
-<p class="fest-card-desc">సూర్యుని ఉత్తరాయణ ప్రవేశం, పంట పండుగ — భోగి, సంక్రాంతి, కనుమ మూడు రోజుల వేడుక.</p>
-<span class="fest-card-cta">పూర్తి కథ చదవండి →</span>
-</a>
-<a class="fest-card" href="maha-shivaratri/index.html">
-<div class="fest-card-icon">🔱</div>
-<h3 class="fest-card-title">మహా శివరాత్రి</h3>
-<div class="fest-card-en">Maha Shivaratri</div>
-<p class="fest-card-desc">పరమశివుని పవిత్ర రాత్రి — లింగోద్భవం, సముద్ర మథనం, రుద్రాభిషేకం &amp; జాగరణ.</p>
-<span class="fest-card-cta">పూర్తి కథ చదవండి →</span>
-</a>
-<a class="fest-card" href="ugadi/index.html">
-<div class="fest-card-icon">🌿</div>
-<h3 class="fest-card-title">ఉగాది</h3>
-<div class="fest-card-en">Ugadi</div>
-<p class="fest-card-desc">తెలుగు నూతన సంవత్సరం — షడ్రుచుల పచ్చడి, పంచాంగ శ్రవణం &amp; సృష్టి ఆరంభ గాథ.</p>
-<span class="fest-card-cta">పూర్తి కథ చదవండి →</span>
-</a>
-<a class="fest-card" href="sri-rama-navami/index.html">
-<div class="fest-card-icon">🏹</div>
-<h3 class="fest-card-title">శ్రీ రామ నవమి</h3>
-<div class="fest-card-en">Sri Rama Navami</div>
-<p class="fest-card-desc">శ్రీరామ జన్మదినం — సీతారామ కల్యాణం, పానకం-వడపప్పు &amp; రామ నామ మహత్యం.</p>
-<span class="fest-card-cta">పూర్తి కథ చదవండి →</span>
-</a>
-<a class="fest-card" href="hanuman-jayanti/index.html">
-<div class="fest-card-icon">🐒</div>
-<h3 class="fest-card-title">హనుమాన్ జయంతి</h3>
-<div class="fest-card-en">Hanuman Jayanti</div>
-<p class="fest-card-desc">ఆంజనేయుని జన్మదినం — సూర్యగ్రహణ లీల, రామభక్తి &amp; హనుమాన్ చాలీసా.</p>
-<span class="fest-card-cta">పూర్తి కథ చదవండి →</span>
-</a>
-<a class="fest-card" href="raksha-bandhan/index.html">
-<div class="fest-card-icon">🪢</div>
-<h3 class="fest-card-title">రక్షా బంధన్</h3>
-<div class="fest-card-en">Raksha Bandhan</div>
-<p class="fest-card-desc">అన్నాచెల్లెళ్ళ రక్షా బంధం — ద్రౌపది-కృష్ణ గాథ &amp; జంధ్యాల పౌర్ణమి.</p>
-<span class="fest-card-cta">పూర్తి కథ చదవండి →</span>
-</a>
-<a class="fest-card" href="sri-krishna-janmashtami/index.html">
-<div class="fest-card-icon">🦚</div>
-<h3 class="fest-card-title">శ్రీ కృష్ణ జన్మాష్టమి</h3>
-<div class="fest-card-en">Krishna Janmashtami</div>
-<p class="fest-card-desc">శ్రీకృష్ణ జననం — గోకుల లీలలు, ఉట్టి కొట్టడం &amp; అర్ధరాత్రి పూజ.</p>
-<span class="fest-card-cta">పూర్తి కథ చదవండి →</span>
-</a>
-<a class="fest-card" href="vinayaka-chavithi/index.html">
-<div class="fest-card-icon">🐘</div>
-<h3 class="fest-card-title">వినాయక చవితి</h3>
-<div class="fest-card-en">Vinayaka Chavithi</div>
-<p class="fest-card-desc">గణేశుని జన్మ పర్వదినం — శ్యమంతక కథ, షోడశోపచార పూజ &amp; బొజ్జ గణపయ్య హారతి.</p>
-<span class="fest-card-cta">పూర్తి కథ చదవండి →</span>
-</a>
-<a class="fest-card" href="varalakshmi-vratam/index.html">
-<div class="fest-card-icon">🪷</div>
-<h3 class="fest-card-title">వరలక్ష్మీ వ్రతం</h3>
-<div class="fest-card-en">Varalakshmi Vratam</div>
-<p class="fest-card-desc">లక్ష్మీదేవి వ్రతం — చారుమతి కథ, కలశ స్థాపన, తోరం &amp; అష్టలక్ష్మి ఆరాధన.</p>
-<span class="fest-card-cta">పూర్తి కథ చదవండి →</span>
-</a>
-<a class="fest-card" href="dasara/index.html">
-<div class="fest-card-icon">🗡️</div>
-<h3 class="fest-card-title">దసరా — విజయదశమి</h3>
-<div class="fest-card-en">Dasara / Vijayadashami</div>
-<p class="fest-card-desc">శరన్నవరాత్రులు — మహిషాసుర మర్దిని, నవదుర్గలు, ఆయుధ పూజ &amp; శమీ పూజ.</p>
-<span class="fest-card-cta">పూర్తి కథ చదవండి →</span>
-</a>
-<a class="fest-card" href="diwali/index.html">
-<div class="fest-card-icon">🪔</div>
-<h3 class="fest-card-title">దీపావళి</h3>
-<div class="fest-card-en">Deepavali / Diwali</div>
-<p class="fest-card-desc">వెలుగుల పండుగ — నరకాసుర వధ, శ్రీరామ ఆగమనం &amp; లక్ష్మీ పూజ.</p>
-<span class="fest-card-cta">పూర్తి కథ చదవండి →</span>
-</a>
-<a class="fest-card" href="eruvaka-punnami/index.html">
-<div class="fest-card-icon">🌾</div>
-<h3 class="fest-card-title">ఏరువాక పున్నమి</h3>
-<div class="fest-card-en">Eruvaka Punnami</div>
-<p class="fest-card-desc">తెలుగు రైతుల వ్యవసాయారంభ పండుగ — నాగలి పూజ &amp; ఎద్దుల అలంకరణ.</p>
-<span class="fest-card-cta">పూర్తి కథ చదవండి →</span>
-</a>
-</div>
-</div>
-</section>
+<div class="ribbon-band"><span class="rb-om">ॐ</span><h1>🪔 పండుగలు</h1><p>హిందూ పండుగలు — కథలు, పూజా విధానం, ముహూర్తాలతో</p><div class="ribbon-deco"><span>❖</span></div></div>
+<div class="row-bc"><a href="../../index.html">హోమ్</a><span>›</span> పండుగలు</div>
+<div class="row-sec">
+<div class="row-head"><h2>🪔 ప్రధాన పండుగలు</h2><a class="row-more" href="all.html">అన్నీ చూడండి →</a></div>
+<div class="row-wrap">
+<button class="row-arrow l" onclick="this.parentNode.querySelector('.row').scrollBy({left:-330,behavior:'smooth'})" aria-label="ఎడమ">‹</button>
+<button class="row-arrow r" onclick="this.parentNode.querySelector('.row').scrollBy({left:330,behavior:'smooth'})" aria-label="కుడి">›</button>
+<div class="row">
+<a class="rcard" href="makara-sankranti/index.html"><div class="rc-img">🌾</div><div class="rc-body"><div class="rc-ti">మకర సంక్రాంతి</div><div class="rc-st">Makara Sankranti</div></div></a>
+<a class="rcard" href="maha-shivaratri/index.html"><div class="rc-img">🔱</div><div class="rc-body"><div class="rc-ti">మహా శివరాత్రి</div><div class="rc-st">Maha Shivaratri</div></div></a>
+<a class="rcard" href="ugadi/index.html"><div class="rc-img">🌿</div><div class="rc-body"><div class="rc-ti">ఉగాది</div><div class="rc-st">Ugadi</div></div></a>
+<a class="rcard" href="sri-rama-navami/index.html"><div class="rc-img">🏹</div><div class="rc-body"><div class="rc-ti">శ్రీ రామ నవమి</div><div class="rc-st">Sri Rama Navami</div></div></a>
+<a class="rcard" href="hanuman-jayanti/index.html"><div class="rc-img">🐒</div><div class="rc-body"><div class="rc-ti">హనుమాన్ జయంతి</div><div class="rc-st">Hanuman Jayanti</div></div></a>
+<a class="rcard" href="raksha-bandhan/index.html"><div class="rc-img">🪢</div><div class="rc-body"><div class="rc-ti">రక్షా బంధన్</div><div class="rc-st">Raksha Bandhan</div></div></a>
+<a class="rcard" href="sri-krishna-janmashtami/index.html"><div class="rc-img">🦚</div><div class="rc-body"><div class="rc-ti">శ్రీ కృష్ణ జన్మాష్టమి</div><div class="rc-st">Krishna Janmashtami</div></div></a>
+<a class="rcard" href="vinayaka-chavithi/index.html"><div class="rc-img">🐘</div><div class="rc-body"><div class="rc-ti">వినాయక చవితి</div><div class="rc-st">Vinayaka Chavithi</div></div></a>
+<a class="rcard" href="varalakshmi-vratam/index.html"><div class="rc-img">🪷</div><div class="rc-body"><div class="rc-ti">వరలక్ష్మీ వ్రతం</div><div class="rc-st">Varalakshmi Vratam</div></div></a>
+<a class="rcard" href="dasara/index.html"><div class="rc-img">🗡️</div><div class="rc-body"><div class="rc-ti">దసరా — విజయదశమి</div><div class="rc-st">Dasara / Vijayadashami</div></div></a>
+<a class="rcard" href="diwali/index.html"><div class="rc-img">🪔</div><div class="rc-body"><div class="rc-ti">దీపావళి</div><div class="rc-st">Deepavali / Diwali</div></div></a>
+<a class="rcard" href="eruvaka-punnami/index.html"><div class="rc-img">🌾</div><div class="rc-body"><div class="rc-ti">ఏరువాక పున్నమి</div><div class="rc-st">Eruvaka Punnami</div></div></a>
+<a class="rcard more" href="all.html"><div class="m">అన్నీ<br>చూడండి →</div></a>
+</div></div></div>
 <div id="site-footer"></div>
-<script src="../../assets/js/main.js"></script>
-<script src="../../assets/js/site-chrome.js"></script>
-</body>
-</html>
+<script src="../../assets/js/main.js"></script><script src="../../assets/js/site-chrome.js"></script>
+</body></html>
