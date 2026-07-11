@@ -32,9 +32,9 @@
       '.info-box p,.source-note{font-size:calc(1em * var(--mh-fs,1)) !important;}',
 
       /* Control widget */
-      '.mh-fs-bar{width:100%;display:flex;justify-content:flex-end;padding:10px 18px 0;box-sizing:border-box;}',
+      '.mh-fs-bar{width:100%;display:flex;justify-content:center;margin:2px 0 18px;box-sizing:border-box;}',
       '.mh-fs{display:flex;align-items:center;gap:6px;}',
-      '@media(max-width:640px){.mh-fs-bar{justify-content:center;padding:10px 16px 0;}}',
+      '@media(max-width:640px){.mh-fs-bar{margin:2px 0 14px;}}',
       '.mh-fs-btn{width:34px;height:34px;border-radius:50%;border:1px solid #ecd9a8;',
       'background:linear-gradient(135deg,#fff,#fdf6e8);color:#5a2e14;cursor:pointer;',
       'font-family:"Poppins",sans-serif;font-weight:600;line-height:1;',
@@ -110,22 +110,35 @@
     wrap.appendChild(plus);
     wrap.appendChild(reset);
 
-    // ONE consistent position on every page: a full-width bar directly
-    // under the breadcrumb, outside any layout grid so it cannot drift.
+    // ONE consistent position on every page:
+    // directly BELOW the intro card and ABOVE the chapters/content.
     var bar = document.createElement('div');
     bar.className = 'mh-fs-bar';
     bar.appendChild(wrap);
 
-    var bc = document.querySelector('.row-bc');
-    if (bc && bc.parentNode) {
-      bc.parentNode.insertBefore(bar, bc.nextSibling);
+    // Preferred anchor: the intro card, whatever the page type calls it.
+    var intro = document.querySelector('.satakam-intro') ||
+                document.querySelector('.info-box') ||
+                document.querySelector('.page-card');
+
+    if (intro && intro.parentNode) {
+      intro.parentNode.insertBefore(bar, intro.nextSibling);
       return;
     }
-    // Fallback: top of the first section
-    var sec = document.querySelector('section.section');
-    if (sec && sec.parentNode) {
-      sec.parentNode.insertBefore(bar, sec);
+
+    // No intro card — sit directly above the content block instead.
+    var content = document.querySelector('.life-story-layout') ||
+                  document.querySelector('.article-layout') ||
+                  document.querySelector('.chapter-content') ||
+                  document.querySelector('.article-body');
+
+    if (content && content.parentNode) {
+      content.parentNode.insertBefore(bar, content);
+      return;
     }
+
+    var sec = document.querySelector('section.section');
+    if (sec && sec.parentNode) sec.parentNode.insertBefore(bar, sec);
   }
 
   if (document.readyState === 'loading') {
