@@ -32,7 +32,9 @@
       '.info-box p,.source-note{font-size:calc(1em * var(--mh-fs,1)) !important;}',
 
       /* Control widget */
-      '.mh-fs{display:flex;align-items:center;gap:6px;justify-content:center;margin:0 0 1.2rem;}',
+      '.mh-fs-bar{width:100%;display:flex;justify-content:flex-end;padding:10px 18px 0;box-sizing:border-box;}',
+      '.mh-fs{display:flex;align-items:center;gap:6px;}',
+      '@media(max-width:640px){.mh-fs-bar{justify-content:center;padding:10px 16px 0;}}',
       '.mh-fs-btn{width:34px;height:34px;border-radius:50%;border:1px solid #ecd9a8;',
       'background:linear-gradient(135deg,#fff,#fdf6e8);color:#5a2e14;cursor:pointer;',
       'font-family:"Poppins",sans-serif;font-weight:600;line-height:1;',
@@ -55,10 +57,9 @@
 
   function init() {
     // Only on pages with actual reading content.
-    var anchor = document.querySelector('.satakam-intro') ||
-                 document.querySelector('.chapter-content') ||
-                 document.querySelector('.article-body');
-    if (!anchor) return;
+    if (!document.querySelector('.chapter-content') &&
+        !document.querySelector('.article-body') &&
+        !document.querySelector('.page-card')) return;
 
     injectCss();
 
@@ -109,8 +110,21 @@
     wrap.appendChild(plus);
     wrap.appendChild(reset);
 
-    if (anchor.parentNode) {
-      anchor.parentNode.insertBefore(wrap, anchor.nextSibling);
+    // ONE consistent position on every page: a full-width bar directly
+    // under the breadcrumb, outside any layout grid so it cannot drift.
+    var bar = document.createElement('div');
+    bar.className = 'mh-fs-bar';
+    bar.appendChild(wrap);
+
+    var bc = document.querySelector('.row-bc');
+    if (bc && bc.parentNode) {
+      bc.parentNode.insertBefore(bar, bc.nextSibling);
+      return;
+    }
+    // Fallback: top of the first section
+    var sec = document.querySelector('section.section');
+    if (sec && sec.parentNode) {
+      sec.parentNode.insertBefore(bar, sec);
     }
   }
 

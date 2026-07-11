@@ -322,16 +322,22 @@
   box-sizing:border-box;
   align-self:flex-start;
 }
-/* Plain pages with no layout wrapper (about, contact, privacy) */
-.section > .container > .page-body,
-.section > .container > .static-content{
-  background:#fff !important;
-  border:1px solid #ecd9a8 !important;
-  border-radius:16px !important;
-  padding:26px 28px !important;
-  box-shadow:0 4px 18px rgba(124,28,28,0.07) !important;
-}
 @media (max-width:640px){
   .life-story-layout > .chapter-content{ padding:20px 18px !important; border-radius:14px !important; }
   .life-story-layout > .chapter-nav{ padding:14px 12px !important; }
+}
+
+/* ═══ Plain text pages (about, contact, privacy, sanatana-dharma, hubs) ═══ */
+.page-card{
+  background:#fff !important;
+  border:1px solid #ecd9a8 !important;
+  border-radius:16px !important;
+  padding:28px 30px !important;
+  box-shadow:0 4px 18px rgba(124,28,28,0.07) !important;
+  box-sizing:border-box;
+}
+.page-card > *:first-child{ margin-top:0 !important; }
+.page-card > *:last-child{ margin-bottom:0 !important; }
+@media (max-width:640px){
+  .page-card{ padding:20px 18px !important; border-radius:14px !important; }
 }
