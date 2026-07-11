@@ -49,10 +49,10 @@
 <nav class="nav" id="mhSidebar">
 <div class="sidebar-head"><span>🕉️ మెను</span><button class="sidebar-close" onclick="window.MHSidebar&&window.MHSidebar.close()" aria-label="మూసివేయి">✕</button></div>
 <a href="{ROOT}index.html">🏠 హోమ్</a>
-<a href="{ROOT}pages/temples/index.html">🛕 దేవాలయాలు</a>
-<a href="{ROOT}pages/hinduism/index.html">📖 హిందూమతం</a>
-<a href="{ROOT}pages/hinduism/puranas/index.html">📚 18 మహాపురాణాలు</a>
 <a href="{ROOT}pages/sanatana-dharma/index.html">🕉️ సనాతన ధర్మం</a>
+<a href="{ROOT}pages/hinduism/index.html">📖 హిందూమతం</a>
+<a href="{ROOT}pages/temples/index.html">🛕 దేవాలయాలు</a>
+<a href="{ROOT}pages/hinduism/puranas/index.html">📚 18 మహాపురాణాలు</a>
 <a href="{ROOT}pages/festivals/index.html">🪔 పండుగలు</a>
 <a href="{ROOT}pages/slokalu/index.html">📜 శ్లోకాలు</a>
 <a href="{ROOT}pages/gallery/index.html">📸 ఫోటో గ్యాలరీ</a>
@@ -103,6 +103,7 @@
     var f = document.getElementById('site-footer');
     if (h) h.innerHTML = applyRoot(HEADER);
     if (f) f.innerHTML = applyRoot(FOOTER);
+    buildHero();
     highlightActive();
     showSiteVisits();
     setupSidebar();
@@ -110,6 +111,44 @@
     if (window.ManaHinduNav && typeof window.ManaHinduNav.bind === 'function') {
       try { window.ManaHinduNav.bind(); } catch (e) {}
     }
+  }
+
+  // 3b) MASTER HERO + BREADCRUMB — defined ONCE here, injected into every page.
+  //     A page declares its data via window.MHPage or a #mh-hero placeholder's data-* attrs.
+  //     This guarantees identical ribbon + breadcrumb position on every page.
+  function buildHero() {
+    var slot = document.getElementById('mh-hero');
+    if (!slot) return;  // page opted out (e.g. splash home)
+    var cfg = window.MHPage || {};
+    // fallback to data-attributes
+    var title = cfg.title || slot.getAttribute('data-title') || '';
+    var sub   = cfg.sub   || slot.getAttribute('data-sub')   || '';
+    var crumbs = cfg.breadcrumb || null;
+
+    // Build breadcrumb HTML from array [{label, href}] (last item = current, no link)
+    var bcHtml = '';
+    if (crumbs && crumbs.length) {
+      for (var i = 0; i < crumbs.length; i++) {
+        var c = crumbs[i];
+        if (i > 0) bcHtml += '<span>›</span>';
+        if (c.href && i < crumbs.length - 1) {
+          bcHtml += '<a href="' + applyRoot(c.href) + '">' + c.label + '</a>';
+        } else {
+          bcHtml += '<span class="bc-current">' + c.label + '</span>';
+        }
+      }
+    }
+
+    var heroHtml =
+      '<div class="ribbon-band">' +
+        '<span class="rb-om">ॐ</span>' +
+        '<h1>' + title + '</h1>' +
+        (sub ? '<p>' + sub + '</p>' : '') +
+        '<div class="ribbon-deco"><span>❖</span></div>' +
+      '</div>' +
+      (bcHtml ? '<div class="row-bc">' + bcHtml + '</div>' : '');
+
+    slot.innerHTML = heroHtml;
   }
 
   // 4) Highlight the link matching the current page.
