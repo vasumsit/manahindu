@@ -218,3 +218,71 @@
 }
 .qf-btn:active{ transform:scale(0.97); }
 .qf-btn:hover{ filter:brightness(1.05); }
+
+/* ═══ Simple footer (master) ═══ */
+.footer-simple{
+  display:flex; flex-direction:column; align-items:center; gap:10px;
+  padding:28px 18px 24px; text-align:center;
+}
+.footer-om{ font-size:1.9rem; color:#d4af37; line-height:1; }
+.footer-name{ color:#e8cf8a; font-family:'Tiro Telugu',serif; font-size:1.05rem; }
+.footer-nav{
+  display:flex; flex-wrap:wrap; justify-content:center; gap:6px 18px;
+  margin-top:4px;
+}
+.footer-nav a{
+  color:#c9b896 !important; text-decoration:none;
+  font-family:'Tiro Telugu',serif; font-size:0.88rem;
+  transition:color .15s;
+}
+.footer-nav a:hover{ color:#e8cf8a !important; }
+.footer-copy{ color:#8a7f6e; font-size:0.8rem; margin-top:8px; font-family:'Tiro Telugu',serif; }
+.footer-visits{ color:#8a7f6e; font-size:0.78rem; }
+.footer-visits strong{ color:#d4af37; }
+
+/* ═══ Floating side navigation (prev/next while reading) ═══ */
+.side-nav{
+  position:fixed; top:50%; transform:translateY(-50%);
+  z-index:900;
+  display:flex; align-items:center; gap:0;
+  height:56px;
+  background:linear-gradient(135deg,#4a2c18,#2a2018);
+  border:1px solid rgba(212,175,55,0.45);
+  color:#e8cf8a; text-decoration:none;
+  box-shadow:0 4px 18px rgba(0,0,0,0.35);
+  overflow:hidden;
+  transition:width .28s ease, background .2s;
+  width:44px;
+}
+.side-prev{ left:0; border-left:none; border-radius:0 14px 14px 0; }
+.side-next{ right:0; border-right:none; border-radius:14px 0 0 14px; flex-direction:row-reverse; }
+.sn-arrow{
+  flex:0 0 44px; width:44px; height:56px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:1.5rem; line-height:1;
+}
+.sn-tip{
+  white-space:nowrap; font-family:'Tiro Telugu',serif; font-size:0.86rem;
+  padding-right:14px; opacity:0; transition:opacity .2s .06s;
+}
+.side-next .sn-tip{ padding-right:0; padding-left:14px; }
+/* expand on hover (desktop) */
+@media (hover:hover){
+  .side-nav:hover{ width:auto; max-width:260px; background:linear-gradient(135deg,#5a3620,#3a2418); }
+  .side-nav:hover .sn-tip{ opacity:1; }
+}
+.side-nav:active{ transform:translateY(-50%) scale(0.96); }
+/* last card -> back to category, highlighted gold */
+.side-end{
+  background:linear-gradient(135deg,#d4af37,#a8862a);
+  color:#2a1810; border-color:#e8cf8a;
+}
+@media (hover:hover){
+  .side-end:hover{ background:linear-gradient(135deg,#e8cf8a,#d4af37); }
+}
+/* Mobile: smaller, tucked to the edges, no hover expand */
+@media (max-width:640px){
+  .side-nav{ width:36px; height:48px; }
+  .sn-arrow{ flex:0 0 36px; width:36px; height:48px; font-size:1.3rem; }
+  .sn-tip{ display:none; }
+}

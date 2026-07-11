@@ -38,6 +38,16 @@
 
   // 2) Templates (root-relative via {ROOT} token).
   var HEADER = `
+<style>
+.header-inner{display:flex!important;align-items:center!important;justify-content:space-between!important;flex-wrap:nowrap!important;gap:1rem;padding:0.8rem 1.2rem;}
+.header-inner .logo{display:flex!important;flex-direction:row!important;align-items:center!important;gap:0.7rem!important;margin-right:auto!important;text-decoration:none;}
+.header-inner .logo > div{display:block!important;}
+.header-inner .logo-om{font-size:2rem;line-height:1;color:#d4af37!important;}
+.header-inner .logo-title{font-family:'Tiro Telugu',serif;font-size:1.3rem;line-height:1.1;color:#f4ecdd!important;font-weight:700;}
+.header-inner .logo-sub{font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:#d4af37!important;}
+.header-inner .sidebar-toggle{margin-left:auto!important;display:inline-block!important;white-space:nowrap;}
+.header-inner nav.nav, .header-inner .sidebar-backdrop{position:fixed!important;}
+</style>
 <header class="header">
 <div class="container header-inner">
 <a class="logo" href="{ROOT}index.html">
@@ -63,37 +73,24 @@
 </div>
 </header>`;
   var FOOTER = `<footer class="footer">
-<div class="container footer-inner">
-<div class="footer-brand">
-<div class="logo-om" style="font-size:2rem;color:#f59e0b;">ॐ</div>
-<div><div class="logo-title" style="font-size:1.2rem;color:#fff;">మన హిందూ</div><div class="logo-sub">ManaHindu</div></div>
-</div>
-<div class="footer-links">
-<div>
-<h4>విభాగాలు</h4>
-<a href="{ROOT}pages/hinduism/index.html">హిందూమతం</a>
+<div class="container footer-simple">
+<div class="footer-om">ॐ</div>
+<div class="footer-name">మన హిందూ · ManaHindu</div>
+<div class="footer-nav">
 <a href="{ROOT}pages/temples/index.html">దేవాలయాలు</a>
-<a href="{ROOT}pages/hinduism/puranas/index.html">18 మహాపురాణాలు</a>
+<a href="{ROOT}pages/hinduism/puranas/index.html">పురాణాలు</a>
 <a href="{ROOT}pages/festivals/index.html">పండుగలు</a>
 <a href="{ROOT}pages/slokalu/index.html">శ్లోకాలు</a>
-</div>
-<div>
-<h4>మరిన్ని</h4>
-<a href="{ROOT}pages/gallery/index.html">📸 ఫోటో గ్యాలరీ</a>
-<a href="{ROOT}pages/news/index.html">📰 వార్తలు</a>
-<a href="{ROOT}pages/vlogs/index.html">🎥 వ్లాగ్స్</a>
-<a href="https://www.youtube.com/@Vasu11tv" target="_blank">▶ YouTube — v11tv</a>
-</div>
-<div>
-<h4>సమాచారం</h4>
 <a href="{ROOT}pages/about/index.html">మా గురించి</a>
 <a href="{ROOT}pages/contact/index.html">సంప్రదించండి</a>
-<a href="{ROOT}pages/privacy/index.html">గోప్యతా విధానం</a>
+<a href="{ROOT}pages/privacy/index.html">గోప్యత</a>
+<a href="https://www.youtube.com/@Vasu11tv" target="_blank" rel="noopener">▶ YouTube</a>
 </div>
+<div class="footer-copy">© 2026 మన హిందూ — జై శ్రీ వేంకటేశ్వర 🙏</div>
+<div class="footer-visits">👁️ సందర్శకులు: <strong id="mh-site-visits">…</strong></div>
 </div>
-</div>
-<div class="footer-bottom"><p>© 2026 మన హిందూ | ManaHindu — జై శ్రీ వేంకటేశ్వర 🙏</p><p class="footer-sitevisits" style="margin-top:0.4rem;font-size:0.85rem;opacity:0.85;">👁️ మొత్తం సందర్శకులు: <strong id="mh-site-visits">…</strong></p></div>
 </footer>`;
+
 
   function applyRoot(html) { return html.split('{ROOT}').join(ROOT); }
 
