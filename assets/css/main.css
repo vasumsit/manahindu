@@ -987,3 +987,11 @@ body {
   .mh-lb-next { right: 8px; }
   .mh-lb-close { top: 12px; right: 16px; font-size: 2rem; }
 }
+
+/* ═══ FAILSAFE: header layout — always applies, not dependent on injected JS CSS ═══ */
+.header-inner { display: flex !important; align-items: center !important; justify-content: space-between !important; flex-wrap: nowrap !important; }
+.header-inner .logo { display: flex !important; align-items: center !important; gap: 0.7rem !important; margin-right: auto !important; flex-direction: row !important; }
+.header-inner .logo > div { display: block; }
+.sidebar-toggle { margin-left: auto !important; display: inline-block !important; white-space: nowrap; }
+/* keep sidebar + backdrop out of the header flex flow */
+nav.nav#mhSidebar, .sidebar-backdrop { position: fixed !important; }

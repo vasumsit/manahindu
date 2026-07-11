@@ -227,7 +227,8 @@
       'nav.nav#mhSidebar .dropdown a{display:block;color:#c9b896;font-size:0.88rem;padding:8px 12px;border-radius:7px;line-height:1.4;transition:all .15s;}',
       'nav.nav#mhSidebar .dropdown a:hover{background:rgba(212,175,55,0.15);color:#e8cf8a;padding-left:16px;}',
       'nav.nav#mhSidebar .dropdown-group-label{display:block;color:#d4af37;font-size:0.68rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:10px 10px 4px;border-left:none;margin:6px 0 2px;background:transparent;border-top:1px solid rgba(212,175,55,0.12);}','nav.nav#mhSidebar .dropdown-group-label:first-child{border-top:none;margin-top:0;}',
-      '@media(min-width:900px){.sidebar-toggle{display:block;}}'
+      '@media(min-width:900px){.sidebar-toggle{display:block;}}',
+      '@media(max-width:768px){nav.nav#mhSidebar{display:flex !important;} .sidebar-toggle{display:inline-block !important;} .hamburger{display:none !important;} .header-inner .nav{display:flex !important;}}'
     ].join('\n');
     document.head.appendChild(css);
     afterCss();
