@@ -286,3 +286,19 @@
   .sn-arrow{ flex:0 0 36px; width:36px; height:48px; font-size:1.3rem; }
   .sn-tip{ display:none; }
 }
+
+/* ═══ Article body as a proper card (was flat / borderless) ═══ */
+.article-layout > .article-body{
+  background:#fff !important;
+  border:1px solid #ecd9a8 !important;
+  border-radius:16px !important;
+  padding:26px 28px !important;
+  box-shadow:0 4px 18px rgba(124,28,28,0.07) !important;
+  box-sizing:border-box;
+}
+@media (max-width:640px){
+  .article-layout > .article-body{
+    padding:20px 18px !important;
+    border-radius:14px !important;
+  }
+}
