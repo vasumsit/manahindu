@@ -39,22 +39,30 @@
   // 2) Templates (root-relative via {ROOT} token).
   var HEADER = `
 <style>
-.header-inner{display:flex!important;align-items:center!important;justify-content:space-between!important;flex-wrap:nowrap!important;gap:1rem;padding:0.8rem 1.2rem;}
-.header-inner .logo{display:flex!important;flex-direction:row!important;align-items:center!important;gap:0.7rem!important;margin-right:auto!important;text-decoration:none;}
-.header-inner .logo > div{display:block!important;}
-.header-inner .logo-om{font-size:2rem;line-height:1;color:#d4af37!important;}
-.header-inner .logo-title{font-family:'Tiro Telugu',serif;font-size:1.3rem;line-height:1.1;color:#f4ecdd!important;font-weight:700;}
-.header-inner .logo-sub{font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:#d4af37!important;}
-.header-inner .sidebar-toggle{margin-left:auto!important;display:inline-block!important;white-space:nowrap;}
-.header-inner nav.nav, .header-inner .sidebar-backdrop{position:fixed!important;}
+/* ── Master header — same look as the root home page ── */
+.header{background:rgba(13,11,18,0.95)!important;border-bottom:1px solid rgba(212,175,55,0.2)!important;
+  box-shadow:0 4px 20px rgba(0,0,0,0.3);position:relative;z-index:100;}
+.header .header-inner{display:flex!important;align-items:center!important;justify-content:space-between!important;
+  flex-wrap:nowrap!important;padding:12px 20px!important;max-width:none!important;width:100%!important;margin:0!important;box-sizing:border-box;}
+.header .logo{display:flex!important;flex-direction:row!important;align-items:center!important;gap:8px!important;
+  text-decoration:none!important;margin:0!important;flex:0 0 auto;}
+.header .logo-om{font-size:1.6rem!important;color:#d4af37!important;line-height:1!important;}
+.header .logo-title{font-family:'Tiro Telugu',serif!important;font-size:1.15rem!important;color:#f4ecdd!important;
+  font-weight:400!important;line-height:1.2!important;}
+.header .sidebar-toggle{margin:0!important;flex:0 0 auto;display:inline-block!important;white-space:nowrap;
+  background:linear-gradient(135deg,#e8cf8a,#d4af37)!important;color:#0d0b12!important;border:none!important;
+  border-radius:22px!important;padding:9px 20px!important;font-family:'Tiro Telugu',serif!important;
+  font-size:0.95rem!important;font-weight:600!important;cursor:pointer;}
+.header .sidebar-toggle:active{transform:scale(0.96);}
 </style>
 <header class="header">
-<div class="container header-inner">
+<div class="header-inner">
 <a class="logo" href="{ROOT}index.html">
-<div class="logo-om">ॐ</div>
-<div><div class="logo-title">మన హిందూ</div><div class="logo-sub">ManaHindu</div></div>
+<span class="logo-om">ॐ</span><span class="logo-title">మన హిందూ</span>
 </a>
 <button class="sidebar-toggle" onclick="window.MHSidebar&&window.MHSidebar.open()" aria-label="మెను">☰ మెను</button>
+</div>
+</header>
 <div class="sidebar-backdrop" id="mhSidebarBackdrop" onclick="window.MHSidebar&&window.MHSidebar.close()"></div>
 <nav class="nav" id="mhSidebar">
 <div class="sidebar-head"><span>🕉️ మెను</span><button class="sidebar-close" onclick="window.MHSidebar&&window.MHSidebar.close()" aria-label="మూసివేయి">✕</button></div>
@@ -69,9 +77,10 @@
 <a href="{ROOT}pages/news/index.html">📰 వార్తలు</a>
 <a href="{ROOT}pages/vlogs/index.html">🎬 వ్లాగ్స్</a>
 <a href="{ROOT}pages/about/index.html">🙏 మా గురించి</a>
-</nav>
-</div>
-</header>`;
+</nav>`;
+
+
+
   var FOOTER = `<footer class="footer">
 <div class="container footer-simple">
 <div class="footer-om">ॐ</div>
@@ -203,29 +212,18 @@
     var css = document.createElement('style');
     css.id = 'mh-sidebar-css';
     css.textContent = [
-      '.header-inner{display:flex !important;align-items:center !important;justify-content:space-between !important;flex-wrap:nowrap !important;}','.header-inner .logo{margin-right:auto !important;}','.header-inner > nav.nav#mhSidebar{position:fixed !important;}','.header-inner > .sidebar-backdrop{position:fixed !important;}','.sidebar-toggle{display:inline-block !important;}','.sidebar-toggle{margin-left:auto;background:linear-gradient(135deg,#e8cf8a,#d4af37);color:#0d0b12;border:none;border-radius:22px;padding:9px 20px;font-family:"Tiro Telugu",serif;font-size:0.95rem;font-weight:600;cursor:pointer;transition:transform .2s;order:3;}',
-      '.sidebar-toggle:active{transform:scale(0.96);}',
-      '.sidebar-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.6);backdrop-filter:blur(3px);z-index:1400;opacity:0;visibility:hidden;transition:opacity .3s;}',
+      '.sidebar-backdrop{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.6);backdrop-filter:blur(3px);opacity:0;visibility:hidden;transition:opacity .3s;}',
       'body.mh-sidebar-open .sidebar-backdrop{opacity:1;visibility:visible;}',
-      'nav.nav#mhSidebar{position:fixed;top:0;right:0;height:100%;width:min(330px,86vw);flex-direction:column;gap:0;background:linear-gradient(180deg,#15121c,#0d0b12);border-left:1px solid rgba(212,175,55,0.3);box-shadow:-12px 0 40px rgba(0,0,0,0.5);z-index:1500;padding:16px;overflow-y:auto;transform:translateX(100%);transition:transform .3s cubic-bezier(.4,0,.2,1);display:flex;}',
-      'body.mh-sidebar-open nav.nav#mhSidebar{transform:translateX(0);}',
-      '.sidebar-head{display:flex;align-items:center;justify-content:space-between;padding-bottom:14px;margin-bottom:8px;border-bottom:1px solid rgba(212,175,55,0.2);color:#e8cf8a;font-family:"Tiro Telugu",serif;font-size:1.15rem;}',
+      'nav.nav#mhSidebar{display:flex !important;position:fixed !important;top:0;right:0;height:100%;width:min(320px,85vw);z-index:250;flex-direction:column;gap:0;background:linear-gradient(180deg,#15121c,#0d0b12);border-left:1px solid rgba(212,175,55,0.25);padding:20px;overflow-y:auto;box-shadow:-10px 0 40px rgba(0,0,0,0.5);transform:translateX(100%);transition:transform .3s ease;}',
+      'body.mh-sidebar-open nav.nav#mhSidebar{transform:translateX(0) !important;}',
+      '.sidebar-head{display:flex;align-items:center;justify-content:space-between;padding-bottom:14px;margin-bottom:12px;border-bottom:1px solid rgba(212,175,55,0.2);color:#e8cf8a;font-family:\'Tiro Telugu\',serif;font-size:1.2rem;}',
       '.sidebar-close{background:none;border:none;color:#e8cf8a;font-size:1.4rem;cursor:pointer;width:36px;height:36px;border-radius:50%;transition:background .2s;}',
       '.sidebar-close:hover{background:rgba(212,175,55,0.15);}',
-      'nav.nav#mhSidebar > a{display:block;color:#f4ecdd;text-decoration:none;padding:13px 14px;border-radius:10px;font-size:1.02rem;transition:background .2s;}',
-      'nav.nav#mhSidebar > a:hover{background:rgba(212,175,55,0.14);color:#e8cf8a;}',
-      'nav.nav#mhSidebar .nav-item{position:static;display:block;}',
-      'nav.nav#mhSidebar .nav-item > a{display:flex;align-items:center;justify-content:space-between;color:#f4ecdd;text-decoration:none;padding:13px 14px;border-radius:10px;font-size:1.02rem;cursor:pointer;}',
-      'nav.nav#mhSidebar .nav-item > a::after{content:"▾";color:#d4af37;font-size:0.8rem;transition:transform .25s;}',
-      'nav.nav#mhSidebar .nav-item.expanded > a::after{transform:rotate(180deg);}',
-      'nav.nav#mhSidebar .nav-item > a:hover{background:rgba(212,175,55,0.1);}',
-      'nav.nav#mhSidebar .dropdown{position:static;display:none;background:rgba(212,175,55,0.04);border:none;box-shadow:none;min-width:0;max-height:none;padding:6px 0 8px 10px;margin:2px 0 6px 14px;border-left:2px solid rgba(212,175,55,0.35);border-radius:0 8px 8px 0;animation:none;}',
-      'nav.nav#mhSidebar .nav-item.expanded .dropdown{display:block;}',
-      'nav.nav#mhSidebar .dropdown a{display:block;color:#c9b896;font-size:0.88rem;padding:8px 12px;border-radius:7px;line-height:1.4;transition:all .15s;}',
-      'nav.nav#mhSidebar .dropdown a:hover{background:rgba(212,175,55,0.15);color:#e8cf8a;padding-left:16px;}',
-      'nav.nav#mhSidebar .dropdown-group-label{display:block;color:#d4af37;font-size:0.68rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:10px 10px 4px;border-left:none;margin:6px 0 2px;background:transparent;border-top:1px solid rgba(212,175,55,0.12);}','nav.nav#mhSidebar .dropdown-group-label:first-child{border-top:none;margin-top:0;}',
-      '@media(min-width:900px){.sidebar-toggle{display:block;}}',
-      '@media(max-width:768px){nav.nav#mhSidebar{display:flex !important;} .sidebar-toggle{display:inline-block !important;} .hamburger{display:none !important;} .header-inner .nav{display:flex !important;}}'
+      'nav.nav#mhSidebar > a{display:block !important;color:#f4ecdd;text-decoration:none;padding:13px 14px;border-radius:10px;font-size:1.05rem;margin-bottom:4px;font-family:\'Tiro Telugu\',serif;transition:background .2s,padding-left .2s;}',
+      'nav.nav#mhSidebar > a:hover{background:rgba(212,175,55,0.14);color:#e8cf8a;padding-left:20px;}',
+      '.sidebar-toggle{display:inline-block !important;}',
+      '.hamburger{display:none !important;}',
+      '@media(max-width:768px){nav.nav#mhSidebar{display:flex !important;}.sidebar-toggle{display:inline-block !important;}}'
     ].join('\n');
     document.head.appendChild(css);
     afterCss();
@@ -263,11 +261,8 @@
         allLinks[j].addEventListener('click', function () { window.MHSidebar.close(); });
       }
 
-      // Restore remembered state (default OPEN on first visit)
-      var state = null;
-      try { state = localStorage.getItem('mh_sidebar'); } catch (e) {}
-      if (state === 'closed') { document.body.classList.remove('mh-sidebar-open'); }
-      else { document.body.classList.add('mh-sidebar-open'); }  // open by default
+      // Closed by default — exactly like the home page menu (opens only on ☰ tap).
+      document.body.classList.remove('mh-sidebar-open');
 
       // Escape closes
       document.addEventListener('keydown', function (e) { if (e.key === 'Escape') window.MHSidebar.close(); });
