@@ -40,8 +40,9 @@
   var HEADER = `
 <style>
 /* ── Master header — same look as the root home page ── */
+#site-header{position:sticky!important;top:0!important;z-index:500!important;display:block;}
 .header{background:rgba(13,11,18,0.97)!important;border-bottom:1px solid rgba(212,175,55,0.2)!important;
-  box-shadow:0 4px 20px rgba(0,0,0,0.3);position:sticky!important;top:0;z-index:500;}
+  box-shadow:0 4px 20px rgba(0,0,0,0.3);position:relative;}
 .header .header-inner{display:flex!important;align-items:center!important;justify-content:space-between!important;
   flex-wrap:nowrap!important;padding:12px 20px!important;max-width:none!important;width:100%!important;margin:0!important;box-sizing:border-box;}
 .header .logo{display:flex!important;flex-direction:row!important;align-items:center!important;gap:8px!important;
