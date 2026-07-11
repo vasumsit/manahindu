@@ -40,8 +40,8 @@
   var HEADER = `
 <style>
 /* ── Master header — same look as the root home page ── */
-.header{background:rgba(13,11,18,0.95)!important;border-bottom:1px solid rgba(212,175,55,0.2)!important;
-  box-shadow:0 4px 20px rgba(0,0,0,0.3);position:relative;z-index:100;}
+.header{background:rgba(13,11,18,0.97)!important;border-bottom:1px solid rgba(212,175,55,0.2)!important;
+  box-shadow:0 4px 20px rgba(0,0,0,0.3);position:sticky!important;top:0;z-index:500;}
 .header .header-inner{display:flex!important;align-items:center!important;justify-content:space-between!important;
   flex-wrap:nowrap!important;padding:12px 20px!important;max-width:none!important;width:100%!important;margin:0!important;box-sizing:border-box;}
 .header .logo{display:flex!important;flex-direction:row!important;align-items:center!important;gap:8px!important;
@@ -159,14 +159,27 @@
 
   // 4) Highlight the link matching the current page.
   function highlightActive() {
-    var here = window.location.pathname.replace(/\/index\.html$/, '/').replace(/\/$/, '/');
-    var links = document.querySelectorAll('#site-header a[href]');
+    var here = window.location.pathname;
+    // Look in the sidebar (it now lives outside <header>) plus the header itself.
+    var links = document.querySelectorAll('#mhSidebar a[href], #site-header a[href]');
     var bestEl = null, bestLen = -1;
     for (var i = 0; i < links.length; i++) {
       var a = links[i];
-      var path = a.pathname ? a.pathname.replace(/\/index\.html$/, '/').replace(/\/$/, '/') : '';
+      var path = a.pathname || '';
       if (!path) continue;
-      if (here === path && path.length > bestLen) { bestEl = a; bestLen = path.length; }
+      // Section folder for this link, e.g. /pages/temples/
+      var dir = path.replace(/[^/]*$/, '');
+      var isHome = /\/index\.html$/.test(path) && dir.replace(/\/$/, '').split('/').filter(Boolean).length === 0;
+
+      var match = false;
+      if (isHome) {
+        // Home only lights up on the actual root page.
+        match = /(^|\/)index\.html$/.test(here) && here.split('/').filter(Boolean).length <= 1;
+      } else {
+        // Any page inside this section (including detail pages) counts.
+        match = here.indexOf(dir) === 0;
+      }
+      if (match && dir.length > bestLen) { bestEl = a; bestLen = dir.length; }
     }
     if (bestEl) bestEl.classList.add('active');
   }
@@ -212,9 +225,9 @@
     var css = document.createElement('style');
     css.id = 'mh-sidebar-css';
     css.textContent = [
-      '.sidebar-backdrop{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.6);backdrop-filter:blur(3px);opacity:0;visibility:hidden;transition:opacity .3s;}',
+      '.sidebar-backdrop{position:fixed;inset:0;z-index:900;background:rgba(0,0,0,0.6);backdrop-filter:blur(3px);opacity:0;visibility:hidden;transition:opacity .3s;}',
       'body.mh-sidebar-open .sidebar-backdrop{opacity:1;visibility:visible;}',
-      'nav.nav#mhSidebar{display:flex !important;position:fixed !important;top:0;right:0;height:100%;width:min(320px,85vw);z-index:250;flex-direction:column;gap:0;background:linear-gradient(180deg,#15121c,#0d0b12);border-left:1px solid rgba(212,175,55,0.25);padding:20px;overflow-y:auto;box-shadow:-10px 0 40px rgba(0,0,0,0.5);transform:translateX(100%);transition:transform .3s ease;}',
+      'nav.nav#mhSidebar{display:flex !important;position:fixed !important;top:0;right:0;height:100%;width:min(320px,85vw);z-index:1000;flex-direction:column;gap:0;background:linear-gradient(180deg,#15121c,#0d0b12);border-left:1px solid rgba(212,175,55,0.25);padding:20px;overflow-y:auto;box-shadow:-10px 0 40px rgba(0,0,0,0.5);transform:translateX(100%);transition:transform .3s ease;}',
       'body.mh-sidebar-open nav.nav#mhSidebar{transform:translateX(0) !important;}',
       '.sidebar-head{display:flex;align-items:center;justify-content:space-between;padding-bottom:14px;margin-bottom:12px;border-bottom:1px solid rgba(212,175,55,0.2);color:#e8cf8a;font-family:\'Tiro Telugu\',serif;font-size:1.2rem;}',
       '.sidebar-close{background:none;border:none;color:#e8cf8a;font-size:1.4rem;cursor:pointer;width:36px;height:36px;border-radius:50%;transition:background .2s;}',
@@ -222,6 +235,7 @@
       'nav.nav#mhSidebar{align-items:stretch !important;text-align:left !important;}',
       'nav.nav#mhSidebar > a{display:block !important;width:100% !important;text-align:left !important;color:#f4ecdd;text-decoration:none;padding:13px 14px;border-radius:10px;font-size:1.05rem;margin-bottom:4px;font-family:\'Tiro Telugu\',serif;transition:background .2s,padding-left .2s;}',
       'nav.nav#mhSidebar > a:hover{background:rgba(212,175,55,0.14);color:#e8cf8a;padding-left:20px;}',
+      'nav.nav#mhSidebar > a.active{background:linear-gradient(135deg,rgba(232,207,138,0.22),rgba(212,175,55,0.10)) !important;color:#e8cf8a !important;font-weight:600;border-left:3px solid #d4af37;padding-left:14px;}',
       '.sidebar-toggle{display:inline-block !important;}',
       '.hamburger{display:none !important;}',
       '@media(max-width:768px){nav.nav#mhSidebar{display:flex !important;}.sidebar-toggle{display:inline-block !important;}}'
