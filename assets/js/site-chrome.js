@@ -90,6 +90,7 @@
 <div class="footer-nav">
 <a href="{ROOT}pages/temples/index.html">దేవాలయాలు</a>
 <a href="{ROOT}pages/hinduism/puranas/index.html">పురాణాలు</a>
+<a href="{ROOT}pages/itihasalu/index.html">ఇతిహాసాలు</a>
 <a href="{ROOT}pages/festivals/index.html">పండుగలు</a>
 <a href="{ROOT}pages/slokalu/index.html">శ్లోకాలు</a>
 <a href="{ROOT}pages/about/index.html">మా గురించి</a>
