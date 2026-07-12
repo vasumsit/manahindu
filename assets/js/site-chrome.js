@@ -72,6 +72,7 @@
 <a href="{ROOT}pages/hinduism/index.html">📖 హిందూమతం</a>
 <a href="{ROOT}pages/temples/index.html">🛕 దేవాలయాలు</a>
 <a href="{ROOT}pages/hinduism/puranas/index.html">📚 18 మహాపురాణాలు</a>
+<a href="{ROOT}pages/itihasalu/index.html">📜 ఇతిహాసాలు</a>
 <a href="{ROOT}pages/festivals/index.html">🪔 పండుగలు</a>
 <a href="{ROOT}pages/slokalu/index.html">📜 శ్లోకాలు</a>
 <a href="{ROOT}pages/gallery/index.html">📸 ఫోటో గ్యాలరీ</a>
