@@ -37,8 +37,8 @@
       '.door > *:not(.mh-stage){position:relative;z-index:1;}',
 
       /* story line that swaps in and out */
-      '.mh-story-line{display:block;margin-top:8px;min-height:2.6em;',
-      '  color:#e8cf8a;font-family:"Tiro Telugu",serif;font-size:0.86rem;line-height:1.6;',
+      '.mh-story-line{display:block;margin-top:10px;min-height:3em;',
+      '  color:#e8cf8a;font-family:"Tiro Telugu",serif;font-size:1rem;line-height:1.75;',
       '  opacity:0;transform:translateX(14px);transition:opacity .5s ease, transform .5s ease;}',
       '.mh-story-line.on{opacity:1;transform:translateX(0);}',
       '.mh-dots{display:flex;gap:4px;margin-top:8px;}',

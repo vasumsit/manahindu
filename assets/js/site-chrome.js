@@ -55,6 +55,8 @@
   border-radius:22px!important;padding:9px 20px!important;font-family:'Tiro Telugu',serif!important;
   font-size:0.95rem!important;font-weight:600!important;cursor:pointer;}
 .header .sidebar-toggle:active{transform:scale(0.96);}
+.header .mh-lang{display:inline-flex;align-items:center;justify-content:center;min-width:38px;height:38px;padding:0 10px;margin-right:8px;flex:0 0 auto;border:1px solid rgba(212,175,55,0.45);border-radius:20px;color:#e8cf8a!important;text-decoration:none!important;font-family:'Poppins',sans-serif;font-size:0.78rem;font-weight:600;letter-spacing:0.05em;transition:background .2s;}
+.header .mh-lang:hover{background:rgba(212,175,55,0.18);}
 </style>
 <header class="header">
 <div class="header-inner">
@@ -230,6 +232,7 @@
     css.textContent = [
       '.sidebar-backdrop{position:fixed;inset:0;z-index:900;background:rgba(0,0,0,0.6);backdrop-filter:blur(3px);opacity:0;visibility:hidden;transition:opacity .3s;}',
       'body.mh-sidebar-open .sidebar-backdrop{opacity:1;visibility:visible;}',
+      'body.mh-sidebar-open{overflow:hidden !important;}',
       'nav.nav#mhSidebar{display:flex !important;position:fixed !important;top:0;right:0;height:100%;width:min(320px,85vw);z-index:1000;flex-direction:column;gap:0;background:linear-gradient(180deg,#15121c,#0d0b12);border-left:1px solid rgba(212,175,55,0.25);padding:20px;overflow-y:auto;box-shadow:-10px 0 40px rgba(0,0,0,0.5);transform:translateX(100%);transition:transform .3s ease;}',
       'body.mh-sidebar-open nav.nav#mhSidebar{transform:translateX(0) !important;}',
       '.sidebar-head{display:flex;align-items:center;justify-content:space-between;padding-bottom:14px;margin-bottom:12px;border-bottom:1px solid rgba(212,175,55,0.2);color:#e8cf8a;font-family:\'Tiro Telugu\',serif;font-size:1.2rem;}',
