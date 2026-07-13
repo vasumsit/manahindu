@@ -26,10 +26,23 @@
     var st = document.createElement('style');
     st.id = 'mh-font-css';
     st.textContent = [
-      /* Scale only reading text — never headings, nav or chrome */
-      '.chapter-content p,.chapter-content li,.article-body p,.article-body li,',
-      '.padyam-text,.padyam-meaning,.satakam-intro p,.chapter-section p,',
-      '.info-box p,.source-note{font-size:calc(1em * var(--mh-fs,1)) !important;}',
+      /* Scale ALL reading text — body copy, verses, meanings, headings inside
+         the content. Never the site chrome (header, menu, breadcrumb, cards). */
+      '.chapter-content,.article-body,.page-card,.satakam-intro{',
+      '  font-size:calc(1rem * var(--mh-fs,1)) !important;}',
+      '.chapter-content p,.chapter-content li,.chapter-content div,',
+      '.article-body p,.article-body li,',
+      '.page-card p,.page-card li,',
+      '.satakam-intro p,.chapter-section p,.chapter-section li,',
+      '.padyam-text,.padyam-meaning,.info-box p,.source-note,',
+      '.chapter-content strong,.page-card strong{',
+      '  font-size:calc(1rem * var(--mh-fs,1)) !important;line-height:1.9 !important;}',
+      /* headings inside the content scale too, but stay proportionally larger */
+      '.chapter-content h2,.chapter-section h2{font-size:calc(1.35rem * var(--mh-fs,1)) !important;}',
+      '.chapter-content h3,.chapter-section h3,.page-card h3{',
+      '  font-size:calc(1.1rem * var(--mh-fs,1)) !important;}',
+      /* the sloka verses need to breathe when enlarged */
+      '.padyam-text{line-height:2 !important;}',
 
       /* Control widget */
       '.mh-fs-bar{width:100%;display:flex;justify-content:center;margin:2px 0 18px;box-sizing:border-box;}',

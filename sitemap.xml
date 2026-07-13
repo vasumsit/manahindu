@@ -2,775 +2,1009 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://manahindu.com/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://manahindu.com/pages/about/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <loc>https://manahindu.com/pages/about/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://manahindu.com/pages/contact/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <loc>https://manahindu.com/pages/contact/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://manahindu.com/pages/festivals/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <loc>https://manahindu.com/pages/festivals/all.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/festivals/dasara/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://manahindu.com/pages/festivals/dasara/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/festivals/diwali/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/festivals/eruvaka-punnami/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/festivals/hanuman-jayanti/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/festivals/maha-shivaratri/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/festivals/makara-sankranti/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/festivals/raksha-bandhan/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/festivals/sri-krishna-janmashtami/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/festivals/sri-rama-navami/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/festivals/ugadi/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/festivals/varalakshmi-vratam/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/festivals/vinayaka-chavithi/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <loc>https://manahindu.com/pages/festivals/diwali/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://manahindu.com/pages/hinduism/adi-shankaracharya/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/agni-puranam/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/bhagavata-puranam/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/bhakti-charithalu/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/bhakti-charithalu/annamayya/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/bhakti-charithalu/bhakta-kannappa/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/bhakti-charithalu/bhakta-prahlada/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/bhakti-charithalu/bhakta-ramadasu/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/bhakti-charithalu/bhakta-siriyala/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/bhakti-charithalu/markandeya/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/bhakti-charithalu/meera-bai/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/bhavishya-puranam/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/brahma-puranam/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/brahmanda-puranam/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/brahmavaivarta-puranam/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/deva-charithalu/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/garuda-puranam/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/kurma-puranam/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/linga-puranam/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/markandeya-puranam/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/matsya-puranam/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/narada-puranam/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/padma-puranam/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/puranas/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/sadhguru/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/siva-puranam/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/skanda-puranam/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/sri-ganesha-jeevitham/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/sri-hanuman-jeevitham/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/sri-krishna-jeevitham/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/sri-muruga-jeevitham/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/sri-rama-jeevitham/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/sri-ramana-maharshi/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/sri-sita-jeevitham/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/sri-venkateswara-jeevitham/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/vamana-puranam/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/varaha-puranam/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/hinduism/vishnu-puranam/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/news/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <loc>https://manahindu.com/pages/festivals/eruvaka-punnami/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://manahindu.com/pages/news/devotional-news/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/privacy/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <loc>https://manahindu.com/pages/festivals/hanuman-jayanti/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://manahindu.com/pages/slokalu/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <loc>https://manahindu.com/pages/festivals/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://manahindu.com/pages/slokalu/annamayya-keerthanalu/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/slokalu/bhaskara-satakam/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/slokalu/hanuman-chalisa/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/slokalu/kanakadhara-stotram/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/slokalu/krishna-satakam/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/slokalu/shiva-panchakshari/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/slokalu/sumati-satakam/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/slokalu/vemana-satakam/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/slokalu/vishnu-ashtottaram/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://manahindu.com/pages/temples/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <loc>https://manahindu.com/pages/festivals/maha-shivaratri/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/festivals/makara-sankranti/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/festivals/raksha-bandhan/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/festivals/sri-krishna-janmashtami/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/festivals/sri-rama-navami/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/festivals/ugadi/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/festivals/varalakshmi-vratam/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/festivals/vinayaka-chavithi/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/gallery/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/adi-shankaracharya/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/agni-puranam/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/bhagavata-puranam/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/bhakti-charithalu/annamayya/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/bhakti-charithalu/bhakta-kannappa/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/bhakti-charithalu/bhakta-prahlada/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/bhakti-charithalu/bhakta-ramadasu/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/bhakti-charithalu/bhakta-siriyala/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/bhakti-charithalu/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/bhakti-charithalu/markandeya/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/bhakti-charithalu/meera-bai/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/bharatadesam/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/bhavishya-puranam/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/brahma-puranam/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/brahmanda-puranam/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/brahmavaivarta-puranam/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/chhatrapati-shivaji/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/deva-charithalu/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/garuda-puranam/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/hindu-vivaham/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/kurma-puranam/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/linga-puranam/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/markandeya-puranam/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/matsya-puranam/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/narada-puranam/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/padma-puranam/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/pavitra-nadulu/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/puranas/all.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/puranas/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/rani-rudrama-devi/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/sadhguru/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/sampradayalu/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/satavahana-kings/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/siva-puranam/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/skanda-puranam/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/sri-ganesha-jeevitham/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/sri-hanuman-jeevitham/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/sri-krishna-jeevitham/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/sri-muruga-jeevitham/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/sri-rama-jeevitham/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/sri-ramana-maharshi/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/sri-sita-jeevitham/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/sri-venkateswara-jeevitham/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/swami-vivekananda/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/vamana-puranam/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/varaha-puranam/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/hinduism/vishnu-puranam/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/itihasalu/aranya-kanda/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/itihasalu/ayodhya-kanda/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/itihasalu/bala-kanda/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/itihasalu/bhagavad-gita/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/itihasalu/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/itihasalu/kishkindha-kanda/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/itihasalu/mahabharatam/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/itihasalu/ramayanam/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/itihasalu/sundara-kanda/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/itihasalu/uttara-kanda/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/itihasalu/yuddha-kanda/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/latest.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/news/devotional-news/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/news/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/privacy/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/sanatana-dharma/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/slokalu/all.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/slokalu/annamayya-keerthanalu/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/slokalu/bajrang-baan/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/slokalu/bhaskara-satakam/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/slokalu/chanakya-niti/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/slokalu/hanuman-ashtakam/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/slokalu/hanuman-chalisa/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/slokalu/hanuman-kavacham/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/slokalu/hanuman-nitya-stuti/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/slokalu/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/slokalu/kanakadhara-stotram/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/slokalu/krishna-satakam/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/slokalu/shiva-panchakshari/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/slokalu/sumati-satakam/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/slokalu/sundara-kanda/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/slokalu/vemana-satakam/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/slokalu/vishnu-ashtottaram/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/temples/all.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/alampur.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/temples/detail/ambadipudi-shiva.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/annavaram.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/arunachalam.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/badrinath.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/basara-saraswati.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/bhimashankar.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/birajadevi-jajpur.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/birla-mandir.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/boppudi-anjaneya.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/chamundeshwari-mysore.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/chilkur-balaji.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/dwarkadhish.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/ghrishneshwar.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/jagadgirigutta.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/jwalamukhi-himachal.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/kamakhya-guwahati.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/kamakshi-kanchipuram.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/kamakshi-thanjavur-gold.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/temples/detail/kanaka-durga.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/temples/detail/kanipaka-vinayaka.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/kanyakumari.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/kashi-vishalakshi.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/kashi-vishwanath.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/kedarnath.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/kondagattu.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/kotappakonda.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/kumbakonam.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/madhaveswari-prayag.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/mahakaleshwar.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/mahakali-ujjain.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/mahalakshmi-kolhapur.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/mahanandi.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/temples/detail/manikonda-shiva.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/manikyamba-draksharamam.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/nageshwar.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/omkareshwar.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/palani.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/pedamma.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/punnainallur-mariamman.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/puri-jagannath.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/purijagannath.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/puruhutika-pithapuram.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/rameshwaram.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/renuka-mahur.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/temples/detail/rock-fort-trichy.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/shani-shingnapur.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/shankari-srilanka.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/sharika-kashmir.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/shirdi.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/simhachalam.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/singarakonda-anjaneya.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/singarayakonda.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/temples/detail/sitarama-orr.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/somnath.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/srirangam.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/srisailam.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/thanjavur-brihadeeswarar.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/tirupati.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/trimbakeshwar.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/ttd-jubileehills.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/vaidyanath.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/vemulawada.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/detail/yadadri.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/temples/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manahindu.com/pages/temples/jyotirlinga-yatra-guide.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://manahindu.com/pages/vlogs/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <loc>https://manahindu.com/pages/vlogs/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manahindu.com/pages/welcome/index.html</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
